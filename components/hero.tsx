@@ -29,17 +29,25 @@ export function Hero() {
             </div>
 
             <div className="flex gap-6 pt-4">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
+              <a
+                href="https://github.com/nahuelsoria"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="GitHub"
+              >
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/nahuelsoria/"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Email">
+              <a
+                href="mailto:jorgenahuelsoria@gmail.com"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Email"
+              >
                 <Mail className="w-6 h-6" />
               </a>
             </div>
