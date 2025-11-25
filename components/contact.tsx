@@ -5,9 +5,40 @@ import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import type { LucideIcon } from "lucide-react"
 import { Mail, MessageCircle } from "lucide-react"
 
+type ContactMethod = {
+  title: string
+  description: string
+  icon: LucideIcon
+  accent: "primary" | "accent"
+}
+
 export function Contact() {
+  const contactMethods: ContactMethod[] = [
+    {
+      title: "Email",
+      description: "jorgenahuelsoria@gmail.com",
+      icon: Mail,
+      accent: "primary",
+    },
+    {
+      title: "WhatsApp",
+      description: "+5491158794428",
+      icon: MessageCircle,
+      accent: "accent",
+    },
+    {
+      title: "Formulario",
+      description: "Envíame un mensaje",
+      icon: Mail,
+      accent: "primary",
+    },
+  ]
+
+  const delayClasses = ["", "animate-delay-100", "animate-delay-200", "animate-delay-300"]
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,45 +57,40 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-20 md:py-32 bg-card/50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 md:px-6 animate-fade-up">
+        <div className="text-center mb-16 animate-delay-100">
           <h2 className="section-title mb-4">Trabajemos juntos</h2>
           <p className="section-subtitle">¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-card border border-border/50 rounded-lg p-8 text-center">
-            <div className="flex justify-center mb-4">
-              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-            </div>
-            <h3 className="font-bold mb-2">Email</h3>
-            <p className="text-muted-foreground">jorgenahuelsoria@gmail.com</p>
-          </div>
+          {contactMethods.map((method, index) => {
+            const Icon = method.icon
 
-          <div className="bg-card border border-border/50 rounded-lg p-8 text-center">
-            <div className="flex justify-center mb-4">
-              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
-                <MessageCircle className="w-6 h-6 text-accent" />
+            return (
+              <div
+                key={method.title}
+                className={`bg-card border border-border/50 rounded-lg p-8 text-center animate-fade-up ${
+                  delayClasses[index % delayClasses.length]
+                }`}
+              >
+                <div className="flex justify-center mb-4">
+                  <div
+                    className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                      method.accent === "primary" ? "bg-primary/20" : "bg-accent/20"
+                    }`}
+                  >
+                    <Icon className={`w-6 h-6 ${method.accent === "primary" ? "text-primary" : "text-accent"}`} />
+                  </div>
+                </div>
+                <h3 className="font-bold mb-2">{method.title}</h3>
+                <p className="text-muted-foreground">{method.description}</p>
               </div>
-            </div>
-            <h3 className="font-bold mb-2">WhatsApp</h3>
-            <p className="text-muted-foreground">+5491158794428</p>
-          </div>
-
-          <div className="bg-card border border-border/50 rounded-lg p-8 text-center">
-            <div className="flex justify-center mb-4">
-              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-            </div>
-            <h3 className="font-bold mb-2">Formulario</h3>
-            <p className="text-muted-foreground">Envíame un mensaje</p>
-          </div>
+            )
+          })}
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto animate-fade-up animate-delay-200">
           <form onSubmit={handleSubmit} className="space-y-6 bg-card border border-border/50 rounded-lg p-8">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">

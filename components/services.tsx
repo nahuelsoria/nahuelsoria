@@ -75,7 +75,18 @@ const services = [
   },
 ]
 
-function PriceDisplay({ priceUSD, hourlyUSD, hourlyRange }: any) {
+type HourlyRange = {
+  min: number
+  max: number
+}
+
+type PriceDisplayProps = {
+  priceUSD: number | null
+  hourlyUSD?: boolean
+  hourlyRange?: HourlyRange
+}
+
+function PriceDisplay({ priceUSD, hourlyUSD, hourlyRange }: PriceDisplayProps) {
   const { rate, isLoading } = useExchangeRate()
 
   if (hourlyUSD && hourlyRange) {
@@ -105,19 +116,23 @@ function PriceDisplay({ priceUSD, hourlyUSD, hourlyRange }: any) {
 }
 
 export function Services() {
+  const delayClasses = ["", "animate-delay-100", "animate-delay-200", "animate-delay-300"]
+
   return (
     <section id="services" className="py-20 md:py-32 bg-card/50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 md:px-6 animate-fade-up">
+        <div className="text-center mb-16 animate-delay-100">
           <h2 className="section-title mb-4">Servicios & pricing</h2>
           <p className="section-subtitle">Soluciones adaptadas a tus necesidades con precios transparentes</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <Card
               key={service.id}
-              className={`relative overflow-hidden transition-all ${
+              className={`relative overflow-hidden transition-all animate-fade-up ${
+                delayClasses[index % delayClasses.length]
+              } ${
                 service.popular ? "lg:scale-105 border-primary/50 ring-2 ring-primary/20" : ""
               }`}
             >
