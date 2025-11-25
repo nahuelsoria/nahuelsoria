@@ -38,7 +38,7 @@ export function Contact() {
     },
   ]
 
-  const delayClasses = ["", "animate-delay-100", "animate-delay-200", "animate-delay-300"]
+  const delayClasses = ["animate-delay-100", "animate-delay-200", "animate-delay-300"]
   const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
 
   const [formData, setFormData] = useState({
@@ -60,7 +60,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-20 md:py-32 bg-card/50" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className={`text-center mb-16 animate-delay-100 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
+        <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Trabajemos juntos</h2>
           <p className="section-subtitle">¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte</p>
         </div>

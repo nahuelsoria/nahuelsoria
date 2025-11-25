@@ -42,12 +42,12 @@ const projects = [
 
 export function FeaturedProjects() {
   const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
-  const delayClasses = ["", "animate-delay-100", "animate-delay-200", "animate-delay-300"]
+  const delayClasses = ["animate-delay-100", "animate-delay-200", "animate-delay-300"]
 
   return (
     <section id="projects" className="py-20 md:py-32" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className={`text-center mb-16 animate-delay-100 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
+        <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Proyectos destacados</h2>
           <p className="section-subtitle">Algunos de mis trabajos más recientes y significativos</p>
         </div>

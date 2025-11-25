@@ -6,24 +6,25 @@ import { useInViewAnimation } from "@/hooks/use-in-view-animation"
 
 export function Hero() {
   const { ref, isVisible } = useInViewAnimation<HTMLElement>()
+  const animationClass = isVisible ? "animate-fade-up" : "reveal-offscreen"
 
   return (
     <section ref={ref} className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className={`space-y-8 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
-            <div className="space-y-3 animate-delay-100">
+          <div className="space-y-8">
+            <div className={`space-y-3 ${animationClass}`}>
               <h1 className="text-5xl md:text-7xl font-bold text-balance leading-tight">
                 Desarrollador <span className="gradient-text">web</span> fullstack.
               </h1>
             </div>
 
-            <p className="text-xl text-muted-foreground max-w-xl">
+            <p className={`text-xl text-muted-foreground max-w-xl animate-delay-100 ${animationClass}`}>
               Creo aplicaciones modernas, rápidas y escalables utilizando Next.js, React, Firebase y un enfoque simple y
               orientado al usuario.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-delay-200">
+            <div className={`flex flex-col sm:flex-row gap-4 animate-delay-200 ${animationClass}`}>
               <Button size="lg" className="group">
                 Ver proyectos
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -33,7 +34,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <div className="flex gap-6 pt-4 animate-delay-300">
+            <div className={`flex gap-6 pt-4 animate-delay-300 ${animationClass}`}>
               <a
                 href="https://github.com/nahuelsoria"
                 className="text-muted-foreground hover:text-foreground transition-colors"
