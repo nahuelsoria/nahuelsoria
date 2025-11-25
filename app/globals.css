@@ -134,6 +134,43 @@
 }
 
 @layer components {
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+      filter: blur(6px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease forwards;
+    opacity: 0;
+    will-change: transform, opacity, filter;
+  }
+
+  .reveal-offscreen {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(8px);
+  }
+
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+
   .section-title {
     @apply text-4xl md:text-5xl font-bold text-balance;
     /* Usar peso de fuente 600-700 para títulos */
