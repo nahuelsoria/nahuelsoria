@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 import { useExchangeRate } from "@/hooks/use-exchange-rate"
+import { useInViewAnimation } from "@/hooks/use-in-view-animation"
 
 const services = [
   {
@@ -116,12 +117,13 @@ function PriceDisplay({ priceUSD, hourlyUSD, hourlyRange }: PriceDisplayProps) {
 }
 
 export function Services() {
+  const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
   const delayClasses = ["", "animate-delay-100", "animate-delay-200", "animate-delay-300"]
 
   return (
-    <section id="services" className="py-20 md:py-32 bg-card/50">
-      <div className="container mx-auto px-4 md:px-6 animate-fade-up">
-        <div className="text-center mb-16 animate-delay-100">
+    <section id="services" className="py-20 md:py-32 bg-card/50" ref={ref}>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className={`text-center mb-16 animate-delay-100 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Servicios & pricing</h2>
           <p className="section-subtitle">Soluciones adaptadas a tus necesidades con precios transparentes</p>
         </div>
@@ -130,11 +132,9 @@ export function Services() {
           {services.map((service, index) => (
             <Card
               key={service.id}
-              className={`relative overflow-hidden transition-all animate-fade-up ${
-                delayClasses[index % delayClasses.length]
-              } ${
-                service.popular ? "lg:scale-105 border-primary/50 ring-2 ring-primary/20" : ""
-              }`}
+              className={`relative overflow-hidden transition-all ${
+                isVisible ? `animate-fade-up ${delayClasses[index % delayClasses.length]}` : "reveal-offscreen"
+              } ${service.popular ? "lg:scale-105 border-primary/50 ring-2 ring-primary/20" : ""}`}
             >
               {service.popular && (
                 <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-medium rounded-bl-lg">

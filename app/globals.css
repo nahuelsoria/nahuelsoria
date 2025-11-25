@@ -153,6 +153,12 @@
     will-change: transform, opacity, filter;
   }
 
+  .reveal-offscreen {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(8px);
+  }
+
   .animate-delay-100 {
     animation-delay: 0.1s;
   }

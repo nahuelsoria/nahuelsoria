@@ -1,12 +1,17 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react"
+import { useInViewAnimation } from "@/hooks/use-in-view-animation"
 
 export function Hero() {
+  const { ref, isVisible } = useInViewAnimation<HTMLElement>()
+
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <section ref={ref} className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 animate-fade-up">
+          <div className={`space-y-8 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
             <div className="space-y-3 animate-delay-100">
               <h1 className="text-5xl md:text-7xl font-bold text-balance leading-tight">
                 Desarrollador <span className="gradient-text">web</span> fullstack.
@@ -53,7 +58,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative animate-fade-up animate-delay-200">
+          <div className={`relative animate-delay-200 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-3xl animate-[pulse_4s_ease-in-out_infinite]"></div>
             <div className="relative bg-card border border-border/50 rounded-2xl p-8 backdrop-blur">
               <img src="/developer-coding-laptop-dark.jpg" alt="Developer workspace" className="w-full rounded-lg" />

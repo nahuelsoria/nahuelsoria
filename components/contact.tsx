@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import type { LucideIcon } from "lucide-react"
 import { Mail, MessageCircle } from "lucide-react"
+import { useInViewAnimation } from "@/hooks/use-in-view-animation"
 
 type ContactMethod = {
   title: string
@@ -38,6 +39,7 @@ export function Contact() {
   ]
 
   const delayClasses = ["", "animate-delay-100", "animate-delay-200", "animate-delay-300"]
+  const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
 
   const [formData, setFormData] = useState({
     name: "",
@@ -56,9 +58,9 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-card/50">
-      <div className="container mx-auto px-4 md:px-6 animate-fade-up">
-        <div className="text-center mb-16 animate-delay-100">
+    <section id="contact" className="py-20 md:py-32 bg-card/50" ref={ref}>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className={`text-center mb-16 animate-delay-100 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Trabajemos juntos</h2>
           <p className="section-subtitle">¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte</p>
         </div>
@@ -70,8 +72,8 @@ export function Contact() {
             return (
               <div
                 key={method.title}
-                className={`bg-card border border-border/50 rounded-lg p-8 text-center animate-fade-up ${
-                  delayClasses[index % delayClasses.length]
+                className={`bg-card border border-border/50 rounded-lg p-8 text-center ${
+                  isVisible ? `animate-fade-up ${delayClasses[index % delayClasses.length]}` : "reveal-offscreen"
                 }`}
               >
                 <div className="flex justify-center mb-4">
@@ -90,7 +92,7 @@ export function Contact() {
           })}
         </div>
 
-        <div className="max-w-2xl mx-auto animate-fade-up animate-delay-200">
+        <div className={`max-w-2xl mx-auto animate-delay-200 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <form onSubmit={handleSubmit} className="space-y-6 bg-card border border-border/50 rounded-lg p-8">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">

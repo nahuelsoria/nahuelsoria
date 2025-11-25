@@ -1,6 +1,9 @@
+"use client"
+
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { useInViewAnimation } from "@/hooks/use-in-view-animation"
 
 const projects = [
   {
@@ -38,12 +41,13 @@ const projects = [
 ]
 
 export function FeaturedProjects() {
+  const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
   const delayClasses = ["", "animate-delay-100", "animate-delay-200", "animate-delay-300"]
 
   return (
-    <section id="projects" className="py-20 md:py-32">
-      <div className="container mx-auto px-4 md:px-6 animate-fade-up">
-        <div className="text-center mb-16 animate-delay-100">
+    <section id="projects" className="py-20 md:py-32" ref={ref}>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className={`text-center mb-16 animate-delay-100 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Proyectos destacados</h2>
           <p className="section-subtitle">Algunos de mis trabajos más recientes y significativos</p>
         </div>
@@ -52,7 +56,9 @@ export function FeaturedProjects() {
           {projects.map((project, index) => (
             <Card
               key={project.id}
-              className={`group overflow-hidden hover:border-primary/50 transition-colors animate-fade-up ${delayClasses[index % delayClasses.length]}`}
+              className={`group overflow-hidden hover:border-primary/50 transition-colors ${
+                isVisible ? `animate-fade-up ${delayClasses[index % delayClasses.length]}` : "reveal-offscreen"
+              }`}
             >
               <div className="relative h-64 overflow-hidden bg-muted">
                 <img
