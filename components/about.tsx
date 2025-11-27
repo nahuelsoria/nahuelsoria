@@ -7,7 +7,7 @@ export function About() {
   const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
 
   return (
-    <section id="about" ref={ref} className="py-20 md:py-32">
+    <section id="about" ref={ref} className="py-20 md:py-32 scroll-mt-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">

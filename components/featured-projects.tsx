@@ -39,7 +39,7 @@ export function FeaturedProjects() {
   const delayClasses = ["animate-delay-100", "animate-delay-200", "animate-delay-300"]
 
   return (
-    <section id="projects" className="py-20 md:py-32" ref={ref}>
+    <section id="projects" className="py-20 md:py-32 scroll-mt-24" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Proyectos destacados</h2>
@@ -54,11 +54,12 @@ export function FeaturedProjects() {
                 isVisible ? `animate-fade-up ${delayClasses[index % delayClasses.length]}` : "reveal-offscreen"
               }`}
             >
-              <div className="relative h-64 overflow-hidden bg-muted">
+              <div className="relative h-64 overflow-hidden bg-muted aspect-[4/3]">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <div className="p-6 space-y-4">

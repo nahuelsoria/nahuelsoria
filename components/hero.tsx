@@ -9,12 +9,12 @@ export function Hero() {
   const animationClass = isVisible ? "animate-fade-up" : "reveal-offscreen"
 
   return (
-    <section ref={ref} className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <section ref={ref} className="relative pt-28 pb-20 md:pt-40 md:pb-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="space-y-8">
             <div className={`space-y-3 ${animationClass}`}>
-              <h1 className="text-5xl md:text-7xl font-bold text-balance leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-balance leading-tight">
                 Desarrollador <span className="gradient-text">web</span> fullstack.
               </h1>
             </div>
@@ -25,13 +25,13 @@ export function Hero() {
             </p>
 
             <div className={`flex flex-col sm:flex-row gap-4 animate-delay-200 ${animationClass}`}>
-              <Button asChild size="lg" className="group">
+              <Button asChild size="lg" className="group w-full sm:w-auto justify-center">
                 <a href="#projects">
                   Ver proyectos
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto justify-center">
                 <a href="#contact">Contactarme</a>
               </Button>
             </div>
@@ -63,9 +63,16 @@ export function Hero() {
 
           <div className={`relative animate-delay-200 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-3xl animate-[pulse_4s_ease-in-out_infinite]"></div>
-            <div className="relative bg-card border border-border/50 rounded-2xl p-8 backdrop-blur">
-              <img src="/developer-coding-laptop-dark.jpg" alt="Developer workspace" className="w-full rounded-lg" />
-              <div className="absolute -bottom-4 -right-4 bg-card border border-border/50 rounded-lg p-4 shadow-lg">
+            <div className="relative bg-card border border-border/50 rounded-2xl p-6 sm:p-8 backdrop-blur">
+              <div className="relative overflow-hidden rounded-lg aspect-[4/3] sm:aspect-square">
+                <img
+                  src="/developer-coding-laptop-dark.jpg"
+                  alt="Developer workspace"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-card border border-border/50 rounded-lg p-4 shadow-lg min-w-[180px] text-left">
                 <p className="text-sm font-medium">Más de 10 proyectos</p>
                 <p className="text-xs text-muted-foreground">activos</p>
               </div>
