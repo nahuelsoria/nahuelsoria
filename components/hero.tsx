@@ -25,12 +25,14 @@ export function Hero() {
             </p>
 
             <div className={`flex flex-col sm:flex-row gap-4 animate-delay-200 ${animationClass}`}>
-              <Button size="lg" className="group">
-                Ver proyectos
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <Button asChild size="lg" className="group">
+                <a href="#projects">
+                  Ver proyectos
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                Contactarme
+              <Button asChild variant="outline" size="lg">
+                <a href="#contact">Contactarme</a>
               </Button>
             </div>
 
@@ -64,7 +66,7 @@ export function Hero() {
             <div className="relative bg-card border border-border/50 rounded-2xl p-8 backdrop-blur">
               <img src="/developer-coding-laptop-dark.jpg" alt="Developer workspace" className="w-full rounded-lg" />
               <div className="absolute -bottom-4 -right-4 bg-card border border-border/50 rounded-lg p-4 shadow-lg">
-                <p className="text-sm font-medium">4+ proyectos</p>
+                <p className="text-sm font-medium">Más de 10 proyectos</p>
                 <p className="text-xs text-muted-foreground">activos</p>
               </div>
             </div>
