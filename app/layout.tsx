@@ -1,15 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-
-/* Importar Geist con variantes de peso 500 y 700 */
-const _geist = Geist({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-})
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Nahuel Soria - Fullstack Developer",
@@ -57,7 +49,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${_geist.className} antialiased`}>
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
       </body>

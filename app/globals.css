@@ -75,9 +75,9 @@
   --sidebar-ring: oklch(0.65 0.2 240);
 }
 
-@theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  @theme inline {
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -123,8 +123,8 @@
   body {
     @apply bg-background text-foreground;
     transition: background-color 0.3s, color 0.3s;
-    /* Aplicar Geist Medium 500 como font principal */
-    font-family: "Geist", "Geist Fallback";
+    /* Aplicar tipografía del sistema para evitar dependencias externas */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-weight: 500;
   }
 
