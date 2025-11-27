@@ -121,7 +121,7 @@ export function Services() {
   const delayClasses = ["animate-delay-100", "animate-delay-200", "animate-delay-300"]
 
   return (
-    <section id="services" className="py-20 md:py-32 bg-card/50" ref={ref}>
+    <section id="services" className="py-20 md:py-32 bg-card/50 scroll-mt-24" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Servicios & pricing</h2>
