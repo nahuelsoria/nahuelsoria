@@ -40,17 +40,17 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-sm">Servicios</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
                   Web Apps
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
                   ERP Systems
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
                   Consultoría
                 </a>
               </li>
@@ -60,25 +60,28 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-sm">Redes sociales</h4>
             <div className="flex gap-4">
-              <a 
-                href="https://github.com/nahuelsoria" 
+              <a
+                href="https://github.com/nahuelsoria"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
-              <a 
-                href="https://linkedin.com/in/nahuelsoria" 
+              <a
+                href="https://www.linkedin.com/in/nahuelsoria/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="mailto:jorgenahuelsoria@gmail.com" 
+              <a
+                href="mailto:jorgenahuelsoria@gmail.com"
                 className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
               </a>

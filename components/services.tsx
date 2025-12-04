@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 import { useExchangeRate } from "@/hooks/use-exchange-rate"
+import { useInViewAnimation } from "@/hooks/use-in-view-animation"
 
 const services = [
   {
@@ -75,7 +76,18 @@ const services = [
   },
 ]
 
-function PriceDisplay({ priceUSD, hourlyUSD, hourlyRange }: any) {
+type HourlyRange = {
+  min: number
+  max: number
+}
+
+type PriceDisplayProps = {
+  priceUSD: number | null
+  hourlyUSD?: boolean
+  hourlyRange?: HourlyRange
+}
+
+function PriceDisplay({ priceUSD, hourlyUSD, hourlyRange }: PriceDisplayProps) {
   const { rate, isLoading } = useExchangeRate()
 
   if (hourlyUSD && hourlyRange) {
@@ -105,10 +117,13 @@ function PriceDisplay({ priceUSD, hourlyUSD, hourlyRange }: any) {
 }
 
 export function Services() {
+  const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
+  const delayClasses = ["animate-delay-100", "animate-delay-200", "animate-delay-300"]
+
   return (
-    <section id="services" className="py-20 md:py-32 bg-card/50">
+    <section id="services" className="py-20 md:py-32 bg-card/50 scroll-mt-24" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Servicios & pricing</h2>
           <p className="section-subtitle">
             Soluciones que generan resultados. Precios transparentes, sin sorpresas.
@@ -121,11 +136,12 @@ export function Services() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <Card
               key={service.id}
-              className={`relative overflow-hidden transition-all ${service.popular ? "lg:scale-105 border-primary/50 ring-2 ring-primary/20" : ""
-                }`}
+              className={`relative overflow-hidden transition-all ${
+                isVisible ? `animate-fade-up ${delayClasses[index % delayClasses.length]}` : "reveal-offscreen"
+              } ${service.popular ? "lg:scale-105 border-primary/50 ring-2 ring-primary/20" : ""}`}
             >
               {service.popular && (
                 <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-medium rounded-bl-lg">
@@ -153,10 +169,11 @@ export function Services() {
                 </ul>
 
                 <Button
-                  className={`w-full ${service.popular
-                    ? "bg-gray-800 hover:bg-gray-700 text-white"
-                    : "bg-gray-900 hover:bg-gray-800 text-white border border-gray-700"
-                    }`}
+                  className={`w-full ${
+                    service.popular
+                      ? "bg-gray-800 hover:bg-gray-700 text-white"
+                      : "bg-gray-900 hover:bg-gray-800 text-white border border-gray-700"
+                  }`}
                   variant={service.popular ? "default" : "outline"}
                   onClick={() => {
                     const message = encodeURIComponent(

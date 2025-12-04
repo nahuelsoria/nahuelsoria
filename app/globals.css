@@ -75,9 +75,9 @@
   --sidebar-ring: oklch(0.65 0.2 240);
 }
 
-@theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  @theme inline {
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -124,8 +124,8 @@
   body {
     @apply bg-background text-foreground;
     transition: background-color 0.3s, color 0.3s;
-    /* Aplicar Geist Medium 500 como font principal */
-    font-family: "Geist", "Geist Fallback";
+    /* Aplicar tipografía del sistema para evitar dependencias externas */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-weight: 500;
   }
 
@@ -135,6 +135,43 @@
 }
 
 @layer components {
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+      filter: blur(6px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease forwards;
+    opacity: 0;
+    will-change: transform, opacity, filter;
+  }
+
+  .reveal-offscreen {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(8px);
+  }
+
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+
   .section-title {
     @apply text-4xl md:text-5xl font-bold text-balance;
     /* Usar peso de fuente 600-700 para títulos */
