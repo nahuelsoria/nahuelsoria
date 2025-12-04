@@ -9,13 +9,14 @@ export function About() {
             <div>
               <h2 className="section-title mb-4">Sobre mí</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Soy Jorge Nahuel Soria, desarrollador web de Buenos Aires. Trabajo en una empresa financiera
-                construyendo sistemas reales y también creo mis propios productos como Picaday, Numerai y What I Wish.
+                Soy Jorge Nahuel Soria, desarrollador web de Buenos Aires. Como <strong>CTO en una fintech</strong>, 
+                construyo sistemas que manejan millones en transacciones. También creo productos propios como Picaday, 
+                Numerai y What I Wish que ya tienen usuarios activos.
               </p>
               <p className="text-lg text-muted-foreground">
-                Me enfoco en hacer productos rápidos, simples y eficientes utilizando Next.js, React, Firebase y diseño
-                moderno. Mi objetivo es transformar ideas en aplicaciones funcionales que resuelvan problemas reales y
-                ofrezcan experiencias excepcionales a los usuarios.
+                Mi enfoque: <strong>velocidad + resultados</strong>. Transformo ideas en aplicaciones funcionales en semanas, 
+                no meses. Utilizo Next.js, React, Firebase y diseño moderno para crear productos que 
+                <strong> generan valor real</strong> y resuelven problemas concretos.
               </p>
             </div>
 

@@ -9,68 +9,68 @@ const services = [
   {
     id: 1,
     title: "Landing Page",
-    priceUSD: 150,
+    priceUSD: 500,
     popular: false,
     features: [
-      "Diseño moderno y responsive",
-      "Secciones básicas",
-      "Formulario de contacto",
-      "Optimización de performance",
-      "SEO básico",
+      "Diseño premium y animaciones",
+      "Copywriting persuasivo",
+      "Formulario de alta conversión",
+      "Optimización de velocidad (90+)",
+      "SEO técnico básico",
     ],
   },
   {
     id: 2,
     title: "Web Profesional",
-    priceUSD: 300,
+    priceUSD: 1200,
     popular: false,
     features: [
-      "Multisecciones personalizadas",
-      "Blog integrado",
-      "Diseño responsive completo",
-      "SEO avanzado",
-      "Panel de administración",
+      "CMS autoadministrable",
+      "Blog / Noticias integrado",
+      "Diseño UX/UI a medida",
+      "SEO avanzado y Schema",
+      "Integración con CRM/Email",
     ],
   },
   {
     id: 3,
-    title: "Web App con Login",
-    priceUSD: 600,
+    title: "Web App / SaaS",
+    priceUSD: 2500,
     popular: true,
     features: [
-      "Autenticación de usuarios",
+      "Autenticación segura",
       "Base de datos en tiempo real",
-      "Panel de control",
-      "Dashboards interactivos",
-      "Integración de APIs",
+      "Panel de administración",
+      "Pagos (Stripe/MercadoPago)",
+      "Dashboard de métricas",
     ],
   },
   {
     id: 4,
-    title: "Sistemas a Medida / ERP",
-    priceUSD: 1000,
+    title: "Sistemas Enterprise / ERP",
+    priceUSD: 5000,
     popular: false,
     features: [
-      "Gestión de cuentas y clientes",
-      "Operaciones complejas",
-      "APIs personalizadas",
-      "Dashboards avanzados",
-      "Reportes y analytics",
+      "Arquitectura escalable",
+      "Múltiples roles y permisos",
+      "Reportes avanzados y exportación",
+      "Integración con APIs de terceros",
+      "Soporte prioritario 24/7",
     ],
   },
   {
     id: 5,
-    title: "Consultoría Técnica",
+    title: "Consultoría CTO",
     priceUSD: null,
     hourlyUSD: true,
-    hourlyRange: { min: 20, max: 30 },
+    hourlyRange: { min: 50, max: 80 },
     popular: false,
     features: [
-      "Asesoramiento técnico",
-      "Revisión de código",
-      "Arquitectura de proyectos",
-      "Optimización de performance",
-      "Sesiones 1 a 1",
+      "Auditoría de código y seguridad",
+      "Arquitectura de sistemas",
+      "Optimización de costos Cloud",
+      "Mentoria a equipos técnicos",
+      "Estrategia tecnológica",
     ],
   },
 ]
@@ -110,16 +110,22 @@ export function Services() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="section-title mb-4">Servicios & pricing</h2>
-          <p className="section-subtitle">Soluciones adaptadas a tus necesidades con precios transparentes</p>
+          <p className="section-subtitle">
+            Soluciones que generan resultados. Precios transparentes, sin sorpresas.
+            <strong className="text-foreground"> Consulta gratuita de 30 minutos</strong> para evaluar tu proyecto.
+          </p>
+          <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span>Disponible para nuevos proyectos este mes</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service) => (
             <Card
               key={service.id}
-              className={`relative overflow-hidden transition-all ${
-                service.popular ? "lg:scale-105 border-primary/50 ring-2 ring-primary/20" : ""
-              }`}
+              className={`relative overflow-hidden transition-all ${service.popular ? "lg:scale-105 border-primary/50 ring-2 ring-primary/20" : ""
+                }`}
             >
               {service.popular && (
                 <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-medium rounded-bl-lg">
@@ -147,18 +153,30 @@ export function Services() {
                 </ul>
 
                 <Button
-                  className={`w-full ${
-                    service.popular
-                      ? "bg-gray-800 hover:bg-gray-700 text-white"
-                      : "bg-gray-900 hover:bg-gray-800 text-white border border-gray-700"
-                  }`}
+                  className={`w-full ${service.popular
+                    ? "bg-gray-800 hover:bg-gray-700 text-white"
+                    : "bg-gray-900 hover:bg-gray-800 text-white border border-gray-700"
+                    }`}
                   variant={service.popular ? "default" : "outline"}
+                  onClick={() => {
+                    const message = encodeURIComponent(
+                      `Hola! Me interesa el servicio: ${service.title}. ¿Podrías darme más información?`
+                    )
+                    window.open(`https://wa.me/5491158794428?text=${message}`, "_blank")
+                  }}
                 >
-                  Solicitar
+                  Solicitar ahora
                 </Button>
               </div>
             </Card>
           ))}
+        </div>
+        <div className="mt-16 text-center">
+          <p className="text-muted-foreground">
+            <strong className="text-foreground">Garantía de Calidad:</strong> Todos los proyectos incluyen 30 días de soporte post-entrega y garantía de satisfacción.
+            <br />
+            Si no cumplimos con los objetivos acordados, te devolvemos tu dinero.
+          </p>
         </div>
       </div>
     </section>

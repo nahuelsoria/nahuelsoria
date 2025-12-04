@@ -1,7 +1,21 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react"
 
 export function Hero() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
+  const openWhatsApp = () => {
+    const message = encodeURIComponent("Hola! Me interesa conocer más sobre tus servicios de desarrollo web.")
+    window.open(`https://wa.me/5491158794428?text=${message}`, "_blank")
+  }
+
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
@@ -9,37 +23,57 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-3">
               <h1 className="text-5xl md:text-7xl font-bold text-balance leading-tight">
-                Desarrollador <span className="gradient-text">web</span> fullstack.
+                Desarrollo Software de <span className="gradient-text">Alto Impacto</span> para Empresas que Quieren Escalar.
               </h1>
             </div>
 
             <p className="text-xl text-muted-foreground max-w-xl">
-              Creo aplicaciones modernas, rápidas y escalables utilizando Next.js, React, Firebase y un enfoque simple y
-              orientado al usuario.
+              Ayudo a fundadores y empresas a construir tecnología escalable. Especialista en React, Next.js y Arquitectura Cloud.
+              <strong> +$2M procesados</strong> en sistemas desarrollados.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group">
+              <Button
+                size="lg"
+                className="group"
+                onClick={() => scrollToSection("projects")}
+              >
                 Ver proyectos
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg">
-                Contactarme
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={openWhatsApp}
+              >
+                Consulta gratuita
               </Button>
             </div>
 
             <div className="flex gap-6 pt-4">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
+              <a
+                href="https://github.com/nahuelsoria"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="GitHub"
+              >
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/in/nahuelsoria"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Email">
+              <a
+                href="mailto:jorgenahuelsoria@gmail.com"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Email"
+              >
                 <Mail className="w-6 h-6" />
               </a>
             </div>

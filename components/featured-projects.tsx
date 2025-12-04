@@ -1,3 +1,5 @@
+"use client"
+
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -66,8 +68,17 @@ export function FeaturedProjects() {
                     </Badge>
                   ))}
                 </div>
-                <Button variant="ghost" className="w-full justify-center">
-                  Ver más
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-center"
+                  onClick={() => {
+                    const message = encodeURIComponent(
+                      `Hola! Me interesa conocer más sobre el proyecto: ${project.title}`
+                    )
+                    window.open(`https://wa.me/5491158794428?text=${message}`, "_blank")
+                  }}
+                >
+                  Ver más detalles
                 </Button>
               </div>
             </Card>

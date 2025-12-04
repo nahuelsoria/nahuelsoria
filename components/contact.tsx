@@ -21,7 +21,29 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log(formData)
+    
+    // Abrir cliente de email con los datos prellenados
+    const subject = encodeURIComponent(`Consulta desde portfolio: ${formData.name}`)
+    const body = encodeURIComponent(
+      `Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`
+    )
+    
+    window.location.href = `mailto:jorgenahuelsoria@gmail.com?subject=${subject}&body=${body}`
+    
+    // También mostrar opción de WhatsApp
+    const whatsappMessage = encodeURIComponent(
+      `Hola Nahuel! Soy ${formData.name} (${formData.email}).\n\n${formData.message}`
+    )
+    
+    // Opcional: abrir WhatsApp también
+    setTimeout(() => {
+      if (confirm("¿Prefieres contactar por WhatsApp? Es más rápido para responder.")) {
+        window.open(`https://wa.me/5491158794428?text=${whatsappMessage}`, "_blank")
+      }
+    }, 500)
+    
+    // Reset form
+    setFormData({ name: "", email: "", message: "" })
   }
 
   return (
@@ -29,7 +51,10 @@ export function Contact() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="section-title mb-4">Trabajemos juntos</h2>
-          <p className="section-subtitle">¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte</p>
+          <p className="section-subtitle">
+            ¿Tienes un proyecto en mente? <strong className="text-foreground">Consulta gratuita de 30 minutos</strong> para 
+            evaluar tu idea y ver cómo puedo ayudarte a hacerla realidad.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">

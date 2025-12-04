@@ -12,9 +12,36 @@ const _geist = Geist({
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Nahuel Soria - Fullstack Developer",
+  title: "Nahuel Soria | Desarrollo Web & Consultoría CTO",
   description:
-    "Desarrollador Web Fullstack especializado en Next.js, React, Firebase. Creo aplicaciones modernas, rápidas y escalables.",
+    "Ayudo a empresas y startups a construir sistemas escalables y productos digitales de alto impacto. Especialista en Next.js, React y Arquitectura Cloud.",
+  keywords: [
+    "Desarrollador Fullstack Argentina",
+    "Consultoría CTO",
+    "Desarrollo Web Premium",
+    "Next.js Expert",
+    "React Developer",
+    "Sistemas ERP a medida",
+    "Desarrollo Fintech",
+  ],
+  authors: [{ name: "Nahuel Soria", url: "https://nahuelsoria.com" }],
+  creator: "Nahuel Soria",
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "https://nahuelsoria.com",
+    title: "Nahuel Soria | Desarrollo Web & Consultoría CTO",
+    description:
+      "Ayudo a empresas y startups a construir sistemas escalables y productos digitales de alto impacto.",
+    siteName: "Nahuel Soria Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nahuel Soria | Desarrollo Web & Consultoría CTO",
+    description:
+      "Ayudo a empresas y startups a construir sistemas escalables y productos digitales de alto impacto.",
+    creator: "@nahuelsoria",
+  },
   generator: "v0.app",
   icons: {
     icon: [

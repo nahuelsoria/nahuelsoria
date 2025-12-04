@@ -60,13 +60,26 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-sm">Redes sociales</h4>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a 
+                href="https://github.com/nahuelsoria" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a 
+                href="https://linkedin.com/in/nahuelsoria" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a 
+                href="mailto:jorgenahuelsoria@gmail.com" 
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 <Mail className="w-5 h-5" />
               </a>
             </div>
