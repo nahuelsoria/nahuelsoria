@@ -89,7 +89,7 @@ export function Hero() {
             <div className="relative bg-card border border-border/50 rounded-2xl p-6 sm:p-8 backdrop-blur">
               <div className="relative overflow-hidden rounded-lg aspect-[4/3] sm:aspect-square">
                 <img
-                  src="/developer-coding-laptop-dark.jpg"
+                  src="/developer-coding-laptop-dark.jpeg"
                   alt="Developer workspace"
                   className="w-full h-full object-cover"
                   loading="lazy"
