@@ -13,11 +13,12 @@ const services = [
     priceUSD: 500,
     popular: false,
     features: [
-      "Diseño premium y animaciones",
-      "Copywriting persuasivo",
-      "Formulario de alta conversión",
-      "Optimización de velocidad (90+)",
-      "SEO técnico básico",
+      "Diseño premium y animaciones modernas",
+      "Textos optimizados para convertir visitantes en clientes",
+      "Formularios integrados y alta conversión",
+      "Velocidad optimizada (90+ en Lighthouse)",
+      "SEO técnico inicial",
+      "Entrega rápida y lista para publicar",
     ],
   },
   {
@@ -26,11 +27,12 @@ const services = [
     priceUSD: 1200,
     popular: false,
     features: [
-      "CMS autoadministrable",
+      "CMS autoadministrable (podés editar contenido sin depender de mí)",
       "Blog / Noticias integrado",
-      "Diseño UX/UI a medida",
-      "SEO avanzado y Schema",
-      "Integración con CRM/Email",
+      "Diseño UX/UI personalizado",
+      "SEO avanzado y marcado Schema",
+      "Integración con CRM/Email marketing",
+      "Ideal para negocios y emprendimientos que necesitan presencia sólida",
     ],
   },
   {
@@ -39,24 +41,26 @@ const services = [
     priceUSD: 2500,
     popular: true,
     features: [
-      "Autenticación segura",
+      "Autenticación segura para usuarios",
       "Base de datos en tiempo real",
-      "Panel de administración",
-      "Pagos (Stripe/MercadoPago)",
-      "Dashboard de métricas",
+      "Panel de administración completo",
+      "Integración de pagos (Stripe / MercadoPago)",
+      "Dashboard con métricas y reportes",
+      "Ideal para startups y productos digitales escalables",
     ],
   },
   {
     id: 4,
-    title: "Sistemas enterprise / ERP",
+    title: "Sistemas Enterprise / ERP",
     priceUSD: 5000,
     popular: false,
     features: [
-      "Arquitectura escalable",
-      "Múltiples roles y permisos",
-      "Reportes avanzados y exportación",
-      "Integración con APIs de terceros",
+      "Arquitectura escalable para grandes volúmenes de datos",
+      "Roles y permisos avanzados",
+      "Reportes, métricas y exportación de datos",
+      "Integraciones con APIs de terceros",
       "Soporte prioritario 24/7",
+      "Ideal para empresas que quieren automatizar operaciones",
     ],
   },
   {
@@ -67,11 +71,11 @@ const services = [
     hourlyRange: { min: 50, max: 80 },
     popular: false,
     features: [
-      "Auditoría de código y seguridad",
-      "Arquitectura de sistemas",
+      "Auditoría de código, seguridad y performance",
+      "Diseño y arquitectura de sistemas",
       "Optimización de costos cloud",
-      "Mentoria a equipos técnicos",
-      "Estrategia tecnológica",
+      "Mentoría para equipos técnicos",
+      "Estrategia y roadmap tecnológico",
     ],
   },
 ]
@@ -126,8 +130,8 @@ export function Services() {
         <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Servicios y pricing</h2>
           <p className="section-subtitle">
-            Soluciones que generan resultados. Precios transparentes, sin sorpresas.
-            <strong className="text-foreground"> Consulta Gratuita de 30 minutos</strong> para evaluar tu proyecto.
+            Soluciones claras y efectivas para impulsar tu negocio. Precios transparentes y sin sorpresas.
+            <strong className="text-foreground"> Incluye una consulta gratuita de 30 minutos</strong> para evaluar tu proyecto.
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>

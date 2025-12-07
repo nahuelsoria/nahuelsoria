@@ -85,8 +85,8 @@ export function Contact() {
         <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Trabajemos juntos</h2>
           <p className="section-subtitle">
-            ¿Tienes un proyecto en mente? <strong className="text-foreground">Consulta Gratuita de 30 minutos</strong> para 
-            evaluar tu idea y ver cómo puedo ayudarte a hacerla realidad.
+            ¿Tienes un proyecto en mente? Agenda una consulta gratuita de 30 minutos para evaluar tu idea y ver cómo puedo
+            ayudarte a convertirla en realidad.
           </p>
         </div>
 

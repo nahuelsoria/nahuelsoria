@@ -40,7 +40,7 @@ export function Testimonials() {
         <div className="text-center mb-16">
           <h2 className="section-title mb-4">Lo que dicen mis clientes</h2>
           <p className="section-subtitle">
-            Resultados reales de proyectos reales. Cada cliente es una historia de éxito.
+            Resultados reales de proyectos reales. Historias de clientes que confiaron en mí para escalar sus negocios.
           </p>
         </div>
 
@@ -70,8 +70,7 @@ export function Testimonials() {
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
-            <strong className="text-foreground">100% de clientes satisfechos</strong> -
-            Todos los proyectos entregados a tiempo y dentro del presupuesto
+            100% de clientes satisfechos — proyectos entregados a tiempo y dentro del presupuesto.
           </p>
         </div>
       </div>

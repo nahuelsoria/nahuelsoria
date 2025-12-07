@@ -4,29 +4,29 @@ import { MessageCircle, FileText, Code, CheckCircle } from "lucide-react"
 const steps = [
   {
     number: "01",
-    title: "Consulta Gratuita",
-    description: "30 minutos para entender tu proyecto, objetivos y necesidades. Sin compromiso.",
+    title: "Consulta gratuita",
+    description: "30 minutos para conocer tu proyecto, aclarar objetivos y definir qué necesitas. Sin compromiso.",
     icon: MessageCircle,
     duration: "30 min",
   },
   {
     number: "02",
-    title: "Propuesta y Presupuesto",
-    description: "Recibes una propuesta detallada con alcance, timeline y precio en 24-48 horas.",
+    title: "Propuesta",
+    description: "Recibís una propuesta detallada con alcance, tiempos y precio en 24–48 horas.",
     icon: FileText,
     duration: "24-48h",
   },
   {
     number: "03",
-    title: "Desarrollo Iterativo",
-    description: "Trabajamos en sprints con entregas parciales. Tú ves el progreso en tiempo real.",
+    title: "Desarrollo iterativo",
+    description: "Trabajo en sprints con entregas parciales. Podés ver el progreso en tiempo real.",
     icon: Code,
     duration: "2-6 semanas",
   },
   {
     number: "04",
-    title: "Entrega y Soporte",
-    description: "Lanzamiento del proyecto + 30 días de soporte incluido. Garantía de satisfacción.",
+    title: "Entrega y soporte",
+    description: "Lanzamiento del proyecto + 30 días de soporte incluido.",
     icon: CheckCircle,
     duration: "30 días",
   },
@@ -39,7 +39,7 @@ export function Process() {
         <div className="text-center mb-16">
           <h2 className="section-title mb-4">Cómo trabajo</h2>
           <p className="section-subtitle">
-            Un proceso probado que garantiza resultados. Transparente, iterativo y orientado a resultados.
+            Un proceso claro y transparente para garantizar resultados. Te acompaño en cada etapa para que siempre sepas qué se está construyendo y cuándo estará listo.
           </p>
         </div>
 
@@ -75,8 +75,8 @@ export function Process() {
 
         <div className="mt-16 text-center">
           <p className="text-muted-foreground">
-            <strong className="text-foreground">Transparencia total:</strong> Sabrás exactamente qué se está construyendo, 
-            cuándo estará listo y cuánto costará. Sin sorpresas.
+            <strong className="text-foreground">Transparencia total:</strong> siempre sabrás qué se construye, cuánto costará
+            y cuándo estará listo.
           </p>
         </div>
       </div>

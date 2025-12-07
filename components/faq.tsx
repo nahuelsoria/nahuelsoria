@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "¿Qué tecnologías usas?",
     answer:
-      "Principalmente Next.js, React, TypeScript, Firebase (Firestore, Auth, Functions), Tailwind CSS. Para bases de datos más complejas uso PostgreSQL. También tengo experiencia con integraciones de APIs, pagos (Stripe, MercadoPago), y automatizaciones con IA.",
+      "Elijo las herramientas según los objetivos y la escala del proyecto. Prioritizo velocidad, seguridad y capacidad de crecer sin complicaciones, cuidando que la solución sea fácil de mantener.",
   },
   {
     question: "¿Ofreces mantenimiento continuo?",
@@ -52,11 +52,7 @@ export function FAQ() {
         <div className="text-center mb-16">
           <h2 className="section-title mb-4">Preguntas frecuentes</h2>
           <p className="section-subtitle">
-            Todo lo que necesitas saber antes de trabajar conmigo. Si tienes más dudas, 
-            <a href="#contact" className="text-primary hover:underline ml-1">
-              contáctame directamente
-            </a>
-            .
+            Todo lo que necesitas saber antes de trabajar conmigo. Si tienes más dudas, puedes contactarme directamente.
           </p>
         </div>
 
