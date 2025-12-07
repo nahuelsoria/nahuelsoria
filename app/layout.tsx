@@ -6,7 +6,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Nahuel Soria | Desarrollo Web & Consultoría CTO",
   description:
-    "Ayudo a empresas y startups a construir sistemas escalables y productos digitales de alto impacto. Especialista en Next.js, React y Arquitectura Cloud.",
+    "Ayudo a empresas y startups a construir sistemas escalables y productos digitales de alto impacto. Especialista en Next.js, React y arquitectura cloud.",
   keywords: [
     "Desarrollador Fullstack Argentina",
     "Consultoría CTO",

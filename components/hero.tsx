@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowRight, Github, Linkedin, Mail, Check } from "lucide-react"
 import { useInViewAnimation } from "@/hooks/use-in-view-animation"
 
 export function Hero() {
@@ -21,25 +21,49 @@ export function Hero() {
   }
 
   return (
-    <section ref={ref} className="relative pt-28 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+    <section ref={ref} className="relative pt-16 pb-20 md:pt-24 md:pb-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="space-y-8">
-            <div className={`space-y-3 ${animationClass}`}>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-balance leading-tight">
-                Desarrollo Software de <span className="gradient-text">Alto Impacto</span> para Empresas que Quieren Escalar.
+            <div className={`space-y-6 ${animationClass}`}>
+              <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight tracking-tight">
+                Desarrollo de software que hace crecer tu <span className="bg-gradient-to-r from-[#0EA5E9] to-[#F8C19A] bg-clip-text text-transparent">negocio</span>.
               </h1>
             </div>
 
-            <p className={`text-xl text-muted-foreground max-w-xl animate-delay-100 ${animationClass}`}>
-              Ayudo a fundadores y empresas a construir tecnología escalable. Especialista en React, Next.js y Arquitectura Cloud.
-              <strong> +$2M procesados</strong> en sistemas desarrollados.
+            <p className={`text-xl sm:text-2xl text-muted-foreground max-w-xl leading-relaxed animate-delay-100 ${animationClass}`}>
+              Construyo páginas web, plataformas y sistemas a medida para emprendedores, empresas y startups. Desde una landing para vender más, hasta un sistema completo para automatizar tu operación.
             </p>
 
-            <div className={`flex flex-col sm:flex-row gap-4 animate-delay-200 ${animationClass}`}>
+            <p className={`text-xl sm:text-2xl text-muted-foreground max-w-xl leading-relaxed animate-delay-100 ${animationClass}`}>
+              Ayudo a founders y equipos a transformar ideas en productos reales, modernos y fáciles de usar. Trabajo con tecnologías como React y Next.js para crear soluciones rápidas, seguras y listas para escalar. Más de <strong className="text-foreground">+$2M procesados</strong> por sistemas que desarrollé para diversas empresas.
+            </p>
+
+            <div className={`space-y-4 animate-delay-200 ${animationClass}`}>
+              <ul className="flex flex-col gap-3">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
+                  <span className="text-base sm:text-lg text-muted-foreground">Desarrollo de páginas web profesionales y landings que convierten</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
+                  <span className="text-base sm:text-lg text-muted-foreground">Creación de sistemas internos, dashboards o plataformas completas</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
+                  <span className="text-base sm:text-lg text-muted-foreground">Automatización de tareas y procesos para ahorrar tiempo y dinero</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
+                  <span className="text-base sm:text-lg text-muted-foreground">Experiencia en fintech, integraciones de pago y soluciones a medida</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className={`flex flex-col sm:flex-row gap-4 animate-delay-300 ${animationClass}`}>
               <Button
                 size="lg"
-                className="group w-full sm:w-auto justify-center"
+                className="group w-full sm:w-auto justify-center bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white"
                 onClick={() => scrollToSection("projects")}
               >
                 Ver proyectos
@@ -48,10 +72,11 @@ export function Hero() {
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full sm:w-auto justify-center"
+                className="group w-full sm:w-auto justify-center border-border/50 hover:bg-accent/50 hover:border-border hover:text-foreground"
                 onClick={openWhatsApp}
               >
-                Consulta gratuita
+                Agendar reunión gratuita
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
 
@@ -87,17 +112,13 @@ export function Hero() {
           <div className={`relative animate-delay-200 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-3xl animate-[pulse_4s_ease-in-out_infinite]"></div>
             <div className="relative bg-card border border-border/50 rounded-2xl p-6 sm:p-8 backdrop-blur">
-              <div className="relative overflow-hidden rounded-lg aspect-[4/3] sm:aspect-square">
+              <div className="relative overflow-hidden rounded-xl aspect-[4/3] sm:aspect-square shadow-lg">
                 <img
                   src="/developer-coding-laptop-dark.jpeg"
-                  alt="Developer workspace"
-                  className="w-full h-full object-cover"
+                  alt="Nahuel Soria desarrollando software"
+                  className="w-full h-full object-cover rounded-xl"
                   loading="lazy"
                 />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-card border border-border/50 rounded-lg p-4 shadow-lg min-w-[180px] text-left">
-                <p className="text-sm font-medium">Más de 10 proyectos</p>
-                <p className="text-xs text-muted-foreground">activos</p>
               </div>
             </div>
           </div>

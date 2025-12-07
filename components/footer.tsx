@@ -25,7 +25,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Sobre mí
+                  Sobre Mí
                 </a>
               </li>
               <li>
@@ -41,12 +41,12 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Web Apps
+                  Web apps
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
-                  ERP Systems
+                  ERP systems
                 </a>
               </li>
               <li>

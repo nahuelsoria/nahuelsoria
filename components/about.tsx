@@ -12,7 +12,7 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className={`${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
-              <h2 className="section-title mb-4">Sobre mí</h2>
+              <h2 className="section-title mb-4">Sobre Mí</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Soy Jorge Nahuel Soria, desarrollador web de Buenos Aires. Como <strong>CTO en una fintech</strong>, 
                 construyo sistemas que manejan millones en transacciones. También creo productos propios como Picaday, 

@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "¿Cuánto tiempo toma desarrollar un proyecto?",
     answer:
-      "Depende del alcance, pero típicamente: Landing Pages (1-2 semanas), Web Apps (3-6 semanas), ERPs/Sistemas Enterprise (6-12 semanas). Trabajo en sprints de 1-2 semanas con entregas parciales para que veas el progreso.",
+      "Depende del alcance, pero típicamente: Landing Pages (1-2 semanas), Web Apps (3-6 semanas), ERPs/sistemas enterprise (6-12 semanas). Trabajo en sprints de 1-2 semanas con entregas parciales para que veas el progreso.",
   },
   {
     question: "¿Trabajas con empresas fuera de Argentina?",

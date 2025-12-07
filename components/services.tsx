@@ -48,7 +48,7 @@ const services = [
   },
   {
     id: 4,
-    title: "Sistemas Enterprise / ERP",
+    title: "Sistemas enterprise / ERP",
     priceUSD: 5000,
     popular: false,
     features: [
@@ -69,7 +69,7 @@ const services = [
     features: [
       "Auditoría de código y seguridad",
       "Arquitectura de sistemas",
-      "Optimización de costos Cloud",
+      "Optimización de costos cloud",
       "Mentoria a equipos técnicos",
       "Estrategia tecnológica",
     ],
@@ -124,10 +124,10 @@ export function Services() {
     <section id="services" className="py-20 md:py-32 bg-card/50 scroll-mt-24" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
-          <h2 className="section-title mb-4">Servicios & pricing</h2>
+          <h2 className="section-title mb-4">Servicios y pricing</h2>
           <p className="section-subtitle">
             Soluciones que generan resultados. Precios transparentes, sin sorpresas.
-            <strong className="text-foreground"> Consulta gratuita de 30 minutos</strong> para evaluar tu proyecto.
+            <strong className="text-foreground"> Consulta Gratuita de 30 minutos</strong> para evaluar tu proyecto.
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -190,7 +190,7 @@ export function Services() {
         </div>
         <div className="mt-16 text-center">
           <p className="text-muted-foreground">
-            <strong className="text-foreground">Garantía de Calidad:</strong> Todos los proyectos incluyen 30 días de soporte post-entrega y garantía de satisfacción.
+            <strong className="text-foreground">Garantía de calidad:</strong> Todos los proyectos incluyen 30 días de soporte post-entrega y garantía de satisfacción.
             <br />
             Si no cumplimos con los objetivos acordados, te devolvemos tu dinero.
           </p>
