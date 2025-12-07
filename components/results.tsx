@@ -6,7 +6,7 @@ const results = [
     icon: DollarSign,
     value: "+$2M",
     label: "Procesados en sistemas desarrollados",
-    description: "Transacciones manejadas por sistemas que construí",
+    description: "Más de 2 millones de USD en transacciones manejadas por sistemas que construí",
   },
   {
     icon: Users,
@@ -33,7 +33,7 @@ export function Results() {
     <section className="py-20 md:py-32 bg-card/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="section-title mb-4">Resultados que hablan por sí solos</h2>
+          <h2 className="section-title mb-4">Resultados reales</h2>
           <p className="section-subtitle">
             Números reales de proyectos reales. Cada métrica representa valor entregado a clientes.
           </p>
