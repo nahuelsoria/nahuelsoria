@@ -31,34 +31,51 @@ export function Hero() {
               </h1>
             </div>
 
-            <p className={`text-xl sm:text-2xl text-muted-foreground max-w-xl leading-relaxed animate-delay-100 ${animationClass}`}>
-              Construyo páginas web, plataformas y sistemas a medida para emprendedores, empresas y startups. Desde una landing para vender más, hasta un sistema completo para automatizar tu operación.
-            </p>
+              <p className={`text-xl sm:text-2xl text-muted-foreground max-w-xl leading-relaxed animate-delay-100 ${animationClass}`}>
+                Construyo productos digitales a medida para que tu negocio venda más y ahorre tiempo.
+              </p>
 
-            <p className={`text-xl sm:text-2xl text-muted-foreground max-w-xl leading-relaxed animate-delay-100 ${animationClass}`}>
-              Ayudo a founders y equipos a transformar ideas en productos reales, modernos y fáciles de usar. Trabajo con tecnologías como React y Next.js para crear soluciones rápidas, seguras y listas para escalar. Más de <strong className="text-foreground">+$2M procesados</strong> por sistemas que desarrollé para diversas empresas.
-            </p>
+              <p
+                className={`text-base sm:text-2xl text-muted-foreground max-w-xl leading-relaxed animate-delay-100 md:block hidden ${animationClass}`}
+              >
+                Ayudo a founders y equipos a transformar ideas en productos reales, modernos y fáciles de usar. Trabajo con tecnologías como React y Next.js para crear soluciones rápidas, seguras y listas para escalar. Más de <strong className="text-foreground">+$2M procesados</strong> por sistemas que desarrollé para diversas empresas.
+              </p>
 
-            <div className={`space-y-4 animate-delay-200 ${animationClass}`}>
-              <ul className="flex flex-col gap-3">
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
-                  <span className="text-base sm:text-lg text-muted-foreground">Desarrollo de páginas web profesionales y landings que convierten</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
-                  <span className="text-base sm:text-lg text-muted-foreground">Creación de sistemas internos, dashboards o plataformas completas</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
-                  <span className="text-base sm:text-lg text-muted-foreground">Automatización de tareas y procesos para ahorrar tiempo y dinero</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
-                  <span className="text-base sm:text-lg text-muted-foreground">Experiencia en fintech, integraciones de pago y soluciones a medida</span>
-                </li>
-              </ul>
-            </div>
+              <div className={`space-y-4 animate-delay-200 ${animationClass}`}>
+                <ul className="hidden md:flex flex-col gap-3">
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
+                    <span className="text-base sm:text-lg text-muted-foreground">Desarrollo de páginas web profesionales y landings que convierten</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
+                    <span className="text-base sm:text-lg text-muted-foreground">Creación de sistemas internos, dashboards o plataformas completas</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
+                    <span className="text-base sm:text-lg text-muted-foreground">Automatización de tareas y procesos para ahorrar tiempo y dinero</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-[#0EA5E9] mt-0.5 flex-shrink-0" />
+                    <span className="text-base sm:text-lg text-muted-foreground">Experiencia en fintech, integraciones de pago y soluciones a medida</span>
+                  </li>
+                </ul>
+
+                <ul className="flex md:hidden flex-col gap-2">
+                  <li className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-[#0EA5E9] flex-shrink-0" />
+                    <span className="text-base text-muted-foreground">Sitios web y landings que convierten</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-[#0EA5E9] flex-shrink-0" />
+                    <span className="text-base text-muted-foreground">Sistemas y automatizaciones a medida</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-[#0EA5E9] flex-shrink-0" />
+                    <span className="text-base text-muted-foreground">Integraciones seguras con pagos y datos</span>
+                  </li>
+                </ul>
+              </div>
 
             <div className={`flex flex-col sm:flex-row gap-4 animate-delay-300 ${animationClass}`}>
               <Button
