@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { Results } from "@/components/results"
 import { FeaturedProjects } from "@/components/featured-projects"
+import { CaseStudiesSection } from "@/components/sections/CaseStudies"
 import { Services } from "@/components/services"
 import { Process } from "@/components/process"
 import { Testimonials } from "@/components/testimonials"
@@ -20,6 +21,7 @@ export default function Home() {
       <Hero />
       <Results />
       <FeaturedProjects />
+      <CaseStudiesSection />
       <Services />
       <Process />
       <Testimonials />

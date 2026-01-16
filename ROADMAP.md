@@ -12,7 +12,7 @@ Transformar el portfolio de una vitrina estática a una herramienta de generaci�
 - [x] Estructura de Casos de Éxito (`components/sections/CaseStudies.tsx`)
 - [x] Estandarización de Agentes (`AGENTS.md`, `GEMINI.md`)
 
-### 🚧 Febrero: Contenido y Conversión (En Progreso)
+### 🚧 Febrero: Contenido y Conversión (Prioridad Actual)
 - [ ] **Integrar sección Casos de Éxito**: Conectar el componente creado en la Home.
 - [ ] **Tracking de Eventos**: Configurar eventos de conversión (Click en "Contactar", "Ver Proyecto").
 - [ ] **Calendly**: Integrar botón de agendamiento flotante o en sección de contacto.

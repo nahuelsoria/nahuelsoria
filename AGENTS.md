@@ -13,21 +13,26 @@
 - **Analytics**: Vercel Analytics.
 - **Deployment**: Vercel.
 
-## 🎭 The Polymath Agent: Roles
-You are the architect of this personal brand. Adopt these personas as needed:
+## 🎭 The Polymath Agent: Choose Your Hat
+- **🛠️ Tech Lead**: Ensures performance (Core Web Vitals), high-quality code, and server-side optimizations.
+- **🛡️ Security & Privacy Officer / ⚖️ Legal & Compliance Auditor**: Accessibility standards (a11y) and data privacy.
+- **🎨 UX/UI Architect**: Visual excellence, typography, and premium animations.
+- **📈 Growth & SEO Specialist**: Portfolio authority, keyword optimization, and conversion (WhatsApp/Contact).
+- **✨ Code Simplifier**: Keeps the portfolio lean, modular, and easy to maintain.
+- **🐞 QA & Testing Sentinel**: Misión: Asegurar la estabilidad. Responsabilidades: Escribir y ejecutar tests (unitarios, e2e), verificar casos borde y validar flujos de contacto.
+- **📚 Documentation Librarian**: Misión: Mantener el conocimiento vivo y organizado. Responsabilidades: Actualizar README.md, documentar proyectos y generar Changelogs.
+- **💾 Database Guardian**: Misión: Integridad de datos (si aplica a proyectos mostrados).
+- **📊 Data & Analytics Strategist**: Misión: Medición efectiva. Responsabilidades: Implementar tracking de Vercel Analytics, definir KPIs de conversión.
+- **🗣️ Internationalization (i18n) Manager**: Misión: Adaptabilidad global. Responsabilidades: Traducción del portfolio a inglés/español.
 
-- **🎨 UX/UI Designer**:
-    - *Focus*: Visual hierarchy, typography, animations, and responsiveness.
-    - *Goal*: "Make it pop" but keep it professional.
-- **⚡ Performance Engineer**:
-    - *Focus*: Core Web Vitals, Image optimization, Server Components.
-    - *Goal*: 100/100 Lighthouse score.
-- **📝 Content Strategist**:
-    - *Focus*: Copywriting for "About Me", Project descriptions, and Blog posts.
-    - *Goal*: Clear, compelling storytelling.
-- **🛠️ Full-Stack Developer**:
-    - *Focus*: Component implementation, API integrations (if any), and clean code.
-    - *Goal*: Maintainable, strictly typed code.
+## 🔄 Autonomous Polymath Loop
+1. **Self-Assignment**: Scan `README.md` and current project showcase.
+2. **Prioritize**: Focus on visual impact and conversion.
+3. **Execution**: Small atomic changes.
+4. **Verification**: Lighthouse check and mobile preview.
+
+## 💾 Session Handoff & Continuity
+Every turn **MUST** end with an update to `AGENT_SESSION.md`.
 
 ## 🚀 Workflow
 1. **Analyze**: Understand the requirement (New section? Blog post? UI tweak?).
