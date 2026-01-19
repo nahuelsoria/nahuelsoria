@@ -4,44 +4,44 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    question: "¿Cuánto tiempo toma desarrollar un proyecto?",
+    question: "Cuanto tiempo toma desarrollar un proyecto?",
     answer:
-      "Depende del alcance, pero típicamente: Landing Pages (1-2 semanas), Web Apps (3-6 semanas), ERPs/sistemas enterprise (6-12 semanas). Trabajo en sprints de 1-2 semanas con entregas parciales para que veas el progreso.",
+      "Depende del alcance, pero tipicamente: Landing Pages (1-2 semanas), Web Apps (3-6 semanas), ERPs/sistemas enterprise (6-12 semanas). Trabajo en sprints de 1-2 semanas con entregas parciales para que veas el progreso.",
   },
   {
-    question: "¿Trabajas con empresas fuera de Argentina?",
+    question: "Trabajas con empresas fuera de Argentina?",
     answer:
-      "Sí, trabajo con clientes de todo el mundo. Tengo experiencia trabajando con equipos distribuidos y puedo adaptarme a diferentes zonas horarias. Los pagos se pueden hacer en USD o ARS.",
+      "Si, trabajo con clientes de todo el mundo. Tengo experiencia trabajando con equipos distribuidos y puedo adaptarme a diferentes zonas horarias. Los pagos se pueden hacer en USD o ARS.",
   },
   {
-    question: "¿Qué incluye el soporte post-entrega?",
+    question: "Que incluye el soporte post-entrega?",
     answer:
-      "Todos los proyectos incluyen 30 días de soporte gratuito post-entrega. Esto cubre corrección de bugs, ajustes menores y consultas técnicas. Después de ese período, ofrezco planes de mantenimiento mensuales opcionales.",
+      "Todos los proyectos incluyen 30 dias de soporte gratuito post-entrega. Esto cubre correccion de bugs, ajustes menores y consultas tecnicas. Despues de ese periodo, ofrezco planes de mantenimiento mensuales opcionales.",
   },
   {
-    question: "¿Qué pasa si no estoy satisfecho con el resultado?",
+    question: "Que pasa si no estoy satisfecho con el resultado?",
     answer:
-      "Tengo una garantía de satisfacción. Si no cumplimos con los objetivos acordados en la propuesta inicial, te devuelvo tu dinero. Hasta ahora, el 100% de mis clientes han quedado satisfechos.",
+      "Tengo una garantia de satisfaccion. Si no cumplimos con los objetivos acordados en la propuesta inicial, te devuelvo tu dinero. Hasta ahora, el 100% de mis clientes han quedado satisfechos.",
   },
   {
-    question: "¿Puedo ver el progreso del desarrollo?",
+    question: "Puedo ver el progreso del desarrollo?",
     answer:
-      "Absolutamente. Trabajo de forma iterativa con entregas parciales cada 1-2 semanas. Tienes acceso a un entorno de staging donde puedes ver y probar el proyecto en tiempo real. También comparto actualizaciones regulares por WhatsApp o email.",
+      "Absolutamente. Trabajo de forma iterativa con entregas parciales cada 1-2 semanas. Tienes acceso a un entorno de staging donde puedes ver y probar el proyecto en tiempo real. Tambien comparto actualizaciones regulares por WhatsApp o email.",
   },
   {
-    question: "¿Qué tecnologías usas?",
+    question: "Que tecnologias usas?",
     answer:
-      "Elijo las herramientas según los objetivos y la escala del proyecto. Prioritizo velocidad, seguridad y capacidad de crecer sin complicaciones, cuidando que la solución sea fácil de mantener.",
+      "Elijo las herramientas segun los objetivos y la escala del proyecto. Priorizo velocidad, seguridad y capacidad de crecer sin complicaciones, cuidando que la solucion sea facil de mantener.",
   },
   {
-    question: "¿Ofreces mantenimiento continuo?",
+    question: "Ofreces mantenimiento continuo?",
     answer:
-      "Sí, después del período de soporte inicial, ofrezco planes de mantenimiento mensuales que incluyen actualizaciones de seguridad, mejoras menores, monitoreo y soporte técnico. Los precios varían según las necesidades del proyecto.",
+      "Si, despues del periodo de soporte inicial, ofrezco planes de mantenimiento mensuales que incluyen actualizaciones de seguridad, mejoras menores, monitoreo y soporte tecnico. La propuesta se ajusta a las necesidades del proyecto.",
   },
   {
-    question: "¿Cómo funciona el pago?",
+    question: "Como funciona el pago?",
     answer:
-      "Típicamente trabajo con un 50% al inicio del proyecto y 50% al finalizar. Para proyectos más grandes, podemos dividirlo en más pagos según hitos. Acepto transferencias bancarias, PayPal, o cripto (USDT).",
+      "Tipicamente trabajo con un 50% al inicio del proyecto y 50% al finalizar. Para proyectos mas grandes, podemos dividirlo en mas pagos segun hitos. Acepto transferencias bancarias, PayPal, o cripto (USDT).",
   },
 ]
 
@@ -52,7 +52,7 @@ export function FAQ() {
         <div className="text-center mb-16">
           <h2 className="section-title mb-4">Preguntas frecuentes</h2>
           <p className="section-subtitle">
-            Todo lo que necesitas saber antes de trabajar conmigo. Si tienes más dudas, puedes contactarme directamente.
+            Todo lo que necesitas saber antes de trabajar conmigo. Si tienes mas dudas, puedes contactarme directamente.
           </p>
         </div>
 

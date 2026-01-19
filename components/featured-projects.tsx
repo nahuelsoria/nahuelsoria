@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useInViewAnimation } from "@/hooks/use-in-view-animation"
+import { trackEvent } from "@/lib/analytics"
 
 const projects = [
   {
@@ -85,6 +86,11 @@ export function FeaturedProjects() {
                     const message = encodeURIComponent(
                       `Hola! Me interesa conocer más sobre el proyecto: ${project.title}`
                     )
+                    trackEvent({
+                      action: "cta_click",
+                      category: "projects",
+                      label: project.title,
+                    })
                     window.open(`https://wa.me/5491158794428?text=${message}`, "_blank")
                   }}
                 >

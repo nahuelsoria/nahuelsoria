@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import type { LucideIcon } from "lucide-react"
 import { Mail, MessageCircle } from "lucide-react"
 import { useInViewAnimation } from "@/hooks/use-in-view-animation"
+import { trackEvent } from "@/lib/analytics"
 
 type ContactMethod = {
   title: string
@@ -38,6 +39,8 @@ export function Contact() {
     },
   ]
 
+  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL
+
   const delayClasses = ["animate-delay-100", "animate-delay-200", "animate-delay-300"]
   const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
 
@@ -54,6 +57,7 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    trackEvent({ action: "form_submit", category: "contact", label: "contact_form" })
     
     // Abrir cliente de email con los datos prellenados
     const subject = encodeURIComponent(`Consulta desde portfolio: ${formData.name}`)
@@ -71,6 +75,7 @@ export function Contact() {
     // Opcional: abrir WhatsApp también
     setTimeout(() => {
       if (confirm("¿Prefieres contactar por WhatsApp? Es más rápido para responder.")) {
+        trackEvent({ action: "cta_click", category: "contact", label: "contact_whatsapp" })
         window.open(`https://wa.me/5491158794428?text=${whatsappMessage}`, "_blank")
       }
     }, 500)
@@ -88,6 +93,22 @@ export function Contact() {
             ¿Tienes un proyecto en mente? Agenda una consulta gratuita de 30 minutos para evaluar tu idea y ver cómo puedo
             ayudarte a convertirla en realidad.
           </p>
+          {calendlyUrl && (
+            <div className="mt-6">
+              <Button
+                asChild
+                variant="outline"
+                className="border-border/50 hover:bg-accent/50 hover:border-border hover:text-foreground"
+                onClick={() =>
+                  trackEvent({ action: "cta_click", category: "contact", label: "calendly" })
+                }
+              >
+                <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+                  Agendar llamada
+                </a>
+              </Button>
+            </div>
+          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
