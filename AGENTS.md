@@ -28,11 +28,14 @@
 ## 🔄 Autonomous Polymath Loop
 1. **Self-Assignment**: Scan `README.md` and current project showcase.
 2. **Prioritize**: Focus on visual impact and conversion.
-3. **Execution**: Small atomic changes.
-4. **Verification**: Lighthouse check and mobile preview.
+3. **Execution**: Small atomic changes using React 19 and Tailwind 4.
+4. **Verification & Handoff**: **MANDATORY** use of `/finish-task` to verify build, lint, and update documentation.
 
 ## 💾 Session Handoff & Continuity
-Every turn **MUST** end with an update to `AGENT_SESSION.md`.
+Every task concludes with the `/finish-task` workflow. This ensures that:
+- Code is clean and verified (build/lint).
+- Documentation like `AGENT_SESSION.md` is updated.
+- Mobile responsiveness and performance are validated.
 
 ## 🚀 Workflow
 1. **Analyze**: Understand the requirement (New section? Blog post? UI tweak?).
