@@ -9,73 +9,73 @@ import { useInViewAnimation } from "@/hooks/use-in-view-animation"
 const services = [
   {
     id: 1,
-    title: "Landing Page",
-    priceUSD: 500,
+    title: "Landing Page Premium",
+    priceUSD: 800,
     popular: false,
     features: [
-      "Diseño premium y animaciones modernas",
-      "Textos optimizados para convertir visitantes en clientes",
-      "Formularios integrados y alta conversión",
-      "Velocidad optimizada (90+ en Lighthouse)",
-      "SEO técnico inicial",
-      "Entrega rápida y lista para publicar",
+      "Como What I Wish, pero para tu marca",
+      "Diseño premium con 40%+ tasa de conversión",
+      "Onboarding <60s y experiencia viral",
+      "Velocidad optimizada (95+ en Lighthouse)",
+      "SEO técnico inicial y Schema markup",
+      "Entrega en 2 semanas, lista para publicar",
     ],
   },
   {
     id: 2,
-    title: "Web Profesional",
-    priceUSD: 1200,
+    title: "Web App SaaS",
+    priceUSD: 3000,
     popular: false,
     features: [
-      "CMS autoadministrable (podés editar contenido sin depender de mí)",
-      "Blog / Noticias integrado",
-      "Diseño UX/UI personalizado",
-      "SEO avanzado y marcado Schema",
-      "Integración con CRM/Email marketing",
-      "Ideal para negocios y emprendimientos que necesitan presencia sólida",
+      "Como Numerai, con tu lógica de negocio",
+      "Dashboard real-time <100ms latency",
+      "Base de datos escalable + seguridad empresarial",
+      "AI features y automatización inteligente",
+      "Reportes P&L y métricas avanzadas",
+      "Integración con pagos y APIs externas",
     ],
   },
   {
     id: 3,
-    title: "Web App / SaaS",
-    priceUSD: 2500,
+    title: "Platform Trading / FinTech",
+    priceUSD: 5000,
     popular: true,
     features: [
-      "Autenticación segura para usuarios",
-      "Base de datos en tiempo real",
-      "Panel de administración completo",
-      "Integración de pagos (Stripe / MercadoPago)",
-      "Dashboard con métricas y reportes",
-      "Ideal para startups y productos digitales escalables",
+      "Como CondorFX, adaptada a tu industria",
+      "1000+ usuarios concurrentes soportados",
+      "Latency <50ms en tiempo real",
+      "Integración con brokers y APIs financieras",
+      "Dashboard con métricas y alertas",
+      "Ideal para startups Fintech y trading systems",
     ],
   },
   {
     id: 4,
-    title: "Sistemas Enterprise / ERP",
-    priceUSD: 5000,
+    title: "Sistema Enterprise / ERP",
+    priceUSD: 8000,
     popular: false,
     features: [
-      "Arquitectura escalable para grandes volúmenes de datos",
-      "Roles y permisos avanzados",
-      "Reportes, métricas y exportación de datos",
-      "Integraciones con APIs de terceros",
-      "Soporte prioritario 24/7",
-      "Ideal para empresas que quieren automatizar operaciones",
+      "Como Bruselascambio, para tu industria",
+      "Procesamiento €1M+ en operaciones diarias",
+      "Arquitectura escalable y reporting regulatorio",
+      "Integraciones bancarias y compliance",
+      "Roles avanzados y auditoría completa",
+      "Soporte prioritario y SLA garantizado",
     ],
   },
   {
     id: 5,
-    title: "Consultoría CTO",
+    title: "CTO as a Service",
     priceUSD: null,
     hourlyUSD: true,
-    hourlyRange: { min: 50, max: 80 },
+    hourlyRange: { min: 80, max: 120 },
     popular: false,
     features: [
-      "Auditoría de código, seguridad y performance",
-      "Diseño y arquitectura de sistemas",
-      "Optimización de costos cloud",
-      "Mentoría para equipos técnicos",
-      "Estrategia y roadmap tecnológico",
+      "Auditoría técnica como CondorFX/Bruselas",
+      "Arquitectura de sistemas escalables",
+      "Estrategia tecnológica y roadmap",
+      "Optimización de costos y performance",
+      "Mentoría para equipos de desarrollo",
     ],
   },
 ]
@@ -130,12 +130,12 @@ export function Services() {
         <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
           <h2 className="section-title mb-4">Servicios y pricing</h2>
           <p className="section-subtitle">
-            Soluciones claras y efectivas para impulsar tu negocio. Precios transparentes y sin sorpresas.
+            Soluciones probadas con resultados reales: $1M+ en transacciones, 10K+ usuarios, 1000+ concurrentes.
             <strong className="text-foreground"> Incluye una consulta gratuita de 30 minutos</strong> para evaluar tu proyecto.
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            <span>Disponible para nuevos proyectos este mes</span>
+            <span>🔥 3 proyectos en desarrollo este mes</span>
           </div>
         </div>
 

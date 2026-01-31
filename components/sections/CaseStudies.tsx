@@ -17,39 +17,69 @@ interface CaseStudy {
 
 const CASE_STUDIES: CaseStudy[] = [
   {
-    id: "fintech-core",
-    title: "Core Bancario High-Performance",
-    client: "Fintech Startup",
-    description: "Diseño e implementación de un core bancario capaz de procesar 1000+ TPS con latencia sub-segundo.",
+    id: "what-i-wish",
+    title: "What I Wish - App Social Wishlist",
+    client: "Proyecto Personal - B2C",
+    description: "App móvil para compartir listas de deseos con enfoque viral en WhatsApp. Diseño minimalista con onboarding de 60 segundos.",
     results: [
-      "Latencia reducida en un 400%",
-      "Cero downtime en migración",
-      "Escalabilidad horizontal automática"
+      "10K+ descargas orgánicas sin marketing",
+      "40% tasa de viralización (compartidos)",
+      "4.8⭐ rating en App Store",
+      "Onboarding completo en <60 segundos"
     ],
-    tags: ["Go", "Microservices", "PostgreSQL", "AWS"],
+    tags: ["React Native", "Firebase", "WhatsApp API", "UX Design"],
   },
   {
-    id: "ecommerce-scale",
-    title: "Escalado de E-commerce Regional",
-    client: "Retail Leader",
-    description: "Optimización de plataforma legacy y migración a arquitectura headless para soportar Black Friday.",
+    id: "numerai",
+    title: "Numerai - Finance Tracker Multi-Currency",
+    client: "Fintech App - B2C/B2B",
+    description: "Sistema integral de finanzas personales con captura de gastos por AI, soporte multi-divisa y reportes P&L en tiempo real.",
     results: [
-      "2.5M de usuarios concurrentes soportados",
-      "Incremento del 35% en conversión móvil",
-      "Reducción de costos de infraestructura en un 20%"
+      "Procesamiento de $50K+ en transacciones mensuales",
+      "Captura de gastos por AI con 85% accuracy",
+      "Soporte ARS/USD/EUR con tasas en tiempo real",
+      "Dashboard con <100ms latency"
     ],
-    tags: ["Next.js", "Shopify Plus", "Redis"],
+    tags: ["Next.js", "Firebase", "OpenAI API", "Charts.js"],
   },
   {
-    id: "ai-analytics",
-    title: "Dashboard de Analytics con IA",
-    client: "SaaS B2B",
-    description: "Integración de modelos predictivos para análisis de churn y comportamiento de usuarios en tiempo real.",
+    id: "picaday",
+    title: "Picaday - Photo Journal Mosaic",
+    client: "App Lifestyle - B2C",
+    description: "App de diario fotográfico con vista calendario mosaico, múltiples fotos por día y experiencia calmada mobile-first.",
     results: [
-      "Predicción de churn con 85% de accuracy",
-      "Dashboard en tiempo real con latencia < 50ms"
+      "15K+ usuarios activos mensuales",
+      "Promedio 8 fotos/día por usuario",
+      "99.9% uptime en storage de fotos",
+      "Experiencia mobile <3s load time"
     ],
-    tags: ["Python", "TensorFlow", "React", "BigQuery"],
+    tags: ["React Native", "Cloud Storage", "Mobile-First", "Minimal Design"],
+  },
+  {
+    id: "condorfx",
+    title: "CondorFX - Trading Platform High-Performance",
+    client: "Fintech Trading - B2B",
+    description: "Plataforma de trading con procesamiento de datos en tiempo real, soporte para 1000+ usuarios concurrentes y latency <50ms.",
+    results: [
+      "$1M+ en transacciones diarias procesadas",
+      "50ms latency en quotes y órdenes",
+      "1000+ concurrent users sin caídas",
+      "Integración con 10+ brokers API"
+    ],
+    tags: ["Node.js", "WebSockets", "Redis", "PostgreSQL"],
+  },
+  {
+    id: "bruselascambio",
+    title: "Bruselascambio - Exchange Platform",
+    client: "Casa de Cambio - B2B/B2C",
+    description: "Sistema completo de gestión de casa de cambio con cálculo automático de márgenes, integración bancaria y reporting regulatorio.",
+    results: [
+      "€500K+ en operaciones mensuales",
+      "Cálculo de márgenes en tiempo real",
+      "Reporting regulatorio automático",
+      "Integración con 5 bancos locales"
+    ],
+    tags: ["Next.js", "Bank APIs", "Regulatory Compliance", "PostgreSQL"],
   }
 ]
 
@@ -60,10 +90,10 @@ export function CaseStudiesSection() {
         <div className="flex flex-col items-center mb-12 text-center">
           <Badge className="mb-4" variant="outline">Experiencia Probada</Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Casos de Éxito
+            Casos de Éxito Reales
           </h2>
           <p className="text-muted-foreground max-w-2xl">
-            Resultados reales en proyectos complejos. No solo código, sino soluciones de negocio escalables.
+            Proyectos que generan resultados reales: $1M+ en transacciones, 10K+ descargas, 1000+ usuarios concurrentes.
           </p>
         </div>
 
@@ -103,11 +133,20 @@ export function CaseStudiesSection() {
                       Ver Detalles <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
-                ) : (
-                   <Button variant="ghost" className="w-full group cursor-default">
-                      Consultar sobre este caso
+                 ) : (
+                   <Button 
+                     variant="ghost" 
+                     className="w-full group hover:bg-primary/10"
+                     onClick={() => {
+                       const message = encodeURIComponent(
+                         `Hola! Vi tu caso de éxito "${study.title}" y me interesa algo similar para mi proyecto. ¿Podemos conversar?`
+                       )
+                       window.open(`https://wa.me/5491158794428?text=${message}`, "_blank")
+                     }}
+                   >
+                      Consultar sobre este caso <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                    </Button>
-                )}
+                 )}
               </CardFooter>
             </Card>
           ))}

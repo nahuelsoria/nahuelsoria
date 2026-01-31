@@ -6,8 +6,9 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import type { LucideIcon } from "lucide-react"
-import { Mail, MessageCircle } from "lucide-react"
+import { Mail, MessageCircle, Calendar } from "lucide-react"
 import { useInViewAnimation } from "@/hooks/use-in-view-animation"
+import { CalendlyButton, CalendlyFloatButton } from "@/components/calendly-button"
 
 type ContactMethod = {
   title: string
@@ -31,10 +32,10 @@ export function Contact() {
       accent: "accent",
     },
     {
-      title: "Formulario",
-      description: "Envíame un mensaje",
-      icon: Mail,
-      accent: "primary",
+      title: "Calendly",
+      description: "Agenda reunión ahora",
+      icon: Calendar,
+      accent: "accent",
     },
   ]
 
@@ -164,12 +165,44 @@ export function Contact() {
               />
             </div>
 
-            <Button type="submit" className="w-full">
-              Enviar mensaje
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button type="submit" className="flex-1">
+                Enviar mensaje
+              </Button>
+              <CalendlyButton 
+                type="outline" 
+                text="Agendar reunión"
+                className="flex-1"
+              />
+            </div>
           </form>
+          
+          <div className="mt-8 text-center">
+            <p className="text-sm text-muted-foreground mb-4">
+              O elige el tipo de reunión que necesitas:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <CalendlyButton 
+                size="default"
+                text="Idea de App (15min)"
+                className="w-full"
+              />
+              <CalendlyButton 
+                size="default"
+                text="Auditoría Técnica (30min)"
+                className="w-full"
+              />
+              <CalendlyButton 
+                size="default"
+                text="CTO as Service (45min)"
+                className="w-full"
+              />
+            </div>
+          </div>
         </div>
       </div>
+      
+      <CalendlyFloatButton />
     </section>
   )
 }
