@@ -2,12 +2,14 @@
 
 import { MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { trackEvent } from "@/lib/analytics"
 
 export function WhatsAppFloat() {
   const openWhatsApp = () => {
     const message = encodeURIComponent(
       "Hola! Vi tu portfolio y me interesa conocer más sobre tus servicios. ¿Podrías ayudarme?"
     )
+    trackEvent({ action: "cta_click", category: "contact", label: "float_whatsapp" })
     window.open(`https://wa.me/5491158794428?text=${message}`, "_blank")
   }
 

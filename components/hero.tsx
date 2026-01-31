@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Github, Linkedin, Mail, Check } from "lucide-react"
 import { useInViewAnimation } from "@/hooks/use-in-view-animation"
+import { trackEvent } from "@/lib/analytics"
 
 export function Hero() {
   const { ref, isVisible } = useInViewAnimation<HTMLElement>()
@@ -17,6 +18,7 @@ export function Hero() {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent("Hola! Me interesa conocer más sobre tus servicios de desarrollo web.")
+    trackEvent({ action: "cta_click", category: "contact", label: "hero_whatsapp" })
     window.open(`https://wa.me/5491158794428?text=${message}`, "_blank")
   }
 

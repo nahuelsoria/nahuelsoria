@@ -6,9 +6,9 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import type { LucideIcon } from "lucide-react"
-import { Mail, MessageCircle, Calendar } from "lucide-react"
+import { Mail, MessageCircle } from "lucide-react"
 import { useInViewAnimation } from "@/hooks/use-in-view-animation"
-import { CalendlyButton, CalendlyFloatButton } from "@/components/calendly-button"
+import { trackEvent } from "@/lib/analytics"
 
 type ContactMethod = {
   title: string
@@ -32,12 +32,14 @@ export function Contact() {
       accent: "accent",
     },
     {
-      title: "Calendly",
-      description: "Agenda reunión ahora",
-      icon: Calendar,
-      accent: "accent",
+      title: "Formulario",
+      description: "Envíame un mensaje",
+      icon: Mail,
+      accent: "primary",
     },
   ]
+
+  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL
 
   const delayClasses = ["animate-delay-100", "animate-delay-200", "animate-delay-300"]
   const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
@@ -55,6 +57,7 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    trackEvent({ action: "form_submit", category: "contact", label: "contact_form" })
     
     // Abrir cliente de email con los datos prellenados
     const subject = encodeURIComponent(`Consulta desde portfolio: ${formData.name}`)
@@ -72,6 +75,7 @@ export function Contact() {
     // Opcional: abrir WhatsApp también
     setTimeout(() => {
       if (confirm("¿Prefieres contactar por WhatsApp? Es más rápido para responder.")) {
+        trackEvent({ action: "cta_click", category: "contact", label: "contact_whatsapp" })
         window.open(`https://wa.me/5491158794428?text=${whatsappMessage}`, "_blank")
       }
     }, 500)
@@ -89,6 +93,22 @@ export function Contact() {
             ¿Tienes un proyecto en mente? Agenda una consulta gratuita de 30 minutos para evaluar tu idea y ver cómo puedo
             ayudarte a convertirla en realidad.
           </p>
+          {calendlyUrl && (
+            <div className="mt-6">
+              <Button
+                asChild
+                variant="outline"
+                className="border-border/50 hover:bg-accent/50 hover:border-border hover:text-foreground"
+                onClick={() =>
+                  trackEvent({ action: "cta_click", category: "contact", label: "calendly" })
+                }
+              >
+                <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+                  Agendar llamada
+                </a>
+              </Button>
+            </div>
+          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -165,44 +185,12 @@ export function Contact() {
               />
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button type="submit" className="flex-1">
-                Enviar mensaje
-              </Button>
-              <CalendlyButton 
-                type="outline" 
-                text="Agendar reunión"
-                className="flex-1"
-              />
-            </div>
+            <Button type="submit" className="w-full">
+              Enviar mensaje
+            </Button>
           </form>
-          
-          <div className="mt-8 text-center">
-            <p className="text-sm text-muted-foreground mb-4">
-              O elige el tipo de reunión que necesitas:
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <CalendlyButton 
-                size="default"
-                text="Idea de App (15min)"
-                className="w-full"
-              />
-              <CalendlyButton 
-                size="default"
-                text="Auditoría Técnica (30min)"
-                className="w-full"
-              />
-              <CalendlyButton 
-                size="default"
-                text="CTO as Service (45min)"
-                className="w-full"
-              />
-            </div>
-          </div>
         </div>
       </div>
-      
-      <CalendlyFloatButton />
     </section>
   )
 }

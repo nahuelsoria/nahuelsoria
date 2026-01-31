@@ -5,30 +5,30 @@ const steps = [
   {
     number: "01",
     title: "Consulta gratuita",
-    description: "30 minutos para conocer tu proyecto, aclarar objetivos y definir qué necesitas. Sin compromiso.",
+    description: "30 minutos para conocer tu proyecto, aclarar objetivos y definir que necesitas. Sin compromiso.",
     icon: MessageCircle,
     duration: "30 min",
   },
   {
     number: "02",
     title: "Propuesta",
-    description: "Recibís una propuesta detallada con alcance, tiempos y precio en 24–48 horas.",
+    description: "Recibis una propuesta detallada con alcance y tiempos en 24-48 horas.",
     icon: FileText,
     duration: "24-48h",
   },
   {
     number: "03",
     title: "Desarrollo iterativo",
-    description: "Trabajo en sprints con entregas parciales. Podés ver el progreso en tiempo real.",
+    description: "Trabajo en sprints con entregas parciales. Podes ver el progreso en tiempo real.",
     icon: Code,
     duration: "2-6 semanas",
   },
   {
     number: "04",
     title: "Entrega y soporte",
-    description: "Lanzamiento del proyecto + 30 días de soporte incluido.",
+    description: "Lanzamiento del proyecto + 30 dias de soporte incluido.",
     icon: CheckCircle,
-    duration: "30 días",
+    duration: "30 dias",
   },
 ]
 
@@ -37,9 +37,9 @@ export function Process() {
     <section className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="section-title mb-4">Cómo trabajo</h2>
+          <h2 className="section-title mb-4">Como trabajo</h2>
           <p className="section-subtitle">
-            Un proceso claro y transparente para garantizar resultados. Te acompaño en cada etapa para que siempre sepas qué se está construyendo y cuándo estará listo.
+            Un proceso claro y transparente para garantizar resultados. Te acompano en cada etapa para que siempre sepas que se esta construyendo y cuando estara listo.
           </p>
         </div>
 
@@ -75,8 +75,7 @@ export function Process() {
 
         <div className="mt-16 text-center">
           <p className="text-muted-foreground">
-            <strong className="text-foreground">Transparencia total:</strong> siempre sabrás qué se construye, cuánto costará
-            y cuándo estará listo.
+            <strong className="text-foreground">Transparencia total:</strong> siempre sabras que se construye, con que alcance y cuando estara listo.
           </p>
         </div>
       </div>
