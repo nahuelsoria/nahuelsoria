@@ -9,35 +9,43 @@ import { trackEvent } from "@/lib/analytics"
 const projects = [
   {
     id: 1,
-    title: "Picaday",
+    title: "Bot Trading Binance",
     description:
-      "Diario fotográfico con calendario tipo mosaico. Aplicación para registrar recuerdos diarios con fotos de forma simple y visual.",
-    image: "/photo-diary-calendar-app.jpg",
-    tags: ["Next.js", "Firebase", "Auth", "Firestore", "Storage", "Tailwind"],
+      "Sistema de trading algorítmico con enfoque científico. v0.7.0 estable con 34% cobertura de tests. Paper trading validation activo. Risk management avanzado con Sharpe 0.47 y Max DD 0.62%.",
+    image: "/bot-trading-algorithmic-dashboard.jpg",
+    tags: ["Python 3.11", "CCXT", "Streamlit", "TA-Lib", "Docker", "Optuna"],
+    status: "v0.7.0 Stable",
+    metrics: "Risk Management: Advanced • Paper Trading: Active • Test Coverage: 34%",
   },
   {
     id: 2,
     title: "Numerai",
     description:
-      "App de finanzas personales con carga de gastos por WhatsApp usando IA. Categorías inteligentes, reportes y automatización.",
+      "App de finanzas personales MVP 85% completado. Target $100 MRR Q2 2026. Sistema de pagos Dodo + MercadoPago implementado. WhatsApp integration con IA para categorización automática de gastos.",
     image: "/finance-app-dashboard-charts.jpg",
-    tags: ["Next.js", "Firestore", "AI", "WhatsApp API"],
+    tags: ["Next.js 14", "Firebase", "Dodo Payments", "WhatsApp API", "MercadoPago", "AI"],
+    status: "MVP 85% - Revenue Ready",
+    metrics: "Revenue Target: $100 MRR • Users Target: 250 MAU • Payments: Dodo + MP",
   },
   {
     id: 3,
-    title: "Condor OTC / ERP",
+    title: "Picaday",
     description:
-      "Sistema completo para una financiera: clientes, cuentas corrientes, cheques, cambio de moneda. Desarrollado en 1 mes.",
-    image: "/erp-dashboard-financial-system.jpg",
-    tags: ["Next.js 15", "Firebase", "Tailwind"],
+      "Diario fotográfico MVP 100% completado. Performance optimizada con LCP < 2.5s garantizado. E2E testing completo con Playwright. Web Workers para compresión de imágenes y virtualización avanzada.",
+    image: "/photo-diary-calendar-app.jpg",
+    tags: ["Next.js 14", "React 18", "Firebase", "Tailwind 4", "Playwright E2E", "Web Workers"],
+    status: "MVP 100% - Production Ready",
+    metrics: "Performance: LCP < 2.5s • E2E Tests: Full Coverage • Engagement: DAU/MAU > 30%",
   },
   {
     id: 4,
-    title: "What I Wish",
+    title: "CondorFX / ERP Financiero",
     description:
-      "Aplicación para listas de regalos para cumpleaños. Plataforma simple y elegante para crear y compartir listas de deseos.",
-    image: "/wishlist-app-gifts-birthday.jpg",
-    tags: ["Next.js", "Firebase"],
+      "Sistema completo para financiera: clientes, cuentas corrientes, cheques, cambio de moneda. Desarrollado en 1 mes con Next.js 15 y Firebase. Multi-currency y FX operations en producción.",
+    image: "/erp-dashboard-financial-system.jpg",
+    tags: ["Next.js 15", "Firebase", "Tailwind", "FX Operations", "Multi-currency"],
+    status: "Production Deployed",
+    metrics: "Development Time: 1 month • Features: Full ERP • Status: Live Production",
   },
 ]
 
@@ -70,8 +78,20 @@ export function FeaturedProjects() {
                 />
               </div>
               <div className="p-6 space-y-4">
-                <h3 className="text-2xl font-bold">{project.title}</h3>
+                <div className="flex items-start justify-between">
+                  <h3 className="text-2xl font-bold">{project.title}</h3>
+                  {project.status && (
+                    <Badge variant="default" className="bg-primary/10 text-primary border-primary/20">
+                      {project.status}
+                    </Badge>
+                  )}
+                </div>
                 <p className="text-muted-foreground">{project.description}</p>
+                {project.metrics && (
+                  <div className="bg-muted/50 p-3 rounded-lg">
+                    <p className="text-sm font-medium text-foreground">{project.metrics}</p>
+                  </div>
+                )}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <Badge key={tag} variant="secondary">
