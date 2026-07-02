@@ -1,193 +1,152 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import type { LucideIcon } from "lucide-react"
-import { Mail, MessageCircle } from "lucide-react"
-import { useInViewAnimation } from "@/hooks/use-in-view-animation"
+import { Mail, MessageCircle, CalendarClock, ArrowUpRight, Send } from "lucide-react"
+import { site, whatsappHref } from "@/content/site"
 import { trackEvent } from "@/lib/analytics"
+import type { Dictionary, Locale } from "@/content/types"
 
-type ContactMethod = {
-  title: string
-  description: string
-  icon: LucideIcon
-  accent: "primary" | "accent"
-}
-
-export function Contact() {
-  const contactMethods: ContactMethod[] = [
-    {
-      title: "Email",
-      description: "jorgenahuelsoria@gmail.com",
-      icon: Mail,
-      accent: "primary",
-    },
-    {
-      title: "WhatsApp",
-      description: "+5491158794428",
-      icon: MessageCircle,
-      accent: "accent",
-    },
-    {
-      title: "Formulario",
-      description: "Envíame un mensaje",
-      icon: Mail,
-      accent: "primary",
-    },
-  ]
-
+export function Contact({ dict, locale }: { dict: Dictionary; locale: Locale }) {
+  const c = dict.contact
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL
+  const [form, setForm] = useState({ name: "", email: "", message: "" })
 
-  const delayClasses = ["animate-delay-100", "animate-delay-200", "animate-delay-300"]
-  const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
+  const wa = whatsappHref(
+    locale === "es"
+      ? "Hola Nahuel! Me interesa hablar sobre un proyecto."
+      : "Hi Nahuel! I'd like to talk about a project.",
+  )
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const onSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     trackEvent({ action: "form_submit", category: "contact", label: "contact_form" })
-    
-    // Abrir cliente de email con los datos prellenados
-    const subject = encodeURIComponent(`Consulta desde portfolio: ${formData.name}`)
+    const subject = encodeURIComponent(
+      (locale === "es" ? "Consulta desde el portfolio: " : "Portfolio inquiry: ") + form.name,
+    )
     const body = encodeURIComponent(
-      `Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`
+      `${dict.contact.form.name}: ${form.name}\n${dict.contact.form.email}: ${form.email}\n\n${form.message}`,
     )
-    
-    window.location.href = `mailto:jorgenahuelsoria@gmail.com?subject=${subject}&body=${body}`
-    
-    // También mostrar opción de WhatsApp
-    const whatsappMessage = encodeURIComponent(
-      `Hola Nahuel! Soy ${formData.name} (${formData.email}).\n\n${formData.message}`
-    )
-    
-    // Opcional: abrir WhatsApp también
-    setTimeout(() => {
-      if (confirm("¿Prefieres contactar por WhatsApp? Es más rápido para responder.")) {
-        trackEvent({ action: "cta_click", category: "contact", label: "contact_whatsapp" })
-        window.open(`https://wa.me/5491158794428?text=${whatsappMessage}`, "_blank")
-      }
-    }, 500)
-    
-    // Reset form
-    setFormData({ name: "", email: "", message: "" })
+    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
   }
 
+  const methods = [
+    {
+      label: c.emailLabel,
+      value: site.email,
+      href: `mailto:${site.email}`,
+      Icon: Mail,
+      external: false,
+    },
+    {
+      label: c.whatsappLabel,
+      value: site.whatsappDisplay,
+      href: wa,
+      Icon: MessageCircle,
+      external: true,
+    },
+    ...(calendlyUrl
+      ? [{ label: c.scheduleLabel, value: "Calendly", href: calendlyUrl, Icon: CalendarClock, external: true }]
+      : []),
+  ]
+
+  const field =
+    "w-full rounded-md border border-line bg-background px-4 py-3 text-sm text-foreground placeholder:text-fg-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
+
   return (
-    <section id="contact" className="py-20 md:py-32 bg-card/50 scroll-mt-24" ref={ref}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
-          <h2 className="section-title mb-4">Trabajemos juntos</h2>
-          <p className="section-subtitle">
-            ¿Tienes un proyecto en mente? Agenda una consulta gratuita de 30 minutos para evaluar tu idea y ver cómo puedo
-            ayudarte a convertirla en realidad.
-          </p>
-          {calendlyUrl && (
-            <div className="mt-6">
-              <Button
-                asChild
-                variant="outline"
-                className="border-border/50 hover:bg-accent/50 hover:border-border hover:text-foreground"
-                onClick={() =>
-                  trackEvent({ action: "cta_click", category: "contact", label: "calendly" })
-                }
-              >
-                <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
-                  Agendar llamada
-                </a>
-              </Button>
-            </div>
-          )}
-        </div>
+    <section id="contact" className="section scroll-mt-24 border-t border-line" aria-labelledby="contact-title">
+      <div className="container-page">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+          {/* Left: pitch + methods */}
+          <div>
+            <span className="eyebrow">{c.eyebrow}</span>
+            <h2 id="contact-title" className="heading mt-5">
+              {c.title}
+            </h2>
+            <p className="lede mt-5">{c.subtitle}</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {contactMethods.map((method, index) => {
-            const Icon = method.icon
-
-            return (
-              <div
-                key={method.title}
-                className={`bg-card border border-border/50 rounded-lg p-8 text-center ${
-                  isVisible ? `animate-fade-up ${delayClasses[index % delayClasses.length]}` : "reveal-offscreen"
-                }`}
-              >
-                <div className="flex justify-center mb-4">
-                  <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                      method.accent === "primary" ? "bg-primary/20" : "bg-accent/20"
-                    }`}
+            <ul className="mt-10 space-y-3">
+              {methods.map(({ label, value, href, Icon, external }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                    onClick={() => trackEvent({ action: "cta_click", category: "contact", label })}
+                    className="group flex items-center justify-between rounded-md border border-line bg-card px-4 py-3.5 transition-colors hover:border-brand"
                   >
-                    <Icon className={`w-6 h-6 ${method.accent === "primary" ? "text-primary" : "text-accent"}`} />
-                  </div>
-                </div>
-                <h3 className="font-bold mb-2">{method.title}</h3>
-                <p className="text-muted-foreground">{method.description}</p>
+                    <span className="flex items-center gap-3">
+                      <span className="grid h-9 w-9 place-items-center rounded-md border border-line text-brand">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span>
+                        <span className="block font-mono text-xs uppercase tracking-wide text-fg-muted">
+                          {label}
+                        </span>
+                        <span className="block text-sm text-foreground">{value}</span>
+                      </span>
+                    </span>
+                    <ArrowUpRight className="h-4 w-4 text-fg-muted transition-colors group-hover:text-brand" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right: form */}
+          <form onSubmit={onSubmit} className="card-surface space-y-5 p-6 sm:p-8">
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground">
+                  {c.form.name}
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  required
+                  value={form.name}
+                  onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
+                  className={field}
+                  placeholder="—"
+                />
               </div>
-            )
-          })}
-        </div>
-
-        <div className={`max-w-2xl mx-auto animate-delay-200 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
-          <form onSubmit={handleSubmit} className="space-y-6 bg-card border border-border/50 rounded-lg p-8">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2">
-                Nombre
-              </label>
-              <Input
-                id="name"
-                name="name"
-                placeholder="Tu nombre"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
+              <div>
+                <label htmlFor="email" className="mb-2 block text-sm font-medium text-foreground">
+                  {c.form.email}
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={form.email}
+                  onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+                  className={field}
+                  placeholder="tu@email.com"
+                />
+              </div>
             </div>
-
             <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
-                Email
-              </label>
-              <Input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="tu@email.com"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">
-                Mensaje
+              <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">
+                {c.form.message}
               </label>
               <textarea
                 id="message"
                 name="message"
-                placeholder="Cuéntame sobre tu proyecto..."
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                className="w-full px-4 py-2 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                 required
+                rows={5}
+                value={form.message}
+                onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
+                className={`${field} resize-none`}
+                placeholder={c.form.messagePlaceholder}
               />
             </div>
-
-            <Button type="submit" className="w-full">
-              Enviar mensaje
-            </Button>
+            <button
+              type="submit"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand px-6 py-3 text-sm font-medium text-brand-foreground transition-transform hover:-translate-y-0.5"
+            >
+              {c.form.submit}
+              <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </button>
           </form>
         </div>
       </div>

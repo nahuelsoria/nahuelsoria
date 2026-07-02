@@ -1,32 +1,17 @@
-import type { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next"
+import { site, locales } from "@/content/site"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://nahuelsoria.com'
+  const languages = {
+    "es-AR": `${site.url}/es`,
+    en: `${site.url}/en`,
+    "x-default": `${site.url}/es`,
+  }
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/#servicios`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#casos-de-exito`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#contacto`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.7,
-    },
-  ]
+  return locales.map((locale) => ({
+    url: `${site.url}/${locale}`,
+    changeFrequency: "monthly",
+    priority: locale === "es" ? 1 : 0.9,
+    alternates: { languages },
+  }))
 }

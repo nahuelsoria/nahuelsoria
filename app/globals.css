@@ -3,81 +3,107 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ============================================================
+   Design tokens — "Financial infrastructure, editorial soul"
+   Light theme is :root, dark theme is .dark (dark-first brand).
+   Shadcn token names are preserved so /components/ui keeps working.
+   ============================================================ */
+
 :root {
-  --background: oklch(0.98 0.002 70);
-  --foreground: oklch(0.15 0.04 264);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.04 264);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.04 264);
-  --primary: oklch(0.45 0.2 240);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.92 0.05 280);
-  --secondary-foreground: oklch(0.45 0.2 240);
-  --muted: oklch(0.92 0.05 280);
-  --muted-foreground: oklch(0.5 0.03 264);
-  --accent: oklch(0.85 0.15 50);
-  --accent-foreground: oklch(0.15 0.04 264);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.92 0.02 280);
-  --input: oklch(0.92 0.02 280);
-  --ring: oklch(0.45 0.2 240);
-  --chart-1: oklch(0.45 0.2 240);
-  --chart-2: oklch(0.85 0.15 50);
-  --chart-3: oklch(0.6 0.15 150);
-  --chart-4: oklch(0.75 0.1 280);
-  --chart-5: oklch(0.5 0.12 20);
-  --radius: 0.625rem;
-  --sidebar: oklch(1 0 0);
-  --sidebar-foreground: oklch(0.15 0.04 264);
-  --sidebar-primary: oklch(0.45 0.2 240);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.92 0.05 280);
-  --sidebar-accent-foreground: oklch(0.45 0.2 240);
-  --sidebar-border: oklch(0.92 0.02 280);
-  --sidebar-ring: oklch(0.45 0.2 240);
+  /* Base palette — LIGHT (paper / ink) */
+  --bg: oklch(0.972 0.008 95);
+  --bg-elev: oklch(0.99 0.004 95);
+  --fg: oklch(0.22 0.02 145);
+  --fg-muted: oklch(0.46 0.02 145);
+  --brand: oklch(0.6 0.16 142);
+  --brand-fg: oklch(0.98 0.01 95);
+  --line: oklch(0.86 0.01 120);
+
+  /* Shadcn mappings */
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--bg-elev);
+  --card-foreground: var(--fg);
+  --popover: var(--bg-elev);
+  --popover-foreground: var(--fg);
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-fg);
+  --secondary: oklch(0.94 0.008 110);
+  --secondary-foreground: var(--fg);
+  --muted: oklch(0.94 0.008 110);
+  --muted-foreground: var(--fg-muted);
+  --accent: oklch(0.94 0.02 140);
+  --accent-foreground: var(--fg);
+  --destructive: oklch(0.58 0.22 25);
+  --destructive-foreground: oklch(0.99 0.01 95);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--brand);
+  --chart-1: var(--brand);
+  --chart-2: oklch(0.6 0.12 220);
+  --chart-3: oklch(0.65 0.13 60);
+  --chart-4: oklch(0.55 0.14 300);
+  --chart-5: oklch(0.6 0.15 20);
+  --radius: 0.5rem;
+  --sidebar: var(--bg-elev);
+  --sidebar-foreground: var(--fg);
+  --sidebar-primary: var(--brand);
+  --sidebar-primary-foreground: var(--brand-fg);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--fg);
+  --sidebar-border: var(--line);
+  --sidebar-ring: var(--brand);
 }
 
 .dark {
-  /* Actualizar dark mode a tonos negros/grises oscuros en lugar de azulados */
-  --background: #0a0a0a;
-  --foreground: #e8e8e8;
-  --card: #1a1a1a;
-  --card-foreground: #e8e8e8;
-  --popover: #1a1a1a;
-  --popover-foreground: #e8e8e8;
-  --primary: oklch(0.65 0.2 240);
-  --primary-foreground: #0a0a0a;
-  --secondary: #2a2a2a;
-  --secondary-foreground: #e8e8e8;
-  --muted: #3a3a3a;
-  --muted-foreground: #999999;
-  --accent: oklch(0.9 0.15 50);
-  --accent-foreground: #0a0a0a;
-  --destructive: oklch(0.6 0.25 30);
-  --destructive-foreground: #e8e8e8;
-  --border: #2a2a2a;
-  --input: #2a2a2a;
-  --ring: oklch(0.65 0.2 240);
-  --chart-1: oklch(0.65 0.2 240);
-  --chart-2: oklch(0.9 0.15 50);
-  --chart-3: oklch(0.75 0.15 150);
-  --chart-4: oklch(0.65 0.1 280);
-  --chart-5: oklch(0.7 0.12 20);
-  --sidebar: #1a1a1a;
-  --sidebar-foreground: #e8e8e8;
-  --sidebar-primary: oklch(0.65 0.2 240);
-  --sidebar-primary-foreground: #0a0a0a;
-  --sidebar-accent: #2a2a2a;
-  --sidebar-accent-foreground: #e8e8e8;
-  --sidebar-border: #2a2a2a;
-  --sidebar-ring: oklch(0.65 0.2 240);
+  /* Base palette — DARK (warm near-black / bone / signal green) */
+  --bg: oklch(0.165 0.008 140);
+  --bg-elev: oklch(0.205 0.01 140);
+  --fg: oklch(0.94 0.012 90);
+  --fg-muted: oklch(0.7 0.014 110);
+  --brand: oklch(0.83 0.19 138);
+  --brand-fg: oklch(0.19 0.03 145);
+  --line: oklch(0.3 0.012 140);
+
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--bg-elev);
+  --card-foreground: var(--fg);
+  --popover: var(--bg-elev);
+  --popover-foreground: var(--fg);
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-fg);
+  --secondary: oklch(0.24 0.01 140);
+  --secondary-foreground: var(--fg);
+  --muted: oklch(0.24 0.01 140);
+  --muted-foreground: var(--fg-muted);
+  --accent: oklch(0.26 0.02 140);
+  --accent-foreground: var(--fg);
+  --destructive: oklch(0.62 0.22 25);
+  --destructive-foreground: oklch(0.98 0.01 95);
+  --border: var(--line);
+  --input: oklch(0.28 0.012 140);
+  --ring: var(--brand);
+  --chart-1: var(--brand);
+  --chart-2: oklch(0.7 0.12 220);
+  --chart-3: oklch(0.75 0.13 60);
+  --chart-4: oklch(0.68 0.14 300);
+  --chart-5: oklch(0.7 0.15 20);
+  --sidebar: var(--bg-elev);
+  --sidebar-foreground: var(--fg);
+  --sidebar-primary: var(--brand);
+  --sidebar-primary-foreground: var(--brand-fg);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--fg);
+  --sidebar-border: var(--line);
+  --sidebar-ring: var(--brand);
 }
 
-  @theme inline {
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+@theme inline {
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument), ui-serif, Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SFMono-Regular", monospace;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -97,15 +123,20 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-fg);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -121,69 +152,165 @@
     @apply border-border outline-ring/50;
   }
 
-  body {
-    @apply bg-background text-foreground;
-    transition: background-color 0.3s, color 0.3s;
-    /* Aplicar tipografía del sistema para evitar dependencias externas */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-weight: 500;
-  }
-
   html {
     scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    font-feature-settings: "cv01", "cv03", "ss01";
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background: var(--brand);
+    color: var(--brand-fg);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
   }
 }
 
 @layer components {
-  @keyframes fade-up {
-    0% {
-      opacity: 0;
-      transform: translateY(12px) scale(0.98);
-      filter: blur(6px);
-    }
-    100% {
+  /* ---- Layout ---- */
+  .container-page {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 5vw, 2rem);
+  }
+
+  .section {
+    padding-block: clamp(4.5rem, 11vh, 8.5rem);
+  }
+
+  /* ---- Kicker / eyebrow (monospace terminal label) ---- */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 9999px;
+    background: var(--brand);
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--brand) 20%, transparent);
+  }
+
+  /* ---- Headings ---- */
+  .display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    font-size: clamp(2.75rem, 7vw, 5.25rem);
+  }
+  .heading {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.018em;
+    text-wrap: balance;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+  }
+  .lede {
+    color: var(--fg-muted);
+    max-width: 60ch;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    line-height: 1.6;
+  }
+
+  .accent-underline {
+    background-image: linear-gradient(var(--brand), var(--brand));
+    background-size: 100% 0.12em;
+    background-position: 0 92%;
+    background-repeat: no-repeat;
+    padding-inline: 0.05em;
+  }
+
+  /* ---- Fine grid / rule motifs ---- */
+  .grid-lines {
+    background-image: linear-gradient(to right, var(--line) 1px, transparent 1px);
+    background-size: 25% 100%;
+  }
+  .rule {
+    height: 1px;
+    background: var(--line);
+    border: 0;
+  }
+
+  /* ---- Cards ---- */
+  .card-surface {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  }
+  .card-surface:hover {
+    border-color: color-mix(in oklch, var(--brand) 60%, var(--line));
+  }
+
+  /* ---- Tag chips (monospace) ---- */
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.01em;
+    color: var(--fg-muted);
+    border: 1px solid var(--line);
+    border-radius: 9999px;
+    padding: 0.15rem 0.6rem;
+    white-space: nowrap;
+  }
+}
+
+@layer utilities {
+  /* ---- Reveal animation (respects reduced motion) ----
+     Gated behind .js so content stays visible without JavaScript. */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(6px);
+    will-change: opacity, transform, filter;
+  }
+  .reveal-in {
+    animation: reveal-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  @keyframes reveal-up {
+    to {
       opacity: 1;
-      transform: translateY(0) scale(1);
+      transform: translateY(0);
       filter: blur(0);
     }
   }
+  .delay-1 { animation-delay: 0.08s; }
+  .delay-2 { animation-delay: 0.16s; }
+  .delay-3 { animation-delay: 0.24s; }
+  .delay-4 { animation-delay: 0.32s; }
+  .delay-5 { animation-delay: 0.4s; }
 
-  .animate-fade-up {
-    animation: fade-up 0.8s ease forwards;
-    opacity: 0;
-    will-change: transform, opacity, filter;
-  }
-
-  .reveal-offscreen {
-    opacity: 0;
-    transform: translateY(16px);
-    filter: blur(8px);
-  }
-
-  .animate-delay-100 {
-    animation-delay: 0.1s;
-  }
-
-  .animate-delay-200 {
-    animation-delay: 0.2s;
-  }
-
-  .animate-delay-300 {
-    animation-delay: 0.3s;
-  }
-
-  .section-title {
-    @apply text-4xl md:text-5xl font-bold text-balance;
-    /* Usar peso de fuente 600-700 para títulos */
-    font-weight: 700;
-  }
-
-  .section-subtitle {
-    @apply text-lg text-muted-foreground max-w-2xl mx-auto;
-    font-weight: 400;
-  }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-delay: 0ms !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .js .reveal { opacity: 1; transform: none; filter: none; }
   }
 }
