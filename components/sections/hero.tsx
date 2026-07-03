@@ -5,12 +5,14 @@ import type { Dictionary, Locale } from "@/content/types"
 
 export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const h = dict.hero
-  const confirmed = metrics.filter((m) => m.status === "confirmed")
+  const confirmed = metrics.filter((m) => m.status === "confirmed").slice(0, 3)
   const wa = whatsappHref(
     locale === "es"
       ? "Hola Nahuel! Me interesa hablar sobre un proyecto."
       : "Hi Nahuel! I'd like to talk about a project.",
   )
+  // Prefer Calendly for the "book a meeting" CTA when configured; fall back to WhatsApp.
+  const scheduleHref = process.env.NEXT_PUBLIC_CALENDLY_URL || wa
 
   return (
     <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
@@ -59,7 +61,7 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </a>
                 <a
-                  href={wa}
+                  href={scheduleHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center gap-2 rounded-md border border-line px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-brand"

@@ -32,9 +32,10 @@ export const whatsappHref = (message: string) =>
  */
 export const metrics: Metric[] = [
   {
-    value: "+$2M",
-    label: { es: "Procesados en producción", en: "Processed in production" },
-    status: "unverified",
+    // Aggregate portfolio figure — not attributed to any single client (privacy-safe).
+    value: "+$20M",
+    label: { es: "USD procesados en plataformas que construí", en: "USD processed across platforms I built" },
+    status: "confirmed",
   },
   {
     value: "6",
