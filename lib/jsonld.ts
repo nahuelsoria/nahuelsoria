@@ -36,7 +36,7 @@ export function buildProfileJsonLd(locale: Locale) {
         jobTitle: dict.hero.role,
         description: dict.hero.statement,
         email: `mailto:${site.email}`,
-        image: `${site.url}/opengraph-image`,
+        image: `${site.url}/${locale}/opengraph-image`,
         address: {
           "@type": "PostalAddress",
           addressLocality: site.location.city,

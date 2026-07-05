@@ -8,7 +8,8 @@ export const defaultLocale: Locale = "es"
  * Change the domain, phone or email here — nowhere else.
  */
 export const site = {
-  url: "https://nahuelsoria.com",
+  // Temporary canonical until the personal .com is purchased. Change this one line to switch.
+  url: "https://nahuelsoria.vercel.app",
   name: "Nahuel Soria",
   fullName: "Jorge Nahuel Soria",
   email: "jorgenahuelsoria@gmail.com",
