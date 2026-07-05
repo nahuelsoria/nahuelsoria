@@ -8,8 +8,9 @@ export const defaultLocale: Locale = "es"
  * Change the domain, phone or email here — nowhere else.
  */
 export const site = {
-  // Temporary canonical until the personal .com is purchased. Change this one line to switch.
-  url: "https://nahuelsoria.vercel.app",
+  // Canonical URL. Override via NEXT_PUBLIC_SITE_URL (Vercel env) when the .com is ready;
+  // defaults to the current vercel.app deployment.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://nahuelsoria.vercel.app",
   name: "Nahuel Soria",
   fullName: "Jorge Nahuel Soria",
   email: "jorgenahuelsoria@gmail.com",

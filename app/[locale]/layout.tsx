@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { notFound } from "next/navigation"
 import { Instrument_Serif, Hanken_Grotesk, JetBrains_Mono } from "next/font/google"
 import { AnalyticsProvider } from "@/lib/analytics"
@@ -27,6 +27,14 @@ const jetbrains = JetBrains_Mono({
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
+}
+
+export const viewport: Viewport = {
+  colorScheme: "dark light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f5ef" },
+    { media: "(prefers-color-scheme: dark)", color: "#12160f" },
+  ],
 }
 
 export async function generateMetadata({
