@@ -1,203 +1,185 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import type { LucideIcon } from "lucide-react"
-import { Mail, MessageCircle } from "lucide-react"
-import { useInViewAnimation } from "@/hooks/use-in-view-animation"
+import { Mail, MessageCircle, CalendarClock, ArrowUpRight, Send } from "lucide-react"
+import { site, whatsappHref } from "@/content/site"
 import { trackEvent } from "@/lib/analytics"
-import { openBooking } from "@/lib/booking"
-import { useLang } from "@/lib/i18n"
+import type { Dictionary, Locale } from "@/content/types"
 
-type ContactMethod = {
-  title: string
-  description: string
-  icon: LucideIcon
-  accent: "primary" | "accent"
-}
-
-export function Contact() {
-  const { t } = useLang()
-  const contactMethods: ContactMethod[] = [
-    {
-      title: "Email",
-      description: "jorgenahuelsoria@gmail.com",
-      icon: Mail,
-      accent: "primary",
-    },
-    {
-      title: "WhatsApp",
-      description: "+5491158794428",
-      icon: MessageCircle,
-      accent: "accent",
-    },
-    {
-      title: t("Formulario", "Contact form"),
-      description: t("Envíame un mensaje", "Send me a message"),
-      icon: Mail,
-      accent: "primary",
-    },
-  ]
-
-  const delayClasses = ["animate-delay-100", "animate-delay-200", "animate-delay-300"]
-  const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
+export function Contact({ dict, locale }: { dict: Dictionary; locale: Locale }) {
+  const c = dict.contact
+  const calendlyUrl = site.calendly
+  const [form, setForm] = useState({ name: "", email: "", message: "" })
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle")
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+  const wa = whatsappHref(
+    locale === "es"
+      ? "Hola Nahuel! Me interesa hablar sobre un proyecto."
+      : "Hi Nahuel! I'd like to talk about a project.",
+  )
+
+  const mailtoFallback = () => {
+    const subject = encodeURIComponent(
+      (locale === "es" ? "Consulta desde el portfolio: " : "Portfolio inquiry: ") + form.name,
+    )
+    const body = encodeURIComponent(
+      `${dict.contact.form.name}: ${form.name}\n${dict.contact.form.email}: ${form.email}\n\n${form.message}`,
+    )
+    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     trackEvent({ action: "form_submit", category: "contact", label: "contact_form" })
     setStatus("sending")
-
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(form),
       })
       if (res.ok) {
         setStatus("sent")
-        setFormData({ name: "", email: "", message: "" })
+        setForm({ name: "", email: "", message: "" })
         return
       }
-      throw new Error("send_failed")
     } catch {
-      // Fallback: si el backend no está configurado o falla, abrir el cliente de
-      // email con los datos prellenados para que el lead nunca se pierda.
-      setStatus("error")
-      const subject = encodeURIComponent(`Consulta desde portfolio: ${formData.name}`)
-      const body = encodeURIComponent(
-        `Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`,
-      )
-      window.location.href = `mailto:jorgenahuelsoria@gmail.com?subject=${subject}&body=${body}`
+      // network error — fall through to mailto
     }
+    // No email provider configured (501) or delivery failed (502): never lose the lead.
+    setStatus("idle")
+    mailtoFallback()
   }
 
+  const statusText: Record<typeof status, string> = {
+    idle: c.form.submit,
+    sending: locale === "es" ? "Enviando…" : "Sending…",
+    sent: locale === "es" ? "¡Mensaje enviado!" : "Message sent!",
+    error: locale === "es" ? "Reintentar" : "Retry",
+  }
+
+  const methods = [
+    {
+      label: c.emailLabel,
+      value: site.email,
+      href: `mailto:${site.email}`,
+      Icon: Mail,
+      external: false,
+    },
+    {
+      label: c.whatsappLabel,
+      value: site.whatsappDisplay,
+      href: wa,
+      Icon: MessageCircle,
+      external: true,
+    },
+    ...(calendlyUrl
+      ? [{ label: c.scheduleLabel, value: "Calendly", href: calendlyUrl, Icon: CalendarClock, external: true }]
+      : []),
+  ]
+
+  const field =
+    "w-full rounded-md border border-line bg-background px-4 py-3 text-sm text-foreground placeholder:text-fg-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
+
   return (
-    <section id="contact" className="py-20 md:py-32 bg-card/50 scroll-mt-24" ref={ref}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
-          <h2 className="section-title mb-4">{t("Trabajemos juntos", "Let's work together")}</h2>
-          <p className="section-subtitle">
-            {t(
-              "¿Tenés un proyecto en mente? Agendá una consulta gratuita de 30 minutos para evaluar tu idea y ver cómo puedo ayudarte a convertirla en realidad.",
-              "Have a project in mind? Book a free 30-minute call to evaluate your idea and see how I can help you make it real.",
-            )}
-          </p>
-          <div className="mt-6">
-            <Button
-              size="lg"
-              className="group bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white"
-              onClick={() => openBooking({ label: "contact_header" })}
-            >
-              {t("Agendar llamada gratuita", "Book a free call")}
-            </Button>
-          </div>
-        </div>
+    <section id="contact" className="section scroll-mt-24 border-t border-line" aria-labelledby="contact-title">
+      <div className="container-page">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+          {/* Left: pitch + methods */}
+          <div>
+            <span className="eyebrow">{c.eyebrow}</span>
+            <h2 id="contact-title" className="heading mt-5">
+              {c.title}
+            </h2>
+            <p className="lede mt-5">{c.subtitle}</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {contactMethods.map((method, index) => {
-            const Icon = method.icon
-
-            return (
-              <div
-                key={method.title}
-                className={`bg-card border border-border/50 rounded-lg p-8 text-center ${
-                  isVisible ? `animate-fade-up ${delayClasses[index % delayClasses.length]}` : "reveal-offscreen"
-                }`}
-              >
-                <div className="flex justify-center mb-4">
-                  <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                      method.accent === "primary" ? "bg-primary/20" : "bg-accent/20"
-                    }`}
+            <ul className="mt-10 space-y-3">
+              {methods.map(({ label, value, href, Icon, external }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                    onClick={() => trackEvent({ action: "cta_click", category: "contact", label })}
+                    className="group flex items-center justify-between rounded-md border border-line bg-card px-4 py-3.5 transition-colors hover:border-brand"
                   >
-                    <Icon className={`w-6 h-6 ${method.accent === "primary" ? "text-primary" : "text-accent"}`} />
-                  </div>
-                </div>
-                <h3 className="font-bold mb-2">{method.title}</h3>
-                <p className="text-muted-foreground">{method.description}</p>
+                    <span className="flex items-center gap-3">
+                      <span className="grid h-9 w-9 place-items-center rounded-md border border-line text-brand">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span>
+                        <span className="block font-mono text-xs uppercase tracking-wide text-fg-muted">
+                          {label}
+                        </span>
+                        <span className="block text-sm text-foreground">{value}</span>
+                      </span>
+                    </span>
+                    <ArrowUpRight className="h-4 w-4 text-fg-muted transition-colors group-hover:text-brand" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right: form */}
+          <form onSubmit={onSubmit} className="card-surface space-y-5 p-6 sm:p-8">
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground">
+                  {c.form.name}
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  required
+                  value={form.name}
+                  onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
+                  className={field}
+                  placeholder="—"
+                />
               </div>
-            )
-          })}
-        </div>
-
-        <div className={`max-w-2xl mx-auto animate-delay-200 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
-          <form onSubmit={handleSubmit} className="space-y-6 bg-card border border-border/50 rounded-lg p-8">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2">
-                {t("Nombre", "Name")}
-              </label>
-              <Input
-                id="name"
-                name="name"
-                placeholder={t("Tu nombre", "Your name")}
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
+              <div>
+                <label htmlFor="email" className="mb-2 block text-sm font-medium text-foreground">
+                  {c.form.email}
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={form.email}
+                  onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+                  className={field}
+                  placeholder="tu@email.com"
+                />
+              </div>
             </div>
-
             <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
-                Email
-              </label>
-              <Input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="tu@email.com"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">
-                {t("Mensaje", "Message")}
+              <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">
+                {c.form.message}
               </label>
               <textarea
                 id="message"
                 name="message"
-                placeholder={t("Cuéntame sobre tu proyecto...", "Tell me about your project...")}
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                className="w-full px-4 py-2 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                 required
+                rows={5}
+                value={form.message}
+                onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
+                className={`${field} resize-none`}
+                placeholder={c.form.messagePlaceholder}
               />
             </div>
-
-            <Button type="submit" className="w-full" disabled={status === "sending"}>
-              {status === "sending" ? t("Enviando...", "Sending...") : t("Enviar mensaje", "Send message")}
-            </Button>
-            {status === "sent" ? (
-              <p className="text-center text-sm font-medium text-[#0EA5E9]">
-                {t("¡Gracias! Recibí tu mensaje y te respondo a la brevedad.", "Thanks! I got your message and I'll reply shortly.")}
-              </p>
-            ) : null}
-            {status === "error" ? (
-              <p className="text-center text-sm text-muted-foreground">
-                {t(
-                  "Se abrió tu cliente de email para enviar el mensaje. ¿Preferís WhatsApp? +54 9 11 5879 4428",
-                  "Your email client opened to send the message. Prefer WhatsApp? +54 9 11 5879 4428",
-                )}
-              </p>
-            ) : null}
+            <button
+              type="submit"
+              disabled={status === "sending" || status === "sent"}
+              aria-live="polite"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand px-6 py-3 text-sm font-medium text-brand-foreground transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+            >
+              {statusText[status]}
+              {status !== "sent" && (
+                <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              )}
+            </button>
           </form>
         </div>
       </div>

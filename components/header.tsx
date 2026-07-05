@@ -1,90 +1,132 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Menu, X, Moon, Sun } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useLang, LanguageToggle } from "@/lib/i18n"
+import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
+import Link from "next/link"
+import { Menu, X, Moon, Sun, Languages } from "lucide-react"
+import { site } from "@/content/site"
+import type { Dictionary, Locale } from "@/content/types"
 
-export function Header() {
-  const { t } = useLang()
-  const [isOpen, setIsOpen] = useState(false)
-  const [isDark, setIsDark] = useState(false)
+export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
+  const [open, setOpen] = useState(false)
+  const [dark, setDark] = useState(true)
+  const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark")
-    setIsDark(isDarkMode)
+    setDark(document.documentElement.classList.contains("dark"))
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
   const toggleTheme = () => {
-    const html = document.documentElement
-    if (html.classList.contains("dark")) {
-      html.classList.remove("dark")
-      localStorage.setItem("theme", "light")
-      setIsDark(false)
-    } else {
-      html.classList.add("dark")
-      localStorage.setItem("theme", "dark")
-      setIsDark(true)
-    }
+    const el = document.documentElement
+    const next = !el.classList.contains("dark")
+    el.classList.toggle("dark", next)
+    localStorage.setItem("theme", next ? "dark" : "light")
+    setDark(next)
   }
 
-  const navItems = [
-    { label: t("Proyectos", "Projects"), href: "#projects" },
-    { label: t("Servicios", "Services"), href: "#services" },
-    { label: t("Sobre Mí", "About"), href: "#about" },
-    { label: t("Contacto", "Contact"), href: "#contact" },
+  const otherLocale: Locale = locale === "es" ? "en" : "es"
+  const otherHref = (pathname || `/${locale}`).replace(`/${locale}`, `/${otherLocale}`)
+
+  const nav = [
+    { label: dict.nav.projects, href: "#projects" },
+    { label: dict.nav.services, href: "#services" },
+    { label: dict.nav.about, href: "#about" },
+    { label: dict.nav.contact, href: "#contact" },
   ]
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-6">
-        <div className="flex items-center gap-2">
-          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground font-bold">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-colors ${
+        scrolled ? "border-line bg-background/80 backdrop-blur-md" : "border-transparent bg-transparent"
+      }`}
+    >
+      <div className="container-page flex h-16 items-center justify-between">
+        <Link href={`/${locale}`} className="group flex items-center gap-2.5" aria-label="Nahuel Soria — home">
+          <span className="grid h-8 w-8 place-items-center rounded-md border border-line font-mono text-sm text-foreground transition-colors group-hover:border-brand">
             NS
-          </div>
-          <span className="hidden sm:inline text-xl font-bold">Nahuel Soria</span>
-        </div>
+          </span>
+          <span className="hidden font-mono text-sm tracking-tight text-foreground sm:inline">
+            nahuel<span className="text-brand">.</span>soria
+          </span>
+        </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+          {nav.map((item) => (
             <a
-              key={item.label}
+              key={item.href}
               href={item.href}
-              className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               {item.label}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
-          <LanguageToggle className="rounded-full border border-border/50 px-2.5 py-1 text-xs font-bold text-foreground/70 hover:text-foreground transition-colors" />
-          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
-            {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </Button>
+        <div className="flex items-center gap-1.5">
+          <Link
+            href={otherHref}
+            className="inline-flex items-center gap-1.5 rounded-md border border-line px-2.5 py-1.5 font-mono text-xs text-muted-foreground transition-colors hover:border-brand hover:text-foreground"
+            aria-label={dict.language.toggle}
+          >
+            <Languages className="h-3.5 w-3.5" />
+            {otherLocale.toUpperCase()}
+          </Link>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <button
+            onClick={toggleTheme}
+            aria-label={dict.theme.toggle}
+            className="grid h-9 w-9 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+          >
+            {dark ? <Sun className="h-[18px] w-[18px]" /> : <Moon className="h-[18px] w-[18px]" />}
+          </button>
+
+          <a
+            href={site.calendly}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-1 hidden rounded-md bg-brand px-4 py-2 text-sm font-medium text-brand-foreground transition-transform hover:-translate-y-0.5 sm:inline-flex"
+          >
+            {dict.nav.cta}
+          </a>
+
+          <button
+            className="grid h-9 w-9 place-items-center rounded-md text-foreground md:hidden"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Menu"
+            aria-expanded={open}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden border-t border-border/40">
-          <nav className="flex flex-col gap-4 px-4 py-4">
-            {navItems.map((item) => (
+      {open && (
+        <div className="border-t border-line bg-background/95 backdrop-blur-md md:hidden">
+          <nav className="container-page flex flex-col gap-1 py-4" aria-label="Mobile">
+            {nav.map((item) => (
               <a
-                key={item.label}
+                key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
-                onClick={() => setIsOpen(false)}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-2 py-2.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
               >
                 {item.label}
               </a>
             ))}
+            <a
+              href={site.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-2 rounded-md bg-brand px-4 py-2.5 text-center text-sm font-medium text-brand-foreground"
+            >
+              {dict.nav.cta}
+            </a>
           </nav>
         </div>
       )}
