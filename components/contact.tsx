@@ -8,7 +8,7 @@ import type { Dictionary, Locale } from "@/content/types"
 
 export function Contact({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const c = dict.contact
-  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL
+  const calendlyUrl = site.calendly
   const [form, setForm] = useState({ name: "", email: "", message: "" })
 
   const wa = whatsappHref(

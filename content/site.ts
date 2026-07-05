@@ -23,6 +23,8 @@ export const site = {
     x: "https://twitter.com/nahhwe",
   },
   githubUser: "nahuelsoria",
+  // Public booking link. Override via NEXT_PUBLIC_CALENDLY_URL if it ever changes.
+  calendly: process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/nahuelsoria/30min",
 } as const
 
 export const whatsappHref = (message: string) =>

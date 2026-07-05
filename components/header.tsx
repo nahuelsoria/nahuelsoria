@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Menu, X, Moon, Sun, Languages } from "lucide-react"
+import { site } from "@/content/site"
 import type { Dictionary, Locale } from "@/content/types"
 
 export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
@@ -85,7 +86,9 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
           </button>
 
           <a
-            href="#contact"
+            href={site.calendly}
+            target="_blank"
+            rel="noopener noreferrer"
             className="ml-1 hidden rounded-md bg-brand px-4 py-2 text-sm font-medium text-brand-foreground transition-transform hover:-translate-y-0.5 sm:inline-flex"
           >
             {dict.nav.cta}
@@ -116,7 +119,9 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
               </a>
             ))}
             <a
-              href="#contact"
+              href={site.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-md bg-brand px-4 py-2.5 text-center text-sm font-medium text-brand-foreground"
             >

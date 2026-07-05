@@ -1,18 +1,13 @@
 import { ArrowRight, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react"
 import { Reveal } from "@/components/reveal"
-import { site, whatsappHref, metrics } from "@/content/site"
+import { site, metrics } from "@/content/site"
 import type { Dictionary, Locale } from "@/content/types"
 
 export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const h = dict.hero
   const confirmed = metrics.filter((m) => m.status === "confirmed").slice(0, 3)
-  const wa = whatsappHref(
-    locale === "es"
-      ? "Hola Nahuel! Me interesa hablar sobre un proyecto."
-      : "Hi Nahuel! I'd like to talk about a project.",
-  )
-  // Prefer Calendly for the "book a meeting" CTA when configured; fall back to WhatsApp.
-  const scheduleHref = process.env.NEXT_PUBLIC_CALENDLY_URL || wa
+  // "Book a meeting" CTA goes to Calendly.
+  const scheduleHref = site.calendly
 
   return (
     <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
