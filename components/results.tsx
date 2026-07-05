@@ -1,30 +1,30 @@
 import { Card } from "@/components/ui/card"
-import { TrendingUp, Users, DollarSign, Zap } from "lucide-react"
+import { Rocket, Code, ShieldCheck, Zap } from "lucide-react"
 
 const results = [
   {
-    icon: DollarSign,
-    value: "+$2M",
-    label: "Procesados en sistemas desarrollados",
-    description: "Más de 2 millones de USD en transacciones manejadas por sistemas que construí",
+    icon: Rocket,
+    value: "4 semanas",
+    label: "De idea a producto",
+    description: "Tiempo típico para tener un MVP funcional en la calle",
   },
   {
-    icon: Users,
-    value: "1000+",
-    label: "Usuarios activos",
-    description: "En aplicaciones que desarrollé y lancé",
+    icon: Code,
+    value: "End-to-end",
+    label: "Un solo responsable técnico",
+    description: "De la arquitectura al deploy, sin traspasos",
+  },
+  {
+    icon: ShieldCheck,
+    value: "Producción",
+    label: "Sistemas críticos en vivo",
+    description: "Plataformas que funcionan bajo presión real",
   },
   {
     icon: Zap,
-    value: "4 semanas",
-    label: "Tiempo promedio de entrega",
-    description: "De la idea al producto funcional",
-  },
-  {
-    icon: TrendingUp,
-    value: "100%",
-    label: "Clientes satisfechos",
-    description: "Todos los proyectos entregados a tiempo",
+    value: "Sin jerga",
+    label: "Claridad para founders",
+    description: "Decisiones técnicas explicadas simple",
   },
 ]
 
@@ -33,9 +33,9 @@ export function Results() {
     <section className="py-20 md:py-32 bg-card/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="section-title mb-4">Resultados reales</h2>
+          <h2 className="section-title mb-4">Cómo trabajo</h2>
           <p className="section-subtitle">
-            Números reales de proyectos reales. Cada métrica representa valor entregado a clientes.
+            Sin métricas infladas. Así entrego: rápido, claro y a estándar de producción.
           </p>
         </div>
 

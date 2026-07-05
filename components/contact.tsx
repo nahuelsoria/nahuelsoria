@@ -9,6 +9,7 @@ import type { LucideIcon } from "lucide-react"
 import { Mail, MessageCircle } from "lucide-react"
 import { useInViewAnimation } from "@/hooks/use-in-view-animation"
 import { trackEvent } from "@/lib/analytics"
+import { openBooking } from "@/lib/booking"
 
 type ContactMethod = {
   title: string
@@ -39,8 +40,6 @@ export function Contact() {
     },
   ]
 
-  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL
-
   const delayClasses = ["animate-delay-100", "animate-delay-200", "animate-delay-300"]
   const { ref, isVisible } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 })
 
@@ -49,39 +48,40 @@ export function Contact() {
     email: "",
     message: "",
   })
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     trackEvent({ action: "form_submit", category: "contact", label: "contact_form" })
-    
-    // Abrir cliente de email con los datos prellenados
-    const subject = encodeURIComponent(`Consulta desde portfolio: ${formData.name}`)
-    const body = encodeURIComponent(
-      `Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`
-    )
-    
-    window.location.href = `mailto:jorgenahuelsoria@gmail.com?subject=${subject}&body=${body}`
-    
-    // También mostrar opción de WhatsApp
-    const whatsappMessage = encodeURIComponent(
-      `Hola Nahuel! Soy ${formData.name} (${formData.email}).\n\n${formData.message}`
-    )
-    
-    // Opcional: abrir WhatsApp también
-    setTimeout(() => {
-      if (confirm("¿Prefieres contactar por WhatsApp? Es más rápido para responder.")) {
-        trackEvent({ action: "cta_click", category: "contact", label: "contact_whatsapp" })
-        window.open(`https://wa.me/5491158794428?text=${whatsappMessage}`, "_blank")
+    setStatus("sending")
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setStatus("sent")
+        setFormData({ name: "", email: "", message: "" })
+        return
       }
-    }, 500)
-    
-    // Reset form
-    setFormData({ name: "", email: "", message: "" })
+      throw new Error("send_failed")
+    } catch {
+      // Fallback: si el backend no está configurado o falla, abrir el cliente de
+      // email con los datos prellenados para que el lead nunca se pierda.
+      setStatus("error")
+      const subject = encodeURIComponent(`Consulta desde portfolio: ${formData.name}`)
+      const body = encodeURIComponent(
+        `Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`,
+      )
+      window.location.href = `mailto:jorgenahuelsoria@gmail.com?subject=${subject}&body=${body}`
+    }
   }
 
   return (
@@ -93,22 +93,15 @@ export function Contact() {
             ¿Tienes un proyecto en mente? Agenda una consulta gratuita de 30 minutos para evaluar tu idea y ver cómo puedo
             ayudarte a convertirla en realidad.
           </p>
-          {calendlyUrl && (
-            <div className="mt-6">
-              <Button
-                asChild
-                variant="outline"
-                className="border-border/50 hover:bg-accent/50 hover:border-border hover:text-foreground"
-                onClick={() =>
-                  trackEvent({ action: "cta_click", category: "contact", label: "calendly" })
-                }
-              >
-                <a href={calendlyUrl} target="_blank" rel="noopener noreferrer">
-                  Agendar llamada
-                </a>
-              </Button>
-            </div>
-          )}
+          <div className="mt-6">
+            <Button
+              size="lg"
+              className="group bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white"
+              onClick={() => openBooking({ label: "contact_header" })}
+            >
+              Agendar llamada gratuita
+            </Button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -185,9 +178,19 @@ export function Contact() {
               />
             </div>
 
-            <Button type="submit" className="w-full">
-              Enviar mensaje
+            <Button type="submit" className="w-full" disabled={status === "sending"}>
+              {status === "sending" ? "Enviando..." : "Enviar mensaje"}
             </Button>
+            {status === "sent" ? (
+              <p className="text-center text-sm font-medium text-[#0EA5E9]">
+                ¡Gracias! Recibí tu mensaje y te respondo a la brevedad.
+              </p>
+            ) : null}
+            {status === "error" ? (
+              <p className="text-center text-sm text-muted-foreground">
+                Se abrió tu cliente de email para enviar el mensaje. ¿Preferís WhatsApp? +54 9 11 5879 4428
+              </p>
+            ) : null}
           </form>
         </div>
       </div>

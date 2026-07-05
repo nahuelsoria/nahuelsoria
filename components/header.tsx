@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react"
 import { Menu, X, Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useLang, LanguageToggle } from "@/lib/i18n"
 
 export function Header() {
+  const { t } = useLang()
   const [isOpen, setIsOpen] = useState(false)
   const [isDark, setIsDark] = useState(false)
 
@@ -27,10 +29,10 @@ export function Header() {
   }
 
   const navItems = [
-    { label: "Proyectos", href: "#projects" },
-    { label: "Servicios", href: "#services" },
-    { label: "Sobre Mí", href: "#about" },
-    { label: "Contacto", href: "#contact" },
+    { label: t("Proyectos", "Projects"), href: "#projects" },
+    { label: t("Servicios", "Services"), href: "#services" },
+    { label: t("Sobre Mí", "About"), href: "#about" },
+    { label: t("Contacto", "Contact"), href: "#contact" },
   ]
 
   return (
@@ -57,6 +59,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <LanguageToggle className="rounded-full border border-border/50 px-2.5 py-1 text-xs font-bold text-foreground/70 hover:text-foreground transition-colors" />
           <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
             {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </Button>
