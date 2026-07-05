@@ -1,11 +1,11 @@
 # Nahuel Soria
 
-**Technical founder & fractional CTO building fintech products end to end.**
-I own architecture, product and delivery for payment, onboarding and compliance systems that run in production — from KYC/KYB and virtual accounts to settlement and crypto rails.
+**Software developer building custom SaaS, fintech products and automations — end to end.**
+I take ideas from architecture to production: web apps, dashboards, payment systems and internal tooling for founders and teams. Over **+$20M USD processed** across platforms I built.
 
-Based in Buenos Aires. Working with founders and teams worldwide.
+Based in Buenos Aires. Working remotely with founders and teams worldwide.
 
-[![Website](https://img.shields.io/badge/Website-111111?style=flat-square&logo=googlechrome&logoColor=white)](https://linktr.ee/nahhwe)
+[![Website](https://img.shields.io/badge/Website-111111?style=flat-square&logo=googlechrome&logoColor=white)](https://nahuelsoria.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nahuelsoria/)
 [![X](https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white)](https://twitter.com/nahhwe)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:jorgenahuelsoria@gmail.com)
@@ -14,46 +14,50 @@ Based in Buenos Aires. Working with founders and teams worldwide.
 
 ## What I do
 
-I'm the single technical owner behind several fintech products. That means I'm accountable for the whole stack and the decisions around it — not just the code:
+I build software to a spec, and own the whole thing — architecture, backend, frontend, integrations and delivery:
 
-- **Architecture** for financial systems that need to be correct, auditable and resilient.
-- **Payments & money movement**: virtual accounts, fiat off-ramps, settlement rules, crypto rails.
-- **Onboarding & compliance**: KYC / KYB flows, provider integrations, operational backoffices.
-- **Product & UX**: I scope what to build, decide the trade-offs, and ship it to real users.
+- **Web apps & SaaS**: scalable products with auth, data, payments and admin dashboards.
+- **Fintech & payments**: KYC/KYB onboarding, provider integrations, settlement and multi-currency operations.
+- **Automation & internal systems**: turning manual processes into reliable tooling.
+- **Landing pages & sites** that are fast, measurable and built to convert.
 
-I work best where the problem is ambiguous, regulated, and has to actually work in production.
+I work best where the problem is ambiguous, has to run in production, and can't be wrong.
 
 ---
 
-## Selected products
+## Selected projects
 
 ### Bridgewater Payments — *B2B fintech infrastructure*
-End-to-end payments platform for business clients. I designed and built the architecture, backend, frontend, integrations and the operational backoffice.
+End-to-end payments platform for business clients. Designed and built the architecture, backend, frontend, integrations and the operational backoffice.
 **Scope:** KYC/KYB onboarding · virtual accounts · fiat off-ramps · settlement rules engine · operations console.
 **Role:** Sole technical owner — architecture to production.
 
 ### Condor OTC / Condor Capitals — *Cross-border payments & exchange*
-Payments and exchange platform supporting international operations. Built the financial provider integrations and the internal tooling the desk runs on day to day.
+Payments and exchange platform for international operations. Built the financial provider integrations and the internal tooling the desk runs on day to day.
 **Scope:** payments · OTC / exchange flows · provider integrations · multi-currency operations.
 **Role:** CTO / Technical Lead.
 
-### What I Wish — *Consumer SaaS, global*
-Product for creating and sharing gift lists. A self-contained SaaS: product decisions, full-stack build and go-to-market readiness.
-**Scope:** shareable lists · multi-user · global-ready.
-
-### LLM Audit — *AI-driven product auditing*
-Automated auditing of products and codebases using LLM agents — turning a manual, expert review process into a repeatable system.
+### LLM Audit — *AI-driven code auditing*
+Automated auditing of codebases using orchestrated LLM agents — turning a manual, expert review process into a repeatable, prioritized report.
 **Scope:** agent orchestration · automated analysis · reporting.
 
-### Picaday — *Photo journaling app*
-A daily photographic journal focused on a calm, fast experience. Shipped to production with a strong bar on performance and UX.
-**Scope:** PWA · performance-first front end · clean product design.
+### Picaday — *Photo journaling app (own product)*
+A daily photographic journal focused on a calm, fast experience. Shipped to production with a strong bar on performance (LCP < 2.5s) and UX.
+**Scope:** performance-first front end · Web Workers · E2E testing.
+
+### Numerai — *Personal finance tracker (own product)*
+Multi-currency finance tracker with AI expense capture over WhatsApp and payment integrations.
+**Scope:** AI categorization · multi-currency · payments.
+
+### What I Wish — *Social wishlist (own product)*
+App for creating and sharing gift lists, with WhatsApp-driven virality and sub-60-second onboarding.
+**Scope:** shareable lists · multi-user · mobile-first.
 
 ---
 
 ## How I work
 
-I think in systems, leverage and long-term cost — not just the next feature. I make the architecture call, then ship fast and iterate with real users. I automate anything repeatable, and I treat compliance and reliability as product features, not afterthoughts. When I lead, the goal is a system the team can keep running without me in the loop.
+I think in systems, leverage and long-term cost — not just the next feature. I make the architecture call, then ship fast and iterate with real users. I automate anything repeatable, and I treat reliability and (where it applies) compliance as product features, not afterthoughts.
 
 ---
 
@@ -67,9 +71,6 @@ I pick tools for fit and longevity, not novelty.
 
 ## Let's talk
 
-I'm open to two kinds of conversations:
+Have a product to build — a SaaS, a dashboard, a payment integration or an automation? I take projects end to end, from idea to production.
 
-- **Founders & startups** that need a technical partner to design and ship a fintech or SaaS product — fractional CTO or technical co-founder.
-- **Companies** looking for a founding CTO or technical lead who has built regulated financial products from zero.
-
-→ [LinkedIn](https://www.linkedin.com/in/nahuelsoria/) · [Email](mailto:jorgenahuelsoria@gmail.com) · [Links](https://linktr.ee/nahhwe)
+→ [nahuelsoria.vercel.app](https://nahuelsoria.vercel.app) · [LinkedIn](https://www.linkedin.com/in/nahuelsoria/) · [Email](mailto:jorgenahuelsoria@gmail.com)

@@ -34,23 +34,31 @@ export async function POST(request: NextRequest) {
   const lead = body as Lead
 
   try {
-    // Option 1 — Resend (set RESEND_API_KEY). Plain REST, no SDK dependency.
-    if (process.env.RESEND_API_KEY) {
-      const res = await fetch("https://api.resend.com/emails", {
+    // Option 1 — SendGrid (set SENDGRID_API_KEY). Plain REST v3, no SDK dependency.
+    // CONTACT_FROM must be a verified sender/domain in SendGrid; defaults to CONTACT_TO.
+    if (process.env.SENDGRID_API_KEY) {
+      const from = process.env.CONTACT_FROM || CONTACT_TO
+      const res = await fetch("https://api.sendgrid.com/v3/mail/send", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+          Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: process.env.CONTACT_FROM || "Portfolio <onboarding@resend.dev>",
-          to: [CONTACT_TO],
-          reply_to: lead.email,
+          personalizations: [{ to: [{ email: CONTACT_TO }] }],
+          from: { email: from, name: "Portfolio" },
+          reply_to: { email: lead.email, name: lead.name },
           subject: `Nuevo contacto desde el sitio: ${lead.name}`,
-          text: `Nombre: ${lead.name}\nEmail: ${lead.email}\n\nMensaje:\n${lead.message}`,
+          content: [
+            {
+              type: "text/plain",
+              value: `Nombre: ${lead.name}\nEmail: ${lead.email}\n\nMensaje:\n${lead.message}`,
+            },
+          ],
         }),
       })
-      if (!res.ok) throw new Error(`resend_${res.status}`)
+      // SendGrid returns 202 Accepted on success.
+      if (!res.ok) throw new Error(`sendgrid_${res.status}`)
       return NextResponse.json({ ok: true })
     }
 
@@ -67,7 +75,7 @@ export async function POST(request: NextRequest) {
 
     // No provider configured yet: log the lead (lands in Vercel logs) and signal
     // the client to fall back to mailto so the lead is never silently lost.
-    console.warn("[contact] no RESEND_API_KEY / CONTACT_WEBHOOK_URL set — lead not delivered:", {
+    console.warn("[contact] no SENDGRID_API_KEY / CONTACT_WEBHOOK_URL set — lead not delivered:", {
       name: lead.name,
       email: lead.email,
     })
