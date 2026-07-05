@@ -30,14 +30,15 @@ Hoy en `nahuelsoria.vercel.app`.
 - [ ] Setear `NEXT_PUBLIC_SITE_URL=https://nahuelsoria.com` (el código ya lo lee — cero cambios).
 - [ ] Verificar canonical/hreflang/sitemap/OG con el dominio nuevo.
 
-### 3. Conectar Resend para el formulario  · `Todo` · medium
-`app/api/contact` listo; sin proveedor cae a mailto.
-- [ ] Crear cuenta Resend + API key; (opcional) verificar dominio remitente y `CONTACT_FROM`.
-- [ ] Setear `RESEND_API_KEY` en Vercel y probar end-to-end.
+### 3. Conectar SendGrid para el formulario  · `Todo` · medium
+`app/api/contact` listo (SendGrid v3); sin proveedor cae a mailto.
+- [ ] Crear cuenta SendGrid + API key.
+- [ ] Verificar un sender/dominio remitente y setear `CONTACT_FROM` (email verificado).
+- [ ] Setear `SENDGRID_API_KEY` en Vercel y probar end-to-end.
 - Alternativa: `CONTACT_WEBHOOK_URL` (Formspree/Zapier/n8n).
 
 ## 🟡 Decisiones abiertas
-- **README** del repo (= perfil público de GitHub) dice "fractional CTO"; el sitio dice "dev a medida". Definir si se alinea.
+- ~~README alineado al posicionamiento del sitio~~ ✅ hecho (2026-07-05).
 - **Foto de perfil real** para mejorar OG/JSON-LD (hoy usa OG de marca genérica).
 
 ## 🗄️ Obsoletas (del plan viejo, ya no aplican)
