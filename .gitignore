@@ -32,3 +32,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# docs internos de trabajo (no exponer en repo público)
+ROADMAP.md
+RECOMENDACIONES_CONVERSION.md
+LINEAR_TASKS.md
+MANUAL_TASKS.md
+AGENT_SESSION.md
