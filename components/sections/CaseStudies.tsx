@@ -22,7 +22,7 @@ const CASE_STUDIES: CaseStudy[] = [
     client: "Proyecto Personal - B2C",
     description: "App móvil para compartir listas de deseos con enfoque viral en WhatsApp. Diseño minimalista con onboarding de 60 segundos.",
     results: [
-      "10K+ descargas orgánicas sin marketing",
+      "Descargas orgánicas sin inversión en marketing",
       "40% tasa de viralización (compartidos)",
       "4.8⭐ rating en App Store",
       "Onboarding completo en <60 segundos"
@@ -35,7 +35,7 @@ const CASE_STUDIES: CaseStudy[] = [
     client: "Fintech App - B2C/B2B",
     description: "Sistema integral de finanzas personales con captura de gastos por AI, soporte multi-divisa y reportes P&L en tiempo real.",
     results: [
-      "Procesamiento de $50K+ en transacciones mensuales",
+      "Procesamiento de pagos multi-divisa en producción",
       "Captura de gastos por AI con 85% accuracy",
       "Soporte ARS/USD/EUR con tasas en tiempo real",
       "Dashboard con <100ms latency"
@@ -48,7 +48,7 @@ const CASE_STUDIES: CaseStudy[] = [
     client: "App Lifestyle - B2C",
     description: "App de diario fotográfico con vista calendario mosaico, múltiples fotos por día y experiencia calmada mobile-first.",
     results: [
-      "15K+ usuarios activos mensuales",
+      "Base de usuarios activos recurrentes",
       "Promedio 8 fotos/día por usuario",
       "99.9% uptime en storage de fotos",
       "Experiencia mobile <3s load time"
@@ -59,11 +59,11 @@ const CASE_STUDIES: CaseStudy[] = [
     id: "condorfx",
     title: "CondorFX - Trading Platform High-Performance",
     client: "Fintech Trading - B2B",
-    description: "Plataforma de trading con procesamiento de datos en tiempo real, soporte para 1000+ usuarios concurrentes y latency <50ms.",
+    description: "Plataforma de trading con procesamiento de datos en tiempo real, soporte para alta concurrencia y latency <50ms.",
     results: [
-      "$1M+ en transacciones diarias procesadas",
+      "Procesamiento de transacciones en tiempo real",
       "50ms latency en quotes y órdenes",
-      "1000+ concurrent users sin caídas",
+      "Alta concurrencia sostenida sin caídas",
       "Integración con 10+ brokers API"
     ],
     tags: ["Node.js", "WebSockets", "Redis", "PostgreSQL"],
@@ -74,7 +74,7 @@ const CASE_STUDIES: CaseStudy[] = [
     client: "Casa de Cambio - B2B/B2C",
     description: "Sistema completo de gestión de casa de cambio con cálculo automático de márgenes, integración bancaria y reporting regulatorio.",
     results: [
-      "€500K+ en operaciones mensuales",
+      "Operaciones de cambio en producción",
       "Cálculo de márgenes en tiempo real",
       "Reporting regulatorio automático",
       "Integración con 5 bancos locales"
@@ -93,7 +93,7 @@ export function CaseStudiesSection() {
             Casos de Éxito Reales
           </h2>
           <p className="text-muted-foreground max-w-2xl">
-            Proyectos que generan resultados reales: $1M+ en transacciones, 10K+ descargas, 1000+ usuarios concurrentes.
+            Proyectos reales en producción, de fintech a productos consumer.
           </p>
         </div>
 

@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "Que pasa si no estoy satisfecho con el resultado?",
     answer:
-      "Tengo una garantia de satisfaccion. Si no cumplimos con los objetivos acordados en la propuesta inicial, te devuelvo tu dinero. Hasta ahora, el 100% de mis clientes han quedado satisfechos.",
+      "Tengo una garantia de satisfaccion. Si no cumplimos con los objetivos acordados en la propuesta inicial, te devuelvo tu dinero.",
   },
   {
     question: "Puedo ver el progreso del desarrollo?",

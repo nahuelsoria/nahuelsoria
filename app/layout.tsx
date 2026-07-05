@@ -1,24 +1,26 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { AnalyticsProvider } from "@/lib/analytics"
+import { ConsoleEasterEgg } from "@/components/console-easter-egg"
+import { LanguageProvider } from "@/lib/i18n"
 import "./globals.css"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nahuelsoria.com'),
-  title: "Nahuel Soria - CTO Fintech | Desarrollo de Software a Medida",
+  title: "Nahuel Soria — Socio técnico & CTO fraccional | De la idea al producto",
   description:
-    "Especialista en apps SaaS, fintech y sistemas enterprise. $1M+ en transacciones procesadas, 10K+ descargas, 1000+ usuarios concurrentes. Consultoría técnica y desarrollo a medida.",
+    "Socio técnico y CTO fraccional: diseño, construyo y lanzo tu producto digital de punta a punta. Con la exigencia de haber liderado la tecnología de plataformas críticas en producción — aplicada a cualquier rubro.",
   keywords: [
-    "Desarrollador Fullstack Argentina",
-    "CTO Fintech",
-    "Apps SaaS a medida",
-    "Trading Platform Development",
-    "Next.js Expert",
+    "CTO fraccional",
+    "Fractional CTO",
+    "Socio técnico",
+    "Desarrollo de producto a medida",
+    "MVP",
+    "Next.js",
     "React Developer",
-    "Sistemas Financieros",
-    "Desarrollo Fintech",
-    "Consultoría Técnica",
-    "Software Enterprise",
+    "Consultoría técnica",
+    "Product engineer",
+    "Desarrollo de software Argentina",
   ],
   authors: [{ name: "Nahuel Soria", url: "https://nahuelsoria.com" }],
   creator: "Nahuel Soria",
@@ -26,31 +28,31 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://nahuelsoria.com",
-    title: "Nahuel Soria - CTO Fintech | Desarrollo de Software a Medida",
+    title: "Nahuel Soria — Socio técnico & CTO fraccional | De la idea al producto",
     description:
-      "Especialista en apps SaaS, fintech y sistemas enterprise. Proyectos: Numerai ($50K+ transacciones), CondorFX (1000+ usuarios), What I Wish (10K+ descargas).",
+      "Diseño, construyo y lanzo tu producto digital de punta a punta. Un solo responsable técnico, de la arquitectura al deploy, con experiencia en sistemas críticos que funcionan en producción.",
     siteName: "Nahuel Soria Portfolio",
     images: [
       {
         url: "/developer-coding-laptop-dark.jpeg",
         width: 1200,
         height: 630,
-        alt: "Nahuel Soria - CTO Fintech Developer",
+        alt: "Nahuel Soria — Socio técnico & CTO fraccional",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nahuel Soria - CTO Fintech | Software Development",
+    title: "Nahuel Soria — Socio técnico & CTO fraccional",
     description:
-      "Apps SaaS, fintech y sistemas enterprise. $1M+ en transacciones, 10K+ descargas, 1000+ usuarios concurrentes.",
+      "Diseño, construyo y lanzo tu producto digital de punta a punta. De la arquitectura al deploy, con experiencia en sistemas críticos en producción.",
     creator: "@nahuelsoria",
     images: [
       {
         url: "/developer-coding-laptop-dark.jpeg",
         width: 1200,
         height: 630,
-        alt: "Nahuel Soria - CTO Fintech Developer",
+        alt: "Nahuel Soria — Socio técnico & CTO fraccional",
       },
     ],
   },
@@ -97,8 +99,11 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         <AnalyticsProvider />
+        <ConsoleEasterEgg />
       </body>
     </html>
   )

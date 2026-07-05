@@ -14,16 +14,15 @@ export function About() {
             <div className={`${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
               <h2 className="section-title mb-4">Sobre Mí</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Soy Nahuel Soria, desarrollador web de Buenos Aires. Construyo plataformas, sitios web y sistemas que
-                ayudan a negocios y startups a crecer, automatizar procesos y mejorar su operación. Como CTO en una
-                fintech, desarrollé sistemas que procesan millones en transacciones y gestionan operaciones críticas
-                diariamente.
+                Soy Nahuel Soria, socio técnico y CTO fraccional desde Buenos Aires. Ayudo a founders y equipos a
+                construir y lanzar sus productos, siendo el responsable técnico de punta a punta: arquitectura,
+                desarrollo, integraciones y la operación del día a día.
               </p>
               <p className="text-lg text-muted-foreground">
-                Mi enfoque es simple: rapidez + claridad + resultados. Transformo ideas en productos reales en semanas,
-                no meses, priorizando experiencias fáciles de usar y enfocadas en impacto de negocio. Creo productos
-                propios como Picaday, Numerai y What I Wish, que ya cuentan con usuarios activos. Mi objetivo es crear
-                tecnología que genere valor real y solucione problemas concretos.
+                Lideré la tecnología de plataformas de pagos donde todo tiene que ser correcto, auditable y funcionar en
+                producción bajo presión. Esa exigencia la traigo a cada proyecto, sea del rubro que sea. Mi enfoque es
+                simple: rapidez, claridad y resultados — transformo ideas en productos reales en semanas, no meses.
+                También creo productos propios con usuarios activos.
               </p>
             </div>
 
@@ -37,8 +36,8 @@ export function About() {
                 <p className="text-sm text-muted-foreground mt-2">Proyectos completados</p>
               </Card>
               <Card className={`p-6 text-center animate-delay-300 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
-                <p className="text-3xl font-bold text-primary">100%</p>
-                <p className="text-sm text-muted-foreground mt-2">Clientes satisfechos</p>
+                <p className="text-3xl font-bold text-primary">Producción</p>
+                <p className="text-sm text-muted-foreground mt-2">Sistemas críticos en vivo</p>
               </Card>
             </div>
           </div>

@@ -21,11 +21,11 @@ const projects = [
     id: 2,
     title: "Numerai",
     description:
-      "App de finanzas personales MVP 85% completado. Target $100 MRR Q2 2026. Sistema de pagos Dodo + MercadoPago implementado. WhatsApp integration con IA para categorización automática de gastos.",
+      "App de finanzas personales MVP 85% completado. Sistema de pagos Dodo + MercadoPago implementado. WhatsApp integration con IA para categorización automática de gastos.",
     image: "/finance-app-dashboard-charts.jpg",
     tags: ["Next.js 14", "Firebase", "Dodo Payments", "WhatsApp API", "MercadoPago", "AI"],
-    status: "MVP 85% - Revenue Ready",
-    metrics: "Revenue Target: $100 MRR • Users Target: 250 MAU • Payments: Dodo + MP",
+    status: "MVP 85%",
+    metrics: "Pagos: Dodo + MercadoPago • IA: categorización de gastos • Estado: MVP",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const projects = [
     image: "/photo-diary-calendar-app.jpg",
     tags: ["Next.js 14", "React 18", "Firebase", "Tailwind 4", "Playwright E2E", "Web Workers"],
     status: "MVP 100% - Production Ready",
-    metrics: "Performance: LCP < 2.5s • E2E Tests: Full Coverage • Engagement: DAU/MAU > 30%",
+    metrics: "Performance: LCP < 2.5s • E2E Tests: Full Coverage • Web Workers: compresión de imágenes",
   },
   {
     id: 4,
