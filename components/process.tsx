@@ -1,45 +1,65 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
 import { MessageCircle, FileText, Code, CheckCircle } from "lucide-react"
-
-const steps = [
-  {
-    number: "01",
-    title: "Consulta gratuita",
-    description: "30 minutos para conocer tu proyecto, aclarar objetivos y definir que necesitas. Sin compromiso.",
-    icon: MessageCircle,
-    duration: "30 min",
-  },
-  {
-    number: "02",
-    title: "Propuesta",
-    description: "Recibis una propuesta detallada con alcance y tiempos en 24-48 horas.",
-    icon: FileText,
-    duration: "24-48h",
-  },
-  {
-    number: "03",
-    title: "Desarrollo iterativo",
-    description: "Trabajo en sprints con entregas parciales. Podes ver el progreso en tiempo real.",
-    icon: Code,
-    duration: "2-6 semanas",
-  },
-  {
-    number: "04",
-    title: "Entrega y soporte",
-    description: "Lanzamiento del proyecto + 30 dias de soporte incluido.",
-    icon: CheckCircle,
-    duration: "30 dias",
-  },
-]
+import { useLang } from "@/lib/i18n"
 
 export function Process() {
+  const { t } = useLang()
+
+  const steps = [
+    {
+      number: "01",
+      title: t("Consulta gratuita", "Free call"),
+      description: t(
+        "30 minutos para conocer tu proyecto, aclarar objetivos y definir qué necesitás. Sin compromiso.",
+        "30 minutes to get to know your project, clarify goals and define what you need. No commitment.",
+      ),
+      icon: MessageCircle,
+      duration: t("30 min", "30 min"),
+    },
+    {
+      number: "02",
+      title: t("Propuesta", "Proposal"),
+      description: t(
+        "Recibís una propuesta detallada con alcance y tiempos en 24-48 horas.",
+        "You get a detailed proposal with scope and timeline in 24-48 hours.",
+      ),
+      icon: FileText,
+      duration: t("24-48h", "24-48h"),
+    },
+    {
+      number: "03",
+      title: t("Desarrollo iterativo", "Iterative development"),
+      description: t(
+        "Trabajo en sprints con entregas parciales. Podés ver el progreso en tiempo real.",
+        "I work in sprints with partial deliveries. You can see progress in real time.",
+      ),
+      icon: Code,
+      duration: t("2-6 semanas", "2-6 weeks"),
+    },
+    {
+      number: "04",
+      title: t("Entrega y soporte", "Delivery & support"),
+      description: t(
+        "Lanzamiento del proyecto + 30 días de soporte incluido.",
+        "Project launch + 30 days of support included.",
+      ),
+      icon: CheckCircle,
+      duration: t("30 días", "30 days"),
+    },
+  ]
+
   return (
     <section className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="section-title mb-4">Como trabajo</h2>
+          <h2 className="section-title mb-4">{t("El proceso", "The process")}</h2>
           <p className="section-subtitle">
-            Un proceso claro y transparente para garantizar resultados. Te acompano en cada etapa para que siempre sepas que se esta construyendo y cuando estara listo.
+            {t(
+              "Un proceso claro y transparente para garantizar resultados. Te acompaño en cada etapa para que siempre sepas qué se está construyendo y cuándo estará listo.",
+              "A clear, transparent process to guarantee results. I walk you through every stage so you always know what's being built and when it will be ready.",
+            )}
           </p>
         </div>
 
@@ -75,7 +95,11 @@ export function Process() {
 
         <div className="mt-16 text-center">
           <p className="text-muted-foreground">
-            <strong className="text-foreground">Transparencia total:</strong> siempre sabras que se construye, con que alcance y cuando estara listo.
+            <strong className="text-foreground">{t("Transparencia total:", "Full transparency:")}</strong>{" "}
+            {t(
+              "siempre sabrás qué se construye, con qué alcance y cuándo estará listo.",
+              "you'll always know what's being built, with what scope, and when it will be ready.",
+            )}
           </p>
         </div>
       </div>

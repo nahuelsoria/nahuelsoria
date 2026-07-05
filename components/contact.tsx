@@ -10,6 +10,7 @@ import { Mail, MessageCircle } from "lucide-react"
 import { useInViewAnimation } from "@/hooks/use-in-view-animation"
 import { trackEvent } from "@/lib/analytics"
 import { openBooking } from "@/lib/booking"
+import { useLang } from "@/lib/i18n"
 
 type ContactMethod = {
   title: string
@@ -19,6 +20,7 @@ type ContactMethod = {
 }
 
 export function Contact() {
+  const { t } = useLang()
   const contactMethods: ContactMethod[] = [
     {
       title: "Email",
@@ -33,8 +35,8 @@ export function Contact() {
       accent: "accent",
     },
     {
-      title: "Formulario",
-      description: "Envíame un mensaje",
+      title: t("Formulario", "Contact form"),
+      description: t("Envíame un mensaje", "Send me a message"),
       icon: Mail,
       accent: "primary",
     },
@@ -88,10 +90,12 @@ export function Contact() {
     <section id="contact" className="py-20 md:py-32 bg-card/50 scroll-mt-24" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         <div className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "reveal-offscreen"}`}>
-          <h2 className="section-title mb-4">Trabajemos juntos</h2>
+          <h2 className="section-title mb-4">{t("Trabajemos juntos", "Let's work together")}</h2>
           <p className="section-subtitle">
-            ¿Tienes un proyecto en mente? Agenda una consulta gratuita de 30 minutos para evaluar tu idea y ver cómo puedo
-            ayudarte a convertirla en realidad.
+            {t(
+              "¿Tenés un proyecto en mente? Agendá una consulta gratuita de 30 minutos para evaluar tu idea y ver cómo puedo ayudarte a convertirla en realidad.",
+              "Have a project in mind? Book a free 30-minute call to evaluate your idea and see how I can help you make it real.",
+            )}
           </p>
           <div className="mt-6">
             <Button
@@ -99,7 +103,7 @@ export function Contact() {
               className="group bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white"
               onClick={() => openBooking({ label: "contact_header" })}
             >
-              Agendar llamada gratuita
+              {t("Agendar llamada gratuita", "Book a free call")}
             </Button>
           </div>
         </div>
@@ -135,12 +139,12 @@ export function Contact() {
           <form onSubmit={handleSubmit} className="space-y-6 bg-card border border-border/50 rounded-lg p-8">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
-                Nombre
+                {t("Nombre", "Name")}
               </label>
               <Input
                 id="name"
                 name="name"
-                placeholder="Tu nombre"
+                placeholder={t("Tu nombre", "Your name")}
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -164,12 +168,12 @@ export function Contact() {
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-2">
-                Mensaje
+                {t("Mensaje", "Message")}
               </label>
               <textarea
                 id="message"
                 name="message"
-                placeholder="Cuéntame sobre tu proyecto..."
+                placeholder={t("Cuéntame sobre tu proyecto...", "Tell me about your project...")}
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
@@ -179,16 +183,19 @@ export function Contact() {
             </div>
 
             <Button type="submit" className="w-full" disabled={status === "sending"}>
-              {status === "sending" ? "Enviando..." : "Enviar mensaje"}
+              {status === "sending" ? t("Enviando...", "Sending...") : t("Enviar mensaje", "Send message")}
             </Button>
             {status === "sent" ? (
               <p className="text-center text-sm font-medium text-[#0EA5E9]">
-                ¡Gracias! Recibí tu mensaje y te respondo a la brevedad.
+                {t("¡Gracias! Recibí tu mensaje y te respondo a la brevedad.", "Thanks! I got your message and I'll reply shortly.")}
               </p>
             ) : null}
             {status === "error" ? (
               <p className="text-center text-sm text-muted-foreground">
-                Se abrió tu cliente de email para enviar el mensaje. ¿Preferís WhatsApp? +54 9 11 5879 4428
+                {t(
+                  "Se abrió tu cliente de email para enviar el mensaje. ¿Preferís WhatsApp? +54 9 11 5879 4428",
+                  "Your email client opened to send the message. Prefer WhatsApp? +54 9 11 5879 4428",
+                )}
               </p>
             ) : null}
           </form>

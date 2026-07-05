@@ -1,41 +1,49 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
 import { Rocket, Code, ShieldCheck, Zap } from "lucide-react"
-
-const results = [
-  {
-    icon: Rocket,
-    value: "4 semanas",
-    label: "De idea a producto",
-    description: "Tiempo típico para tener un MVP funcional en la calle",
-  },
-  {
-    icon: Code,
-    value: "End-to-end",
-    label: "Un solo responsable técnico",
-    description: "De la arquitectura al deploy, sin traspasos",
-  },
-  {
-    icon: ShieldCheck,
-    value: "Producción",
-    label: "Sistemas críticos en vivo",
-    description: "Plataformas que funcionan bajo presión real",
-  },
-  {
-    icon: Zap,
-    value: "Sin jerga",
-    label: "Claridad para founders",
-    description: "Decisiones técnicas explicadas simple",
-  },
-]
+import { useLang } from "@/lib/i18n"
 
 export function Results() {
+  const { t } = useLang()
+
+  const results = [
+    {
+      icon: Rocket,
+      value: t("4 semanas", "4 weeks"),
+      label: t("De idea a producto", "From idea to product"),
+      description: t("Tiempo típico para tener un MVP funcional en la calle", "Typical time to get a working MVP out the door"),
+    },
+    {
+      icon: Code,
+      value: t("End-to-end", "End-to-end"),
+      label: t("Un solo responsable técnico", "A single technical owner"),
+      description: t("De la arquitectura al deploy, sin traspasos", "From architecture to deploy, no handoffs"),
+    },
+    {
+      icon: ShieldCheck,
+      value: t("Producción", "Production"),
+      label: t("Sistemas críticos en vivo", "Critical systems, live"),
+      description: t("Plataformas que funcionan bajo presión real", "Platforms that work under real pressure"),
+    },
+    {
+      icon: Zap,
+      value: t("Sin jerga", "No jargon"),
+      label: t("Claridad para founders", "Clarity for founders"),
+      description: t("Decisiones técnicas explicadas simple", "Technical decisions explained simply"),
+    },
+  ]
+
   return (
     <section className="py-20 md:py-32 bg-card/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="section-title mb-4">Cómo trabajo</h2>
+          <h2 className="section-title mb-4">{t("Cómo trabajo", "How I work")}</h2>
           <p className="section-subtitle">
-            Sin métricas infladas. Así entrego: rápido, claro y a estándar de producción.
+            {t(
+              "Sin métricas infladas. Así entrego: rápido, claro y a estándar de producción.",
+              "No inflated metrics. This is how I deliver: fast, clear and to production standard.",
+            )}
           </p>
         </div>
 
