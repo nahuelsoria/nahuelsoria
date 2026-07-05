@@ -10,6 +10,7 @@ export function Contact({ dict, locale }: { dict: Dictionary; locale: Locale }) 
   const c = dict.contact
   const calendlyUrl = site.calendly
   const [form, setForm] = useState({ name: "", email: "", message: "" })
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle")
 
   const wa = whatsappHref(
     locale === "es"
@@ -17,9 +18,7 @@ export function Contact({ dict, locale }: { dict: Dictionary; locale: Locale }) 
       : "Hi Nahuel! I'd like to talk about a project.",
   )
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    trackEvent({ action: "form_submit", category: "contact", label: "contact_form" })
+  const mailtoFallback = () => {
     const subject = encodeURIComponent(
       (locale === "es" ? "Consulta desde el portfolio: " : "Portfolio inquiry: ") + form.name,
     )
@@ -27,6 +26,36 @@ export function Contact({ dict, locale }: { dict: Dictionary; locale: Locale }) 
       `${dict.contact.form.name}: ${form.name}\n${dict.contact.form.email}: ${form.email}\n\n${form.message}`,
     )
     window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
+  }
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    trackEvent({ action: "form_submit", category: "contact", label: "contact_form" })
+    setStatus("sending")
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setStatus("sent")
+        setForm({ name: "", email: "", message: "" })
+        return
+      }
+    } catch {
+      // network error — fall through to mailto
+    }
+    // No email provider configured (501) or delivery failed (502): never lose the lead.
+    setStatus("idle")
+    mailtoFallback()
+  }
+
+  const statusText: Record<typeof status, string> = {
+    idle: c.form.submit,
+    sending: locale === "es" ? "Enviando…" : "Sending…",
+    sent: locale === "es" ? "¡Mensaje enviado!" : "Message sent!",
+    error: locale === "es" ? "Reintentar" : "Retry",
   }
 
   const methods = [
@@ -142,10 +171,14 @@ export function Contact({ dict, locale }: { dict: Dictionary; locale: Locale }) 
             </div>
             <button
               type="submit"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand px-6 py-3 text-sm font-medium text-brand-foreground transition-transform hover:-translate-y-0.5"
+              disabled={status === "sending" || status === "sent"}
+              aria-live="polite"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand px-6 py-3 text-sm font-medium text-brand-foreground transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
             >
-              {c.form.submit}
-              <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              {statusText[status]}
+              {status !== "sent" && (
+                <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              )}
             </button>
           </form>
         </div>
