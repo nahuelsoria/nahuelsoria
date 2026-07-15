@@ -37,6 +37,10 @@ Payments and exchange platform for international operations. I built the financi
 Automated auditing of codebases using orchestrated LLM agents. It turns a manual expert review into a repeatable, prioritized report.
 **Scope:** agent orchestration, automated analysis, reporting.
 
+### Onda Corta (AI-run tech newsroom, own product)
+A Spanish-language tech-news site that runs almost on its own: an editorial AI pipeline selects, writes, fact-checks and publishes, with real guardrails (anti-plagiarism, cross-checking, a quality gate) and self-monitoring automations. Built end to end, live in production.
+**Scope:** LLM editorial agent, quality gates, Next.js + Python + PostgreSQL, auto-distribution and watchdogs.
+
 ### Picaday (photo journaling app, own product)
 A daily photographic journal focused on a calm, fast experience. Shipped to production with a strong bar on performance (LCP under 2.5s) and UX.
 **Scope:** performance-first frontend, Web Workers, E2E testing.
