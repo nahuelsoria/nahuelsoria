@@ -1,13 +1,19 @@
-import { nextJsConfig } from "next/eslint-plugin-next";
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
 
 export default [
   {
-    ignores: ["node_modules/**", ".next/**", "out/**"],
+    ignores: ["node_modules/**", ".next/**", "out/**", "next-env.d.ts"],
   },
-  ...nextJsConfig,
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     rules: {
-      "@next/next/no-html-link-for-pages": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
     },
   },
 ];
