@@ -32,11 +32,13 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const otherLocale: Locale = locale === "es" ? "en" : "es"
   const otherHref = (pathname || `/${locale}`).replace(`/${locale}`, `/${otherLocale}`)
 
+  // Locale-absolute hrefs so section links also work from /blog pages.
   const nav = [
-    { label: dict.nav.projects, href: "#projects" },
-    { label: dict.nav.services, href: "#services" },
-    { label: dict.nav.about, href: "#about" },
-    { label: dict.nav.contact, href: "#contact" },
+    { label: dict.nav.projects, href: `/${locale}#projects` },
+    { label: dict.nav.services, href: `/${locale}#services` },
+    { label: dict.nav.about, href: `/${locale}#about` },
+    { label: dict.nav.blog, href: `/${locale}/blog` },
+    { label: dict.nav.contact, href: `/${locale}#contact` },
   ]
 
   return (

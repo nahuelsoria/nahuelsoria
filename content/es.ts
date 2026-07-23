@@ -5,6 +5,7 @@ export const es: Dictionary = {
     projects: "Proyectos",
     services: "Servicios",
     about: "Sobre mí",
+    blog: "Blog",
     contact: "Contacto",
     cta: "Agendar llamada",
   },
@@ -99,6 +100,14 @@ export const es: Dictionary = {
       messagePlaceholder: "Contame sobre tu proyecto…",
       submit: "Enviar mensaje",
     },
+  },
+  blog: {
+    eyebrow: "// Blog",
+    title: "Notas de ingeniería",
+    subtitle:
+      "Sistemas reales corriendo en producción: agentes de IA, infraestructura fintech y automatización. Sin tutoriales; lo que construyo y lo que aprendo operándolo.",
+    readingTime: "min de lectura",
+    back: "Volver al blog",
   },
   footer: {
     tagline: "Desarrollo de software a medida · Fintech & producto",

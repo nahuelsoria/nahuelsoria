@@ -51,6 +51,7 @@ export type Dictionary = {
     projects: string
     services: string
     about: string
+    blog: string
     contact: string
     cta: string
   }
@@ -110,6 +111,13 @@ export type Dictionary = {
     eyebrow: string
     title: string
     subtitle: string
+  }
+  blog: {
+    eyebrow: string
+    title: string
+    subtitle: string
+    readingTime: string
+    back: string
   }
   contact: {
     eyebrow: string
