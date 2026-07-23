@@ -12,11 +12,13 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: Locale }) {
       : "Hi Nahuel! I'd like to get in touch.",
   )
 
+  // Locale-absolute hrefs so section links also work from /blog pages.
   const navLinks = [
-    { href: "#projects", label: dict.nav.projects },
-    { href: "#services", label: dict.nav.services },
-    { href: "#about", label: dict.nav.about },
-    { href: "#contact", label: dict.nav.contact },
+    { href: `/${locale}#projects`, label: dict.nav.projects },
+    { href: `/${locale}#services`, label: dict.nav.services },
+    { href: `/${locale}#about`, label: dict.nav.about },
+    { href: `/${locale}/blog`, label: dict.nav.blog },
+    { href: `/${locale}#contact`, label: dict.nav.contact },
   ]
 
   const connectLinks = [

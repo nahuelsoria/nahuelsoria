@@ -90,6 +90,42 @@ export function buildProfileJsonLd(locale: Locale) {
   }
 }
 
+/** BlogPosting + BreadcrumbList for a blog post page. */
+export function buildBlogPostingJsonLd(
+  locale: Locale,
+  post: { slug: string; title: string; description: string; date: string },
+) {
+  const dict = getDictionary(locale)
+  const personId = `${site.url}/#person`
+  const postUrl = `${site.url}/${locale}/blog/${post.slug}`
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${postUrl}#post`,
+        headline: post.title,
+        description: post.description,
+        datePublished: post.date,
+        inLanguage: locale === "es" ? "es-AR" : "en",
+        url: postUrl,
+        mainEntityOfPage: postUrl,
+        author: { "@id": personId },
+        publisher: { "@id": personId },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: site.name, item: `${site.url}/${locale}` },
+          { "@type": "ListItem", position: 2, name: dict.blog.title, item: `${site.url}/${locale}/blog` },
+          { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+        ],
+      },
+    ],
+  }
+}
+
 /** FAQPage — high value for AI Overviews and rich results. */
 export function buildFaqJsonLd(locale: Locale) {
   return {

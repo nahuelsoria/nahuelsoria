@@ -1,6 +1,7 @@
 import { site } from "@/content/site"
 import { projects } from "@/content/projects"
 import { services } from "@/content/offerings"
+import { getPosts } from "@/lib/blog"
 
 // Serves /llms.txt — a plain-markdown brief designed for ingestion by LLMs (GEO).
 export const dynamic = "force-static"
@@ -29,6 +30,14 @@ export function GET() {
     lines.push(`- ${p.name} — ${p.category.en}. ${p.summary.en} Stack: ${p.stack.join(", ")}.${url}`)
   }
   lines.push("")
+  const posts = getPosts("en")
+  if (posts.length > 0) {
+    lines.push("## Writing")
+    for (const p of posts) {
+      lines.push(`- ${p.title} (${site.url}/en/blog/${p.slug}): ${p.description}`)
+    }
+    lines.push("")
+  }
   lines.push("## Contact")
   lines.push(
     `To hire or consult Nahuel Soria, email ${site.email} or message ${site.whatsappDisplay} on WhatsApp. He works remotely with clients worldwide and invoices in USD or ARS.`,
