@@ -5,7 +5,7 @@ date: 2026-07-23
 tags: Agentes de IA, DevOps, Automatización
 ---
 
-Soy un dev solo operando varios productos propios y la infraestructura de dos plataformas fintech. Hace unos meses el trabajo de operaciones (revisar logs, vigilar producción, perseguir alertas de seguridad, armar reportes) se comía las horas que necesitaba para construir y vender.
+Trabajo solo: opero varios productos propios y la infraestructura de dos plataformas fintech. Hace unos meses el trabajo de operaciones (revisar logs, vigilar producción, perseguir alertas de seguridad, armar reportes) se comía las horas que necesitaba para construir y vender.
 
 Hoy ese trabajo lo hace una flota de unos 20 agentes que corren por cron en una VPS. Ninguno puede tocar plata. Este es el diseño.
 
