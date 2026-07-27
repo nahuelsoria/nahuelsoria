@@ -20,6 +20,9 @@ export async function generateMetadata({
 
   const title = `${dict.blog.title} — ${site.name}`
   const description = dict.blog.subtitle
+  // openGraph/twitter are shallow-merged: declaring them here drops the
+  // file-based image from app/[locale]/opengraph-image, so re-attach it.
+  const ogImage = `${site.url}/${loc}/opengraph-image`
 
   return {
     metadataBase: new URL(site.url),
@@ -41,8 +44,9 @@ export async function generateMetadata({
       siteName: site.name,
       title,
       description,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
-    twitter: { card: "summary_large_image", title, description, creator: "@nahhwe" },
+    twitter: { card: "summary_large_image", title, description, creator: "@nahhwe", images: [ogImage] },
   }
 }
 
