@@ -18,6 +18,7 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: Locale }) {
     { href: `/${locale}#services`, label: dict.nav.services },
     { href: `/${locale}#about`, label: dict.nav.about },
     { href: `/${locale}/blog`, label: dict.nav.blog },
+    { href: `/${locale}/links`, label: dict.nav.links },
     { href: `/${locale}#contact`, label: dict.nav.contact },
   ]
 

@@ -24,7 +24,7 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "Node.js", "PostgreSQL", "Firebase", "Vercel", "Cloudflare"],
     status: "production",
-    links: { repo: `${site.social.github}/bridgewater-payments` },
+    links: { repo: `${site.social.github}/bridgewater-payments`, live: "https://www.bridgewaterpayments.com" },
   },
   {
     slug: "condor-otc",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     ],
     stack: ["TypeScript", "Next.js", "Node.js", "PostgreSQL"],
     status: "production",
-    links: { repo: `${site.social.github}/condor-otc` },
+    links: { repo: `${site.social.github}/condor-otc`, live: "https://www.condorotc.com.ar" },
   },
   {
     slug: "llm-audit",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "TypeScript", "LLM APIs"],
     status: "active",
-    links: { repo: `${site.social.github}/llm-audit` },
+    links: { repo: `${site.social.github}/llm-audit`, live: "https://llmaudit.app" },
   },
   {
     slug: "picaday",
@@ -113,5 +113,6 @@ export const projects: Project[] = [
     ],
     stack: ["React Native", "Firebase", "WhatsApp API"],
     status: "production",
+    links: { live: "https://whatiwish.app" },
   },
 ]

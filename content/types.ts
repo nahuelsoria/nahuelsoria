@@ -45,6 +45,18 @@ export type FaqItem = {
   a: Localized
 }
 
+export type BioLinkKind = "writing" | "project" | "contact"
+
+export type BioLink = {
+  label: Localized
+  description: Localized
+  /** Absolute URL, or a locale-relative path when `internal` is true. */
+  href: string
+  kind: BioLinkKind
+  internal?: boolean
+  featured?: boolean
+}
+
 /** Copy dictionary — one shape, two languages resolved at build/render time. */
 export type Dictionary = {
   nav: {
@@ -52,6 +64,7 @@ export type Dictionary = {
     services: string
     about: string
     blog: string
+    links: string
     contact: string
     cta: string
   }
@@ -118,6 +131,12 @@ export type Dictionary = {
     subtitle: string
     readingTime: string
     back: string
+  }
+  links: {
+    eyebrow: string
+    title: string
+    subtitle: string
+    groups: Record<BioLinkKind, string>
   }
   contact: {
     eyebrow: string
