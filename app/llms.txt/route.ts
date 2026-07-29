@@ -15,6 +15,7 @@ export function GET() {
   )
   lines.push("")
   lines.push(`- Website: ${site.url}`)
+  lines.push(`- All project links: ${site.url}/es/links`)
   lines.push(`- Email: ${site.email}`)
   lines.push(`- WhatsApp: ${site.whatsappDisplay}`)
   lines.push(`- GitHub: ${site.social.github}`)
@@ -26,7 +27,8 @@ export function GET() {
   lines.push("")
   lines.push("## Selected projects")
   for (const p of projects) {
-    const url = p.links?.repo ? ` (${p.links.repo})` : ""
+    const urls = [p.links?.live, p.links?.repo].filter(Boolean)
+    const url = urls.length > 0 ? ` (${urls.join(", ")})` : ""
     lines.push(`- ${p.name} — ${p.category.en}. ${p.summary.en} Stack: ${p.stack.join(", ")}.${url}`)
   }
   lines.push("")

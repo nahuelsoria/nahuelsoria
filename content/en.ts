@@ -6,6 +6,7 @@ export const en: Dictionary = {
     services: "Services",
     about: "About",
     blog: "Blog",
+    links: "Links",
     contact: "Contact",
     cta: "Book a call",
   },
@@ -108,6 +109,16 @@ export const en: Dictionary = {
       "Real systems running in production: AI agents, fintech infrastructure and automation. No tutorials; what I build and what I learn operating it.",
     readingTime: "min read",
     back: "Back to blog",
+  },
+  links: {
+    eyebrow: "// Links",
+    title: "All my projects",
+    subtitle: "Everything I build and where to find me, in one place.",
+    groups: {
+      writing: "Writing",
+      project: "Projects",
+      contact: "Contact",
+    },
   },
   footer: {
     tagline: "Custom software development · Fintech & product",
