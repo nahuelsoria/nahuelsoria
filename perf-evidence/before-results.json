@@ -1,0 +1,2112 @@
+[
+  {
+    "page": "home",
+    "path": "/es",
+    "viewport": "mobile",
+    "width": 390,
+    "totalTransferBytes": 437026,
+    "byType": {
+      "js": 185233,
+      "css": 0,
+      "font": 182168,
+      "image": 2806,
+      "document": 66090,
+      "other": 729
+    },
+    "topAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es",
+        "type": "document",
+        "bytes": 29241,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css",
+        "type": "js",
+        "bytes": 21204,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 12339,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 11964,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js",
+        "type": "js",
+        "bytes": 9386,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "type": "js",
+        "bytes": 8770,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "type": "js",
+        "bytes": 4543,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3669,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3567,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3hjjetkaddzvd.js",
+        "type": "js",
+        "bytes": 3459,
+        "mime": "application/javascript",
+        "status": 200
+      }
+    ],
+    "allAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es",
+        "type": "document",
+        "bytes": 29241,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css",
+        "type": "js",
+        "bytes": 21204,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 12339,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 11964,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js",
+        "type": "js",
+        "bytes": 9386,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "type": "js",
+        "bytes": 8770,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "type": "js",
+        "bytes": 4543,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3669,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3567,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3hjjetkaddzvd.js",
+        "type": "js",
+        "bytes": 3459,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=dMBt3GaTCMFoiQUD",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=dMBt3GaTCMFoiQUD",
+        "type": "document",
+        "bytes": 1659,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2y4urf-nf_i2l.css",
+        "type": "js",
+        "bytes": 1524,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XlwSBhFOJIdptixZ",
+        "type": "document",
+        "bytes": 1171,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon-light-32x32.png",
+        "type": "image",
+        "bytes": 844,
+        "mime": "image/png",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_vercel/insights/script.js",
+        "type": "js",
+        "bytes": 776,
+        "mime": "text/html",
+        "status": 404
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=UOlQcfOPFbguJJrh",
+        "type": "document",
+        "bytes": 771,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/manifest.webmanifest",
+        "type": "other",
+        "bytes": 729,
+        "mime": "application/manifest+json",
+        "status": 200
+      }
+    ],
+    "metrics": {
+      "overflowHorizontal": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "title": "Nahuel Soria — Desarrollo de software a medida",
+      "navigation": {
+        "transferSize": 29039,
+        "encodedBodySize": 28739,
+        "decodedBodySize": 200465,
+        "domContentLoaded": 330.59999999403954,
+        "loadEventEnd": 332.5,
+        "responseEnd": 44.099999994039536,
+        "duration": 332.5
+      },
+      "paints": {
+        "first-paint": 264,
+        "first-contentful-paint": 264
+      },
+      "resourceCount": 30,
+      "images": [],
+      "fontsReady": "loaded",
+      "fontFaces": [
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Instrument Serif Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "JetBrains Mono Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        }
+      ],
+      "preloadedFonts": [
+        "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2"
+      ],
+      "stylesheets": [
+        "http://localhost:3456/_next/static/chunks/2y4urf-nf_i2l.css",
+        "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css"
+      ],
+      "scripts": [
+        "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "http://localhost:3456/_next/static/chunks/3hjjetkaddzvd.js",
+        "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "http://localhost:3456/_next/static/chunks/0cz1d0mv5g_q7.js",
+        "http://localhost:3456/_vercel/insights/script.js",
+        "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js"
+      ]
+    },
+    "screenshot": "/tmp/perf-portfolio/before-home-mobile.png"
+  },
+  {
+    "page": "home",
+    "path": "/es",
+    "viewport": "desktop",
+    "width": 1440,
+    "totalTransferBytes": 437026,
+    "byType": {
+      "js": 185233,
+      "css": 0,
+      "font": 182168,
+      "image": 2806,
+      "document": 66090,
+      "other": 729
+    },
+    "topAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es",
+        "type": "document",
+        "bytes": 29241,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css",
+        "type": "js",
+        "bytes": 21204,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 12339,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 11964,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js",
+        "type": "js",
+        "bytes": 9386,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "type": "js",
+        "bytes": 8770,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "type": "js",
+        "bytes": 4543,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3669,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3567,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3hjjetkaddzvd.js",
+        "type": "js",
+        "bytes": 3459,
+        "mime": "application/javascript",
+        "status": 200
+      }
+    ],
+    "allAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es",
+        "type": "document",
+        "bytes": 29241,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css",
+        "type": "js",
+        "bytes": 21204,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 12339,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 11964,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js",
+        "type": "js",
+        "bytes": 9386,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "type": "js",
+        "bytes": 8770,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "type": "js",
+        "bytes": 4543,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3669,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3567,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3hjjetkaddzvd.js",
+        "type": "js",
+        "bytes": 3459,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=dMBt3GaTCMFoiQUD",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=dMBt3GaTCMFoiQUD",
+        "type": "document",
+        "bytes": 1659,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2y4urf-nf_i2l.css",
+        "type": "js",
+        "bytes": 1524,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XlwSBhFOJIdptixZ",
+        "type": "document",
+        "bytes": 1171,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon-light-32x32.png",
+        "type": "image",
+        "bytes": 844,
+        "mime": "image/png",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_vercel/insights/script.js",
+        "type": "js",
+        "bytes": 776,
+        "mime": "text/html",
+        "status": 404
+      },
+      {
+        "url": "http://localhost:3456/en?_rsc=UOlQcfOPFbguJJrh",
+        "type": "document",
+        "bytes": 771,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/manifest.webmanifest",
+        "type": "other",
+        "bytes": 729,
+        "mime": "application/manifest+json",
+        "status": 200
+      }
+    ],
+    "metrics": {
+      "overflowHorizontal": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "title": "Nahuel Soria — Desarrollo de software a medida",
+      "navigation": {
+        "transferSize": 29039,
+        "encodedBodySize": 28739,
+        "decodedBodySize": 200465,
+        "domContentLoaded": 238.20000000298023,
+        "loadEventEnd": 239.79999999701977,
+        "responseEnd": 22.200000002980232,
+        "duration": 239.79999999701977
+      },
+      "paints": {
+        "first-paint": 204,
+        "first-contentful-paint": 204
+      },
+      "resourceCount": 30,
+      "images": [],
+      "fontsReady": "loaded",
+      "fontFaces": [
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Instrument Serif Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "JetBrains Mono Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        }
+      ],
+      "preloadedFonts": [
+        "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2"
+      ],
+      "stylesheets": [
+        "http://localhost:3456/_next/static/chunks/2y4urf-nf_i2l.css",
+        "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css"
+      ],
+      "scripts": [
+        "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "http://localhost:3456/_next/static/chunks/3hjjetkaddzvd.js",
+        "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "http://localhost:3456/_next/static/chunks/0cz1d0mv5g_q7.js",
+        "http://localhost:3456/_vercel/insights/script.js",
+        "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js"
+      ]
+    },
+    "screenshot": "/tmp/perf-portfolio/before-home-desktop.png"
+  },
+  {
+    "page": "blog",
+    "path": "/es/blog/agent-fleet",
+    "viewport": "mobile",
+    "width": 390,
+    "totalTransferBytes": 429811,
+    "byType": {
+      "js": 191560,
+      "css": 0,
+      "font": 182168,
+      "image": 2806,
+      "document": 52548,
+      "other": 729
+    },
+    "topAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css",
+        "type": "js",
+        "bytes": 21204,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es/blog/agent-fleet",
+        "type": "document",
+        "bytes": 18196,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=rEIAuNQz5Wi103jl",
+        "type": "document",
+        "bytes": 12339,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js",
+        "type": "js",
+        "bytes": 9386,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "type": "js",
+        "bytes": 8770,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=K9M0CrRxi7BPYdoi",
+        "type": "document",
+        "bytes": 7217,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0ifd3qqgfvfky.js",
+        "type": "js",
+        "bytes": 6327,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "type": "js",
+        "bytes": 4543,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3669,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3570,
+        "mime": "text/x-component",
+        "status": 200
+      }
+    ],
+    "allAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css",
+        "type": "js",
+        "bytes": 21204,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es/blog/agent-fleet",
+        "type": "document",
+        "bytes": 18196,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=rEIAuNQz5Wi103jl",
+        "type": "document",
+        "bytes": 12339,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js",
+        "type": "js",
+        "bytes": 9386,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "type": "js",
+        "bytes": 8770,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=K9M0CrRxi7BPYdoi",
+        "type": "document",
+        "bytes": 7217,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0ifd3qqgfvfky.js",
+        "type": "js",
+        "bytes": 6327,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "type": "js",
+        "bytes": 4543,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3669,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3570,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3hjjetkaddzvd.js",
+        "type": "js",
+        "bytes": 3459,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=5Qu8EMruXQ9G_JNt",
+        "type": "document",
+        "bytes": 1743,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=5Qu8EMruXQ9G_JNt",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2y4urf-nf_i2l.css",
+        "type": "js",
+        "bytes": 1524,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XX52ViXzHJ4Xq96W",
+        "type": "document",
+        "bytes": 1171,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon-light-32x32.png",
+        "type": "image",
+        "bytes": 844,
+        "mime": "image/png",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=XEDVdSFtE4KCKOe8",
+        "type": "document",
+        "bytes": 792,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_vercel/insights/script.js",
+        "type": "js",
+        "bytes": 776,
+        "mime": "text/html",
+        "status": 404
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XEDVdSFtE4KCKOe8",
+        "type": "document",
+        "bytes": 770,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/manifest.webmanifest",
+        "type": "other",
+        "bytes": 729,
+        "mime": "application/manifest+json",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=sq8VI5mGoa6MwMOv",
+        "type": "document",
+        "bytes": 686,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=6JMGF7Jx0UjmyzBP",
+        "type": "document",
+        "bytes": 686,
+        "mime": "text/x-component",
+        "status": 200
+      }
+    ],
+    "metrics": {
+      "overflowHorizontal": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "title": "Una flota de agentes opera mi infraestructura mientras duermo — Nahuel Soria",
+      "navigation": {
+        "transferSize": 17998,
+        "encodedBodySize": 17698,
+        "decodedBodySize": 72900,
+        "domContentLoaded": 104.70000000298023,
+        "loadEventEnd": 235.1000000089407,
+        "responseEnd": 14.300000011920929,
+        "duration": 235.1000000089407
+      },
+      "paints": {
+        "first-paint": 192,
+        "first-contentful-paint": 192
+      },
+      "resourceCount": 34,
+      "images": [],
+      "fontsReady": "loaded",
+      "fontFaces": [
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Instrument Serif Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "JetBrains Mono Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        }
+      ],
+      "preloadedFonts": [
+        "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2"
+      ],
+      "stylesheets": [
+        "http://localhost:3456/_next/static/chunks/2y4urf-nf_i2l.css",
+        "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css"
+      ],
+      "scripts": [
+        "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "http://localhost:3456/_next/static/chunks/3hjjetkaddzvd.js",
+        "http://localhost:3456/_next/static/chunks/0ifd3qqgfvfky.js",
+        "http://localhost:3456/_next/static/chunks/0cz1d0mv5g_q7.js",
+        "http://localhost:3456/_vercel/insights/script.js",
+        "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js"
+      ]
+    },
+    "screenshot": "/tmp/perf-portfolio/before-blog-mobile.png"
+  },
+  {
+    "page": "blog",
+    "path": "/es/blog/agent-fleet",
+    "viewport": "desktop",
+    "width": 1440,
+    "totalTransferBytes": 429811,
+    "byType": {
+      "js": 191560,
+      "css": 0,
+      "font": 182168,
+      "image": 2806,
+      "document": 52548,
+      "other": 729
+    },
+    "topAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css",
+        "type": "js",
+        "bytes": 21204,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es/blog/agent-fleet",
+        "type": "document",
+        "bytes": 18196,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=rEIAuNQz5Wi103jl",
+        "type": "document",
+        "bytes": 12339,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js",
+        "type": "js",
+        "bytes": 9386,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "type": "js",
+        "bytes": 8770,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=K9M0CrRxi7BPYdoi",
+        "type": "document",
+        "bytes": 7217,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0ifd3qqgfvfky.js",
+        "type": "js",
+        "bytes": 6327,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "type": "js",
+        "bytes": 4543,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3669,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3570,
+        "mime": "text/x-component",
+        "status": 200
+      }
+    ],
+    "allAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "type": "font",
+        "bytes": 40780,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css",
+        "type": "js",
+        "bytes": 21204,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es/blog/agent-fleet",
+        "type": "document",
+        "bytes": 18196,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=rEIAuNQz5Wi103jl",
+        "type": "document",
+        "bytes": 12339,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js",
+        "type": "js",
+        "bytes": 9386,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "type": "js",
+        "bytes": 8770,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=K9M0CrRxi7BPYdoi",
+        "type": "document",
+        "bytes": 7217,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0ifd3qqgfvfky.js",
+        "type": "js",
+        "bytes": 6327,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "type": "js",
+        "bytes": 4543,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3669,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3570,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3hjjetkaddzvd.js",
+        "type": "js",
+        "bytes": 3459,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=5Qu8EMruXQ9G_JNt",
+        "type": "document",
+        "bytes": 1743,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=5Qu8EMruXQ9G_JNt",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2y4urf-nf_i2l.css",
+        "type": "js",
+        "bytes": 1524,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=XX52ViXzHJ4Xq96W",
+        "type": "document",
+        "bytes": 1171,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon-light-32x32.png",
+        "type": "image",
+        "bytes": 844,
+        "mime": "image/png",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=XEDVdSFtE4KCKOe8",
+        "type": "document",
+        "bytes": 792,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_vercel/insights/script.js",
+        "type": "js",
+        "bytes": 776,
+        "mime": "text/html",
+        "status": 404
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XEDVdSFtE4KCKOe8",
+        "type": "document",
+        "bytes": 770,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/manifest.webmanifest",
+        "type": "other",
+        "bytes": 729,
+        "mime": "application/manifest+json",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=sq8VI5mGoa6MwMOv",
+        "type": "document",
+        "bytes": 686,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/en/blog/agent-fleet?_rsc=6JMGF7Jx0UjmyzBP",
+        "type": "document",
+        "bytes": 686,
+        "mime": "text/x-component",
+        "status": 200
+      }
+    ],
+    "metrics": {
+      "overflowHorizontal": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "title": "Una flota de agentes opera mi infraestructura mientras duermo — Nahuel Soria",
+      "navigation": {
+        "transferSize": 17998,
+        "encodedBodySize": 17698,
+        "decodedBodySize": 72900,
+        "domContentLoaded": 136.1000000089407,
+        "loadEventEnd": 193.70000000298023,
+        "responseEnd": 14.400000005960464,
+        "duration": 193.70000000298023
+      },
+      "paints": {
+        "first-paint": 164,
+        "first-contentful-paint": 164
+      },
+      "resourceCount": 34,
+      "images": [],
+      "fontsReady": "loaded",
+      "fontFaces": [
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Instrument Serif Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "100 900",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "100 800",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "JetBrains Mono Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        }
+      ],
+      "preloadedFonts": [
+        "http://localhost:3456/_next/static/media/70bc3e132a0a741e-s.p.3t6q91iet4nsy.woff2",
+        "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2"
+      ],
+      "stylesheets": [
+        "http://localhost:3456/_next/static/chunks/2y4urf-nf_i2l.css",
+        "http://localhost:3456/_next/static/chunks/21pjzmmv3tmg8.css"
+      ],
+      "scripts": [
+        "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "http://localhost:3456/_next/static/chunks/turbopack-1is3t1m41muo9.js",
+        "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "http://localhost:3456/_next/static/chunks/3hjjetkaddzvd.js",
+        "http://localhost:3456/_next/static/chunks/0ifd3qqgfvfky.js",
+        "http://localhost:3456/_next/static/chunks/0cz1d0mv5g_q7.js",
+        "http://localhost:3456/_vercel/insights/script.js",
+        "http://localhost:3456/_next/static/chunks/2wbbiowixciyw.js",
+        "http://localhost:3456/_next/static/chunks/3xav9mwlsgdod.js"
+      ]
+    },
+    "screenshot": "/tmp/perf-portfolio/before-blog-desktop.png"
+  }
+]

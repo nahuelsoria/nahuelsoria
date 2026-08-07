@@ -1,5 +1,5 @@
-import { Analytics } from "@vercel/analytics/react"
 import Script from "next/script"
+import { VercelAnalytics } from "@/lib/analytics-client"
 
 const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
 
@@ -23,14 +23,14 @@ export const trackEvent = ({ action, category, label, value }: AnalyticsEvent) =
 export function AnalyticsProvider() {
   return (
     <>
-      <Analytics />
+      <VercelAnalytics />
       {GA_TRACKING_ID && (
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-            strategy="afterInteractive"
+            strategy="lazyOnload"
           />
-          <Script id="google-analytics" strategy="afterInteractive">
+          <Script id="google-analytics" strategy="lazyOnload">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
