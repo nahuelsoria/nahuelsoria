@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { notFound } from "next/navigation"
 import { Instrument_Serif, Hanken_Grotesk, JetBrains_Mono } from "next/font/google"
 import { AnalyticsProvider } from "@/lib/analytics"
-import { buildProfileJsonLd, buildFaqJsonLd } from "@/lib/jsonld"
+import { buildProfileJsonLd } from "@/lib/jsonld"
 import { getDictionary, isLocale, locales } from "@/lib/i18n"
 import { site } from "@/content/site"
 import type { Locale } from "@/content/types"
@@ -120,8 +120,9 @@ export default async function LocaleLayout({
   const { locale } = await params
   if (!isLocale(locale)) notFound()
 
+  // FAQPage JSON-LD lives on the home page only: the markup must describe FAQ
+  // content that is actually visible on that page (the <Faq> section).
   const profileLd = buildProfileJsonLd(locale)
-  const faqLd = buildFaqJsonLd(locale)
 
   return (
     <html
@@ -134,10 +135,6 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(profileLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
         />
       </head>
       <body>

@@ -12,7 +12,10 @@ const INLINE_TOKEN = /(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g
 function renderInline(text: string): ReactNode[] {
   return text.split(INLINE_TOKEN).map((part, i) => {
     if (part.startsWith("**") && part.endsWith("**")) {
-      return <strong key={i}>{part.slice(2, -2)}</strong>
+      // Recurse so `code` and [links](url) nested inside bold are rendered,
+      // not printed as literal markdown. The token has no `*` inside, so
+      // recursion terminates after one level.
+      return <strong key={i}>{renderInline(part.slice(2, -2))}</strong>
     }
     if (part.startsWith("`") && part.endsWith("`")) {
       return <code key={i}>{part.slice(1, -1)}</code>

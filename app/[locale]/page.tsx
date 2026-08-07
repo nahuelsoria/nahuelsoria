@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getDictionary, isLocale } from "@/lib/i18n"
+import { buildFaqJsonLd } from "@/lib/jsonld"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/sections/hero"
 import { Proof } from "@/components/sections/proof"
@@ -23,9 +24,14 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const { locale } = await params
   if (!isLocale(locale)) notFound()
   const dict = getDictionary(locale)
+  const faqLd = buildFaqJsonLd(locale)
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Header dict={dict} locale={locale} />
       <main>
         <Hero dict={dict} locale={locale} />
