@@ -1,5 +1,13 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+
+/*
+  Unused shadcn kit lives under components/ui but is not imported by any route.
+  Excluding it (and the duplicate styles/ globals) keeps Tailwind from shipping
+  ~100KB of dead utility CSS. Re-include a file if a route starts using it.
+*/
+@source not "../components/ui/**/*.{js,ts,jsx,tsx}";
+@source not "../styles/**";
+@source not "../hooks/use-toast.ts";
 
 @custom-variant dark (&:is(.dark *));
 

@@ -73,6 +73,7 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
         <div className="flex items-center gap-1.5">
           <Link
             href={otherHref}
+            prefetch={false}
             className="inline-flex items-center gap-1.5 rounded-md border border-line px-2.5 py-1.5 font-mono text-xs text-muted-foreground transition-colors hover:border-brand hover:text-foreground"
             aria-label={dict.language.toggle}
           >

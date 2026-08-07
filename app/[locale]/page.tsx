@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getDictionary, isLocale } from "@/lib/i18n"
 import { Header } from "@/components/header"
@@ -8,9 +9,15 @@ import { Services } from "@/components/sections/services"
 import { Process } from "@/components/sections/process"
 import { About } from "@/components/sections/about"
 import { Faq } from "@/components/sections/faq"
-import { Contact } from "@/components/contact"
 import { Footer } from "@/components/sections/footer"
-import { WhatsAppFloat } from "@/components/whatsapp-float"
+
+// Below-the-fold client islands: keep initial JS for the first viewport leaner.
+const Contact = dynamic(() =>
+  import("@/components/contact").then((m) => m.Contact),
+)
+const WhatsAppFloat = dynamic(() =>
+  import("@/components/whatsapp-float").then((m) => m.WhatsAppFloat),
+)
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params

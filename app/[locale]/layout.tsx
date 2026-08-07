@@ -14,15 +14,20 @@ const instrument = Instrument_Serif({
   variable: "--font-instrument",
   display: "swap",
 })
+// Only the weights used on the portfolio (regular/body + medium CTAs + bold prose).
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   variable: "--font-hanken",
   display: "swap",
 })
+// Mono is accent-only (eyebrows/chips); single weight avoids the full variable axis.
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
+  weight: "400",
   variable: "--font-jetbrains",
   display: "swap",
+  preload: false,
 })
 
 export function generateStaticParams() {

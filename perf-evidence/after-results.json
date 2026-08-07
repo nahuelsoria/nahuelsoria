@@ -1,0 +1,2100 @@
+[
+  {
+    "page": "home",
+    "path": "/es",
+    "viewport": "mobile",
+    "width": 390,
+    "totalTransferBytes": 346089,
+    "byType": {
+      "js": 172300,
+      "css": 0,
+      "font": 122120,
+      "image": 2806,
+      "document": 48134,
+      "other": 729
+    },
+    "topAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es",
+        "type": "document",
+        "bytes": 29198,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/19087af2bdec32b5-s.0schr0lclylgv.woff2",
+        "type": "font",
+        "bytes": 21512,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 12410,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css",
+        "type": "js",
+        "bytes": 9764,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js",
+        "type": "js",
+        "bytes": 9383,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "type": "js",
+        "bytes": 9258,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "type": "js",
+        "bytes": 4544,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3646,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "type": "js",
+        "bytes": 3127,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=dMBt3GaTCMFoiQUD",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XlwSBhFOJIdptixZ",
+        "type": "document",
+        "bytes": 1171,
+        "mime": "text/x-component",
+        "status": 200
+      }
+    ],
+    "allAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es",
+        "type": "document",
+        "bytes": 29198,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/19087af2bdec32b5-s.0schr0lclylgv.woff2",
+        "type": "font",
+        "bytes": 21512,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 12410,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css",
+        "type": "js",
+        "bytes": 9764,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js",
+        "type": "js",
+        "bytes": 9383,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "type": "js",
+        "bytes": 9258,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "type": "js",
+        "bytes": 4544,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3646,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "type": "js",
+        "bytes": 3127,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=dMBt3GaTCMFoiQUD",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XlwSBhFOJIdptixZ",
+        "type": "document",
+        "bytes": 1171,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon-light-32x32.png",
+        "type": "image",
+        "bytes": 844,
+        "mime": "image/png",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/manifest.webmanifest",
+        "type": "other",
+        "bytes": 729,
+        "mime": "application/manifest+json",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_vercel/insights/script.js",
+        "type": "js",
+        "bytes": 653,
+        "mime": "text/html",
+        "status": 404
+      }
+    ],
+    "metrics": {
+      "overflowHorizontal": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "title": "Nahuel Soria — Desarrollo de software a medida",
+      "navigation": {
+        "transferSize": 28996,
+        "encodedBodySize": 28696,
+        "decodedBodySize": 200198,
+        "domContentLoaded": 161.8999999910593,
+        "loadEventEnd": 204.29999999701977,
+        "responseEnd": 27.099999994039536,
+        "duration": 204.29999999701977
+      },
+      "paints": {
+        "first-paint": 152,
+        "first-contentful-paint": 152
+      },
+      "resourceCount": 24,
+      "images": [],
+      "fontsReady": "loaded",
+      "fontFaces": [
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Instrument Serif Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "JetBrains Mono Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "error"
+        }
+      ],
+      "preloadedFonts": [
+        "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2"
+      ],
+      "stylesheets": [
+        "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css"
+      ],
+      "scripts": [
+        "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "http://localhost:3456/_next/static/chunks/0cz1d0mv5g_q7.js",
+        "http://localhost:3456/_vercel/insights/script.js",
+        "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js"
+      ]
+    },
+    "screenshot": "/tmp/perf-portfolio/after-home-mobile.png"
+  },
+  {
+    "page": "home",
+    "path": "/es",
+    "viewport": "desktop",
+    "width": 1440,
+    "totalTransferBytes": 346089,
+    "byType": {
+      "js": 172300,
+      "css": 0,
+      "font": 122120,
+      "image": 2806,
+      "document": 48134,
+      "other": 729
+    },
+    "topAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es",
+        "type": "document",
+        "bytes": 29198,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/19087af2bdec32b5-s.0schr0lclylgv.woff2",
+        "type": "font",
+        "bytes": 21512,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 12410,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css",
+        "type": "js",
+        "bytes": 9764,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js",
+        "type": "js",
+        "bytes": 9383,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "type": "js",
+        "bytes": 9258,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "type": "js",
+        "bytes": 4544,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3646,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "type": "js",
+        "bytes": 3127,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=dMBt3GaTCMFoiQUD",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XlwSBhFOJIdptixZ",
+        "type": "document",
+        "bytes": 1171,
+        "mime": "text/x-component",
+        "status": 200
+      }
+    ],
+    "allAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es",
+        "type": "document",
+        "bytes": 29198,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/19087af2bdec32b5-s.0schr0lclylgv.woff2",
+        "type": "font",
+        "bytes": 21512,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=QZla2VvneAn05IPO",
+        "type": "document",
+        "bytes": 12410,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css",
+        "type": "js",
+        "bytes": 9764,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js",
+        "type": "js",
+        "bytes": 9383,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "type": "js",
+        "bytes": 9258,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "type": "js",
+        "bytes": 4544,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=8tTA_tzJLs2upmFp",
+        "type": "document",
+        "bytes": 3646,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "type": "js",
+        "bytes": 3127,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=dMBt3GaTCMFoiQUD",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XlwSBhFOJIdptixZ",
+        "type": "document",
+        "bytes": 1171,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon-light-32x32.png",
+        "type": "image",
+        "bytes": 844,
+        "mime": "image/png",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/manifest.webmanifest",
+        "type": "other",
+        "bytes": 729,
+        "mime": "application/manifest+json",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_vercel/insights/script.js",
+        "type": "js",
+        "bytes": 653,
+        "mime": "text/html",
+        "status": 404
+      }
+    ],
+    "metrics": {
+      "overflowHorizontal": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "title": "Nahuel Soria — Desarrollo de software a medida",
+      "navigation": {
+        "transferSize": 28996,
+        "encodedBodySize": 28696,
+        "decodedBodySize": 200198,
+        "domContentLoaded": 107.20000000298023,
+        "loadEventEnd": 168.70000000298023,
+        "responseEnd": 10.5,
+        "duration": 168.70000000298023
+      },
+      "paints": {
+        "first-paint": 128,
+        "first-contentful-paint": 128
+      },
+      "resourceCount": 24,
+      "images": [],
+      "fontsReady": "loaded",
+      "fontFaces": [
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Instrument Serif Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "JetBrains Mono Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "error"
+        }
+      ],
+      "preloadedFonts": [
+        "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2"
+      ],
+      "stylesheets": [
+        "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css"
+      ],
+      "scripts": [
+        "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "http://localhost:3456/_next/static/chunks/0cz1d0mv5g_q7.js",
+        "http://localhost:3456/_vercel/insights/script.js",
+        "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js"
+      ]
+    },
+    "screenshot": "/tmp/perf-portfolio/after-home-desktop.png"
+  },
+  {
+    "page": "blog",
+    "path": "/es/blog/agent-fleet",
+    "viewport": "mobile",
+    "width": 390,
+    "totalTransferBytes": 342094,
+    "byType": {
+      "js": 178653,
+      "css": 0,
+      "font": 122120,
+      "image": 2806,
+      "document": 37786,
+      "other": 729
+    },
+    "topAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/19087af2bdec32b5-s.0schr0lclylgv.woff2",
+        "type": "font",
+        "bytes": 21512,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es/blog/agent-fleet",
+        "type": "document",
+        "bytes": 18117,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=rEIAuNQz5Wi103jl",
+        "type": "document",
+        "bytes": 12410,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css",
+        "type": "js",
+        "bytes": 9764,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js",
+        "type": "js",
+        "bytes": 9383,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "type": "js",
+        "bytes": 9258,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0gyq9cr2nafog.js",
+        "type": "js",
+        "bytes": 6353,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "type": "js",
+        "bytes": 4544,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3646,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "type": "js",
+        "bytes": 3127,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=5Qu8EMruXQ9G_JNt",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      }
+    ],
+    "allAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/19087af2bdec32b5-s.0schr0lclylgv.woff2",
+        "type": "font",
+        "bytes": 21512,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es/blog/agent-fleet",
+        "type": "document",
+        "bytes": 18117,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=rEIAuNQz5Wi103jl",
+        "type": "document",
+        "bytes": 12410,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css",
+        "type": "js",
+        "bytes": 9764,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js",
+        "type": "js",
+        "bytes": 9383,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "type": "js",
+        "bytes": 9258,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0gyq9cr2nafog.js",
+        "type": "js",
+        "bytes": 6353,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "type": "js",
+        "bytes": 4544,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3646,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "type": "js",
+        "bytes": 3127,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=5Qu8EMruXQ9G_JNt",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XX52ViXzHJ4Xq96W",
+        "type": "document",
+        "bytes": 1171,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon-light-32x32.png",
+        "type": "image",
+        "bytes": 844,
+        "mime": "image/png",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XEDVdSFtE4KCKOe8",
+        "type": "document",
+        "bytes": 733,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/manifest.webmanifest",
+        "type": "other",
+        "bytes": 729,
+        "mime": "application/manifest+json",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_vercel/insights/script.js",
+        "type": "js",
+        "bytes": 653,
+        "mime": "text/html",
+        "status": 404
+      }
+    ],
+    "metrics": {
+      "overflowHorizontal": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "title": "Una flota de agentes opera mi infraestructura mientras duermo — Nahuel Soria",
+      "navigation": {
+        "transferSize": 17919,
+        "encodedBodySize": 17619,
+        "decodedBodySize": 72314,
+        "domContentLoaded": 88.59999999403954,
+        "loadEventEnd": 134.29999999701977,
+        "responseEnd": 15.900000005960464,
+        "duration": 134.29999999701977
+      },
+      "paints": {
+        "first-paint": 112,
+        "first-contentful-paint": 112
+      },
+      "resourceCount": 26,
+      "images": [],
+      "fontsReady": "loaded",
+      "fontFaces": [
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Instrument Serif Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "JetBrains Mono Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "error"
+        }
+      ],
+      "preloadedFonts": [
+        "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2"
+      ],
+      "stylesheets": [
+        "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css"
+      ],
+      "scripts": [
+        "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "http://localhost:3456/_next/static/chunks/0gyq9cr2nafog.js",
+        "http://localhost:3456/_next/static/chunks/0cz1d0mv5g_q7.js",
+        "http://localhost:3456/_vercel/insights/script.js",
+        "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js"
+      ]
+    },
+    "screenshot": "/tmp/perf-portfolio/after-blog-mobile.png"
+  },
+  {
+    "page": "blog",
+    "path": "/es/blog/agent-fleet",
+    "viewport": "desktop",
+    "width": 1440,
+    "totalTransferBytes": 342094,
+    "byType": {
+      "js": 178653,
+      "css": 0,
+      "font": 122120,
+      "image": 2806,
+      "document": 37786,
+      "other": 729
+    },
+    "topAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/19087af2bdec32b5-s.0schr0lclylgv.woff2",
+        "type": "font",
+        "bytes": 21512,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es/blog/agent-fleet",
+        "type": "document",
+        "bytes": 18117,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=rEIAuNQz5Wi103jl",
+        "type": "document",
+        "bytes": 12410,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css",
+        "type": "js",
+        "bytes": 9764,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js",
+        "type": "js",
+        "bytes": 9383,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "type": "js",
+        "bytes": 9258,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0gyq9cr2nafog.js",
+        "type": "js",
+        "bytes": 6353,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "type": "js",
+        "bytes": 4544,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3646,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "type": "js",
+        "bytes": 3127,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=5Qu8EMruXQ9G_JNt",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      }
+    ],
+    "allAssets": [
+      {
+        "url": "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "type": "js",
+        "bytes": 71169,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "type": "js",
+        "bytes": 39647,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "type": "font",
+        "bytes": 34964,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/19087af2bdec32b5-s.0schr0lclylgv.woff2",
+        "type": "font",
+        "bytes": 21512,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es/blog/agent-fleet",
+        "type": "document",
+        "bytes": 18117,
+        "mime": "text/html",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2",
+        "type": "font",
+        "bytes": 15340,
+        "mime": "font/woff2",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "type": "js",
+        "bytes": 13273,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=rEIAuNQz5Wi103jl",
+        "type": "document",
+        "bytes": 12410,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css",
+        "type": "js",
+        "bytes": 9764,
+        "mime": "text/css",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "type": "js",
+        "bytes": 9635,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js",
+        "type": "js",
+        "bytes": 9383,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "type": "js",
+        "bytes": 9258,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0gyq9cr2nafog.js",
+        "type": "js",
+        "bytes": 6353,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "type": "js",
+        "bytes": 4544,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=GBkuDw1Y80jVZb4_",
+        "type": "document",
+        "bytes": 3646,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "type": "js",
+        "bytes": 3127,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "type": "js",
+        "bytes": 1847,
+        "mime": "application/javascript",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=5Qu8EMruXQ9G_JNt",
+        "type": "document",
+        "bytes": 1709,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XX52ViXzHJ4Xq96W",
+        "type": "document",
+        "bytes": 1171,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon.svg",
+        "type": "image",
+        "bytes": 981,
+        "mime": "image/svg+xml",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/icon-light-32x32.png",
+        "type": "image",
+        "bytes": 844,
+        "mime": "image/png",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/es?_rsc=XEDVdSFtE4KCKOe8",
+        "type": "document",
+        "bytes": 733,
+        "mime": "text/x-component",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/manifest.webmanifest",
+        "type": "other",
+        "bytes": 729,
+        "mime": "application/manifest+json",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:3456/_vercel/insights/script.js",
+        "type": "js",
+        "bytes": 653,
+        "mime": "text/html",
+        "status": 404
+      }
+    ],
+    "metrics": {
+      "overflowHorizontal": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "title": "Una flota de agentes opera mi infraestructura mientras duermo — Nahuel Soria",
+      "navigation": {
+        "transferSize": 17919,
+        "encodedBodySize": 17619,
+        "decodedBodySize": 72314,
+        "domContentLoaded": 95.3999999910593,
+        "loadEventEnd": 144.79999999701977,
+        "responseEnd": 10.199999988079071,
+        "duration": 144.79999999701977
+      },
+      "paints": {
+        "first-paint": 128,
+        "first-contentful-paint": 128
+      },
+      "resourceCount": 26,
+      "images": [],
+      "fontsReady": "loaded",
+      "fontFaces": [
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Instrument Serif",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Instrument Serif Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "500",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "Hanken Grotesk",
+          "weight": "600",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "Hanken Grotesk Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "unloaded"
+        },
+        {
+          "family": "JetBrains Mono",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        },
+        {
+          "family": "JetBrains Mono Fallback",
+          "weight": "normal",
+          "style": "normal",
+          "status": "error"
+        }
+      ],
+      "preloadedFonts": [
+        "http://localhost:3456/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+        "http://localhost:3456/_next/static/media/e41d5df559864f9e-s.p.1g73gv09-xcb6.woff2"
+      ],
+      "stylesheets": [
+        "http://localhost:3456/_next/static/chunks/3a407uf2sbpln.css"
+      ],
+      "scripts": [
+        "http://localhost:3456/_next/static/chunks/3vrg_w6pvb_jp.js",
+        "http://localhost:3456/_next/static/chunks/2_tdduzgm68e2.js",
+        "http://localhost:3456/_next/static/chunks/14podnilsu8gn.js",
+        "http://localhost:3456/_next/static/chunks/turbopack-1opa50_r9y96v.js",
+        "http://localhost:3456/_next/static/chunks/05-c3ty_6dwfk.js",
+        "http://localhost:3456/_next/static/chunks/2vw_a9x7tjey5.js",
+        "http://localhost:3456/_next/static/chunks/0xcynccg35a4q.js",
+        "http://localhost:3456/_next/static/chunks/0gyq9cr2nafog.js",
+        "http://localhost:3456/_next/static/chunks/0cz1d0mv5g_q7.js",
+        "http://localhost:3456/_vercel/insights/script.js",
+        "http://localhost:3456/_next/static/chunks/2wrg3o9ch0v73.js",
+        "http://localhost:3456/_next/static/chunks/0zior_-xhn1qt.js"
+      ]
+    },
+    "screenshot": "/tmp/perf-portfolio/after-blog-desktop.png"
+  }
+]
