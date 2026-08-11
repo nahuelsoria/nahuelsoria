@@ -19,13 +19,13 @@ What does hold is boring: ordinary, deterministic code that runs after the model
 
 Each agent does exactly one thing. The one that reads my inbox publishes nothing. The one that publishes never reads third-party content. The one that writes code can't touch production.
 
-This didn't come from a design principle. It came from practice: a small agent is easy to reason about, easy to audit in its logs and, above all, has little to break. If the mail triage misbehaves tomorrow, the worst case is a bad summary in my Telegram, not a deploy.
+This came out of practice: a small agent is easy to reason about, easy to audit in its logs and, above all, has little to break. If the mail triage misbehaves tomorrow, the worst case is a bad summary in my Telegram, not a deploy.
 
 ## Layer 2: the output gate
 
 The news site publishes on its own, three times a day, no human in the loop. It can do that because between the model and the publish button there's a gate written in code: a plagiarism check against the sources, verification of cited facts and a dedupe pass against everything already published. If an article fails any of the three, it doesn't go out. There's no negotiation and no creative retry: whatever fails the gate doesn't exist.
 
-The part that took me longest to learn: the gate has to be code, not another model with opinions. A second LLM reviewing the first inherits its problems. The plagiarism check is text comparison; the dedupe is a database query. Things that return the same answer all thousand times you run them.
+What took me longest to learn is that the gate has to be code, not another model with opinions. A second LLM reviewing the first inherits its problems. The plagiarism check is text comparison; the dedupe is a database query. Things that return the same answer all thousand times you run them.
 
 ## Layer 3: third-party content, with no hands
 
@@ -37,7 +37,7 @@ My version: those agents run with no tools connected at all, and their output go
 
 Almost everything the agents produce lands in my Telegram as a draft, and I do the last step by hand. It costs me seconds per day. In exchange, no agent can burn my reputation without me having pressed the button.
 
-The exception is the news site, and it's an earned exception: months of runs behind the layer-2 gate with no surprises. That's how autonomy works in my fleet. It's earned with a track record; it doesn't ship by default.
+The exception is the news site, and it's an earned exception: months of runs behind the layer-2 gate with no surprises. In my fleet, autonomy is earned with a track record.
 
 ## Layer 5: where there's money, PRs and nothing else
 
@@ -45,4 +45,4 @@ The repos that move money have their own rule: the agent can investigate and pro
 
 ## Start with drafts
 
-If you're building something similar, the order that worked for me: first everything goes to drafts and you publish by hand, then code gates for the repetitive parts, and autonomy only for the agent that has already bored you with how predictable it is. The prompt suggests, the code decides.
+If you're building something similar, the order that worked for me: first everything goes to drafts and you publish by hand, then code gates for the repetitive parts, and autonomy only for the agent that has already bored you with how predictable it is.

@@ -19,13 +19,13 @@ Lo que sí funciona es aburrido: código corriente y determinista que corre desp
 
 Cada agente hace una cosa sola. El que lee el inbox no publica nada. El que publica no lee contenido de terceros. El que escribe código no toca producción.
 
-Esto no nació de un principio de diseño sino de la práctica: un agente chico es fácil de razonar, fácil de auditar en sus logs y, sobre todo, tiene poco para romper. Si mañana el triage de mails se comporta raro, el daño posible es un resumen malo en mi Telegram, no un deploy.
+Esto salió de la práctica: un agente chico es fácil de razonar, fácil de auditar en sus logs y, sobre todo, tiene poco para romper. Si mañana el triage de mails se comporta raro, el daño posible es un resumen malo en mi Telegram, no un deploy.
 
 ## Capa 2: el gate de salida
 
 El diario publica solo, tres veces por día, sin humano en el loop. Puede hacerlo porque entre el modelo y el botón de publicar hay un gate en código: chequeo de plagio contra las fuentes, verificación de datos citados y dedupe contra lo ya publicado. Si una nota falla cualquiera de los tres, no sale. No hay negociación ni reintento creativo: lo que no pasa el gate no existe.
 
-La parte que más me costó aprender: el gate tiene que ser código, no otro modelo opinando. Un segundo LLM que revisa al primero hereda sus mismos problemas. El anti plagio es comparación de texto; el dedupe es una consulta a la base. Cosas que dan el mismo resultado las mil veces que las corras.
+Lo que más me costó aprender es que el gate tiene que ser código, no otro modelo opinando. Un segundo LLM que revisa al primero hereda sus mismos problemas. El anti plagio es comparación de texto; el dedupe es una consulta a la base. Cosas que dan el mismo resultado las mil veces que las corras.
 
 ## Capa 3: contenido de terceros, sin manos
 
@@ -37,7 +37,7 @@ Mi versión: esos agentes corren sin ninguna herramienta conectada, y su salida 
 
 Casi todo lo que los agentes generan termina en mi Telegram como borrador, y el último paso lo hago yo, a mano. Me cuesta segundos por día. A cambio, ningún agente puede quemar mi reputación sin que yo haya apretado el botón.
 
-La excepción es el diario, y es una excepción ganada: meses de corridas con el gate de la capa 2 sin sorpresas. La autonomía en mi flota funciona así, se gana con historial, no viene de fábrica.
+La excepción es el diario, y es una excepción ganada: meses de corridas con el gate de la capa 2 sin sorpresas. En mi flota la autonomía se gana con historial.
 
 ## Capa 5: donde hay plata, PR y nada más
 
@@ -45,4 +45,4 @@ Los repos que mueven dinero tienen su propia regla: el agente puede investigar y
 
 ## Empezá por los borradores
 
-Si estás armando algo parecido, el orden que a mí me funcionó: primero todo a borrador y publicás vos, después gates en código para lo repetitivo, y autonomía solo para el agente que ya te aburrió de tan predecible. El prompt sugiere, el código decide.
+Si estás armando algo parecido, el orden que a mí me funcionó: primero todo a borrador y publicás vos, después gates en código para lo repetitivo, y autonomía solo para el agente que ya te aburrió de tan predecible.
