@@ -7,7 +7,7 @@ tags: Agentes de IA, DevOps, Automatización
 
 En el [primer post de esta serie](/es/blog/agent-fleet) describí una flota de unos 20 agentes que opera mi infraestructura. Casi todos solo observan. Uno escribe código y lo pushea a mis repositorios.
 
-Este es ese: el bug hunter nocturno. Es el agente con más autonomía y, no por casualidad, el que tiene más guardrails. Acá está el diseño completo, incluidas las partes que se rompieron.
+Este es ese: el bug hunter nocturno. Es el agente con más autonomía y también el que tiene más guardrails. Acá está el diseño completo, incluidas las partes que se rompieron.
 
 ## Cómo es una noche
 
@@ -24,17 +24,17 @@ Por cada repo resetea un workspace local persistente a `origin/main`, le pasa el
 {"bugs_found":2,"bugs_fixed":2,"tests_pass":true,"summary":"...","recommendation":"needs-review"}
 ```
 
-El script parsea ese objeto y decide qué pasa con el código. Después sigue con el repo siguiente, y cuando termina, un mensaje de Telegram por repo me cuenta qué pasó. Seis repos, seis veredictos, esperándome en el desayuno.
+El script parsea ese objeto y decide qué pasa con el código. Después sigue con el repo siguiente, y cuando termina, un mensaje de Telegram por repo me cuenta qué pasó; a la mañana tengo los seis veredictos juntos.
 
-El detalle estructural importante: el agente no decide si su trabajo sale. Reporta, y un script de bash tonto, al que no se lo puede convencer de nada, aplica la política.
+El detalle estructural importante es que el agente no decide si su trabajo sale: reporta, y la política la aplica un script de bash al que no se lo puede convencer de nada.
 
-## El prompt es un guardrail, no un deseo
+## El prompt es una lista de negativas
 
 Casi toda la seguridad vive en dos archivos: el script lanzador y el prompt. El prompt está escrito como una lista de negativas.
 
-Caza solo lo que puede demostrar: crashes, auth rota, pérdida de datos, contratos de API mal implementados, jobs que fallan. Estilo, refactors, bumps de dependencias y mejoras especulativas están explícitamente fuera de alcance, y notar una no es motivo para tocarla. La instrucción que más me importa es esta: ante la duda, nombrá el bug en el resumen y no toques el código. Un hallazgo escrito en una frase me cuesta 30 segundos de lectura. Un parche equivocado con seguridad me cuesta una tarde.
+Caza solo lo que puede demostrar: crashes, auth rota, pérdida de datos, contratos de API mal implementados, jobs que fallan. Estilo, refactors, bumps de dependencias y mejoras especulativas están explícitamente fuera de alcance, y notar una no es motivo para tocarla. La instrucción que más me importa es esta: ante la duda, nombrá el bug en el resumen y no toques el código. Un hallazgo escrito en una frase me cuesta 30 segundos, y un parche equivocado con seguridad me cuesta una tarde.
 
-El scan está acotado a propósito. Si la branch está limpia, mira la superficie riesgosa (handlers de API, jobs de cron, helpers de auth, helpers de base de datos y de estado, webhooks, y los tests que están al lado) y nunca hace una auditoría de repo completo. Un agente con alcance ilimitado produce ruido ilimitado.
+El scan está acotado a propósito. Si la branch está limpia, mira la superficie riesgosa (handlers de API, jobs de cron, helpers de auth, helpers de base de datos y de estado, webhooks, y los tests que están al lado) y nunca hace una auditoría de repo completo, porque eso solo multiplica el ruido.
 
 Y una regla chica que existe por una falla real: antes de filear algo, revisa sus propios pull requests abiertos. Sobre eso vuelvo más abajo.
 
@@ -68,14 +68,14 @@ Entre esos 34 hay cosas reales: un bug de auth que afectaba 24 endpoints de un b
 
 **Encontró el mismo bug dos veces.** Dos noches seguidas fileó el mismo fix como dos pull requests distintos, porque el primero seguía abierto y él no tenía forma de saberlo. Los agentes no tienen memoria de ayer salvo que se la des. El fix fue agregar un paso cero al prompt: revisar tus propios PRs abiertos y el estado de la branch base antes de filear nada.
 
-**Me tapó.** Con seis repos en modo PR, abre alrededor de cinco pull requests por semana que necesitan un humano. Dejé de revisar unos días y volví a 17 PRs abiertos en tres repos. Los 17 eran bugs reales y distintos, y ninguno estaba todavía en producción. Ese es el modo de falla del que nadie te avisa: el cuello de botella se corre de encontrar bugs a consumir el output. Un agente que produce trabajo que no revisás no te está ahorrando tiempo, te está emitiendo deuda.
+**Me tapó.** Con seis repos en modo PR, abre alrededor de cinco pull requests por semana que necesitan un humano. Dejé de revisar unos días y volví a 17 PRs abiertos en tres repos. Los 17 eran bugs reales y distintos, y ninguno estaba todavía en producción. Ese modo de falla no me lo esperaba: el cuello de botella se corre de encontrar bugs a consumir el output, y el trabajo sin revisar se acumula como deuda.
 
 ## Qué le diría a alguien que arma uno
 
-1. **El gate de merge es del harness, no del modelo.** Que el agente reporte; que decida código determinístico.
-2. **Que abstenerse salga barato.** "Nombralo y no lo toques" tiene que ser un final fácil y bendecido, y el silencio en una noche limpia tiene que ser normal.
-3. **Acotá el alcance antes que el modelo.** Diez minutos y una lista de superficie riesgosa le ganan a un modelo más inteligente mirando el repo entero.
-4. **Guardá por nombre, no por configuración.** La protección que sirve es la que sobrevive a tu propio error de tipeo.
-5. **Dimensioná la flota a tu capacidad de revisión.** Output que no podés revisar no es output.
+1. El gate de merge va en el harness: el agente reporta y decide código determinístico.
+2. Que abstenerse salga barato: "nombralo y no lo toques" tiene que ser un final fácil, y el silencio en una noche limpia tiene que ser normal.
+3. Acotá el alcance antes de mejorar el modelo: diez minutos y una lista de superficie riesgosa le ganan a un modelo más inteligente mirando el repo entero.
+4. Protegé por nombre de repo, que es lo único que sobrevive a tu propio error de tipeo.
+5. Dimensioná la flota a tu capacidad de revisión.
 
 El próximo de la serie: el agente de error triage, el que diagnostica incidentes de producción y no tiene permitido tocar un solo archivo. Si estás armando algo parecido, o querés esto corriendo sobre tus repositorios, [escribime](mailto:jorgenahuelsoria@gmail.com).
