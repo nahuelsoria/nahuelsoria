@@ -14,12 +14,25 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const pathname = usePathname()
 
   useEffect(() => {
-    setDark(document.documentElement.classList.contains("dark"))
     const onScroll = () => setScrolled(window.scrollY > 8)
     onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
+
+  // Al navegar entre locales el segmento [locale] remonta el <html> y se
+  // pierden las clases puestas por JS (dark, js). Re-aplicar la preferencia
+  // guardada en cada navegación deja el theme estable; es idempotente.
+  useEffect(() => {
+    const el = document.documentElement
+    let wantDark = true
+    try {
+      wantDark = (localStorage.getItem("theme") ?? "dark") === "dark"
+    } catch {}
+    el.classList.toggle("dark", wantDark)
+    el.classList.add("js")
+    setDark(wantDark)
+  }, [pathname])
 
   const toggleTheme = () => {
     const el = document.documentElement
