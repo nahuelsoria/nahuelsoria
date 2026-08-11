@@ -7,7 +7,7 @@ tags: AI agents, DevOps, Automation
 
 In the [first post of this series](/en/blog/agent-fleet) I described a fleet of about 20 agents that runs my infrastructure. Most of them only observe. One of them writes code and pushes it to my repositories.
 
-This is that one: the nightly bug hunter. It is the agent with the most autonomy and, not by coincidence, the one with the most guardrails. This post is the whole design, including the parts that broke.
+This is that one: the nightly bug hunter. It is the agent with the most autonomy and also the one with the most guardrails. This post is the whole design, including the parts that broke.
 
 ## What one night looks like
 
@@ -24,15 +24,15 @@ For each repo it resets a persistent local workspace to `origin/main`, hands a h
 {"bugs_found":2,"bugs_fixed":2,"tests_pass":true,"summary":"...","recommendation":"needs-review"}
 ```
 
-The script parses that object and decides what happens to the code. Then it moves to the next repo, and when it finishes, one Telegram message per repo tells me what happened. Six repos, six verdicts, waiting for me at breakfast.
+The script parses that object and decides what happens to the code. Then it moves to the next repo, and when it finishes, one Telegram message per repo tells me what happened; by morning I have all six verdicts together.
 
-The important structural detail: the agent does not decide whether its work ships. It reports, and a dumb bash script that cannot be talked out of anything applies the policy.
+The important structural detail is that the agent does not decide whether its work ships: it reports, and the policy is applied by a bash script that cannot be talked out of anything.
 
-## The prompt is a guardrail, not a wish
+## The prompt is a list of negatives
 
 Most of the safety lives in two files: the launcher script and the prompt. The prompt is written as a set of refusals.
 
-It hunts only what it can prove: crashes, broken auth, data loss, wrong API contracts, failing jobs. Style, refactors, dependency bumps and speculative improvements are explicitly out of scope, and noticing one is not a reason to touch it. The instruction I care about most is this one: when unsure, name the bug in the summary and leave the code alone. A finding written in plain English costs me 30 seconds to read. A confident wrong patch costs me an afternoon.
+It hunts only what it can prove: crashes, broken auth, data loss, wrong API contracts, failing jobs. Style, refactors, dependency bumps and speculative improvements are explicitly out of scope, and noticing one is not a reason to touch it. The instruction I care about most is this one: when unsure, name the bug in the summary and leave the code alone. A finding written in plain English costs me 30 seconds to read, and a confident wrong patch costs me an afternoon.
 
 The scan is bounded on purpose. If the branch is clean, it looks at the risky surface (API handlers, cron jobs, auth helpers, database and state helpers, webhooks, and the tests beside them) and never does a full repo audit. An agent with an unbounded scope produces unbounded noise.
 
@@ -68,14 +68,14 @@ Those 34 include real ones: an auth bug affecting 24 endpoints in a backoffice, 
 
 **It found the same bug twice.** Two nights in a row it filed the same fix as two different pull requests, because the first one was still open and it had no idea. Agents have no memory of yesterday unless you give them one. The fix was to add a step zero to the prompt: check your own open PRs and the state of the base branch before filing anything.
 
-**It buried me.** With six repos in PR mode, it opens roughly five pull requests a week that need a human. I stopped reviewing for a few days and came back to 17 open PRs across three repos. All 17 were real, distinct bugs, and none of them were in production yet. That is the failure mode nobody warns you about: the bottleneck moves from finding bugs to consuming the output. An agent that produces work you do not review is not saving you time, it is issuing you debt.
+**It buried me.** With six repos in PR mode, it opens roughly five pull requests a week that need a human. I stopped reviewing for a few days and came back to 17 open PRs across three repos. All 17 were real, distinct bugs, and none of them were in production yet. I did not expect that failure mode: the bottleneck moves from finding bugs to consuming the output, and unreviewed work piles up as debt.
 
 ## What I would tell someone building one
 
-1. **The merge gate belongs to the harness, not the model.** Let the agent report; let deterministic code decide.
-2. **Make refusal cheap.** "Name it and leave it alone" should be an easy, blessed outcome, and silence on a clean night should be normal.
-3. **Bound the scope before you bound the model.** Ten minutes and a risky-surface list beat a smarter model with the whole repo in view.
-4. **Guard by name, not by config.** The protection that matters is the one that survives your own typo.
-5. **Size the fleet to your review capacity.** Output you cannot review is not output.
+1. The merge gate goes in the harness: the agent reports, deterministic code decides.
+2. Make refusal cheap: "name it and leave it alone" should be an easy outcome, and silence on a clean night should be normal.
+3. Bound the scope before upgrading the model: ten minutes and a risky-surface list beat a smarter model with the whole repo in view.
+4. Guard by repo name, which is the only thing that survives your own typo.
+5. Size the fleet to your review capacity.
 
 Next in the series: the read-only error triage agent, the one that diagnoses production incidents and is not allowed to touch a single file. If you are building something similar, or you want this running over your repositories, [write me](mailto:jorgenahuelsoria@gmail.com).
