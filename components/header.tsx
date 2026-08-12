@@ -28,7 +28,9 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
     let wantDark = true
     try {
       wantDark = (localStorage.getItem("theme") ?? "dark") === "dark"
-    } catch {}
+    } catch {
+      // localStorage bloqueado (modo privado / cookies de terceros): queda el dark por defecto.
+    }
     el.classList.toggle("dark", wantDark)
     el.classList.add("js")
     setDark(wantDark)
