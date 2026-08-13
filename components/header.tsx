@@ -40,7 +40,11 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
     const el = document.documentElement
     const next = !el.classList.contains("dark")
     el.classList.toggle("dark", next)
-    localStorage.setItem("theme", next ? "dark" : "light")
+    try {
+      localStorage.setItem("theme", next ? "dark" : "light")
+    } catch {
+      // localStorage bloqueado: el theme igual cambia, solo no se recuerda.
+    }
     setDark(next)
   }
 
