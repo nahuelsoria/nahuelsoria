@@ -31,4 +31,4 @@ Hay una distinción que me importa sostener en todo lo que automatizo: los agent
 
 Más de 400 notas en seis semanas con un operador que dedica minutos por día, no horas. El costo marginal de cada nota es centavos. El tráfico todavía es chico (el medio tiene semanas de vida y la autoridad de dominio se construye lenta), así que este case study no es "mirá cuánto tráfico": es "mirá cuánta operación editorial sostiene una persona sola con el sistema correcto".
 
-Si tu negocio tiene un flujo editorial repetitivo (resúmenes, fichas, newsletters, catálogos) y te interesa esta arquitectura, [hablemos](https://nahuelsoria.vercel.app/es#contacto).
+Si tu negocio tiene un flujo editorial repetitivo (resúmenes, fichas, newsletters, catálogos) y te interesa esta arquitectura, [hablemos](https://nahuelsoria.vercel.app/es#contact).

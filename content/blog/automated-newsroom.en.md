@@ -31,4 +31,4 @@ There is a distinction I hold across everything I automate: agents can produce a
 
 Over 400 articles in six weeks, with an operator who spends minutes per day, not hours. The marginal cost of each article is cents. Traffic is still small (the site is weeks old and domain authority builds slowly), so this case study is not "look at the traffic": it is "look at how much editorial operation one person can run with the right system".
 
-If your business has a repetitive editorial flow (summaries, product sheets, newsletters, catalogs) and this architecture sounds useful, [let's talk](https://nahuelsoria.vercel.app/en#contacto).
+If your business has a repetitive editorial flow (summaries, product sheets, newsletters, catalogs) and this architecture sounds useful, [let's talk](https://nahuelsoria.vercel.app/en#contact).
