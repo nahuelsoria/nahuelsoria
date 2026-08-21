@@ -5,7 +5,7 @@ I take ideas from architecture to production: web apps, dashboards, payment syst
 
 Based in Buenos Aires. Working remotely with founders and teams worldwide.
 
-[![Website](https://img.shields.io/badge/Website-111111?style=flat-square&logo=googlechrome&logoColor=white)](https://nahuelsoria.vercel.app)
+[![Website](https://img.shields.io/badge/Website-111111?style=flat-square&logo=googlechrome&logoColor=white)](https://nahuelsoria.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nahuelsoria/)
 [![X](https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white)](https://twitter.com/nahhwe)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:jorgenahuelsoria@gmail.com)
@@ -74,4 +74,4 @@ I pick tools that will still make sense in five years.
 
 Have a product to build? A SaaS, a dashboard, a payment integration, an automation? I take projects end to end, from idea to production.
 
-[nahuelsoria.vercel.app](https://nahuelsoria.vercel.app) | [LinkedIn](https://www.linkedin.com/in/nahuelsoria/) | [Email](mailto:jorgenahuelsoria@gmail.com)
+[nahuelsoria.com](https://nahuelsoria.com) | [LinkedIn](https://www.linkedin.com/in/nahuelsoria/) | [Email](mailto:jorgenahuelsoria@gmail.com)
