@@ -44,7 +44,7 @@ export function Contact({ dict, locale }: { dict: Dictionary; locale: Locale }) 
         return
       }
     } catch {
-      // network error — fall through to mailto
+      // network error, fall through to mailto
     }
     // No email provider configured (501) or delivery failed (502): never lose the lead.
     setStatus("idle")
@@ -135,7 +135,6 @@ export function Contact({ dict, locale }: { dict: Dictionary; locale: Locale }) 
                   value={form.name}
                   onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                   className={field}
-                  placeholder="—"
                 />
               </div>
               <div>

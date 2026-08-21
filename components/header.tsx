@@ -68,7 +68,7 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
       }`}
     >
       <div className="container-page flex h-16 items-center justify-between">
-        <Link href={`/${locale}`} className="group flex items-center gap-2.5" aria-label="Nahuel Soria — home">
+        <Link href={`/${locale}`} className="group flex items-center gap-2.5" aria-label="Nahuel Soria · home">
           <span className="grid h-8 w-8 place-items-center rounded-md border border-line font-mono text-sm text-foreground transition-colors group-hover:border-brand">
             NS
           </span>

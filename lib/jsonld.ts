@@ -49,7 +49,7 @@ export function buildProfileJsonLd(locale: Locale) {
       {
         "@type": "ProfessionalService",
         "@id": `${site.url}/#service`,
-        name: `${site.name} — ${dict.hero.role}`,
+        name: `${site.name} · ${dict.hero.role}`,
         description: dict.hero.statement,
         url: home,
         provider: { "@id": personId },
@@ -126,7 +126,7 @@ export function buildBlogPostingJsonLd(
   }
 }
 
-/** FAQPage — high value for AI Overviews and rich results. */
+/** FAQPage: high value for AI Overviews and rich results. */
 export function buildFaqJsonLd(locale: Locale) {
   return {
     "@context": "https://schema.org",
