@@ -2,7 +2,7 @@ import type { Project } from "./types"
 import { site } from "./site"
 
 /**
- * Canonical project list — replaces the old FeaturedProjects + CaseStudies
+ * Canonical project list. Replaces the old FeaturedProjects + CaseStudies
  * (which described the same projects with contradictory metrics).
  * Sourced from real GitHub repos + README. Order == hierarchy.
  */
@@ -12,7 +12,7 @@ export const projects: Project[] = [
     name: "Bridgewater Payments",
     index: "01",
     category: { es: "Infraestructura fintech B2B", en: "B2B fintech infrastructure" },
-    role: { es: "Único dueño técnico — arquitectura a producción", en: "Sole technical owner — architecture to production" },
+    role: { es: "Único dueño técnico: arquitectura a producción", en: "Sole technical owner: architecture to production" },
     summary: {
       es: "Plataforma de pagos end-to-end para clientes empresa: onboarding, movimiento de dinero y operaciones, con correctitud y auditabilidad como prioridad.",
       en: "End-to-end payments platform for business clients: onboarding, money movement and operations, with correctness and auditability as first-class concerns.",
@@ -52,8 +52,8 @@ export const projects: Project[] = [
     category: { es: "Auditoría de código con IA", en: "AI-powered code auditing" },
     role: { es: "Creador", en: "Creator" },
     summary: {
-      es: "Herramienta que orquesta agentes LLM —cada uno cubre una dimensión (seguridad, calidad, UX, arquitectura)— y consolida un reporte priorizado.",
-      en: "A tool that orchestrates LLM agents — each covering one dimension (security, code quality, UX, architecture) — into a single prioritized report.",
+      es: "Herramienta que orquesta agentes LLM, cada uno sobre una dimensión (seguridad, calidad, UX, arquitectura), y consolida un reporte priorizado.",
+      en: "A tool that orchestrates LLM agents, each covering one dimension (security, code quality, UX, architecture), into a single prioritized report.",
     },
     highlights: [
       { es: "Agentes especializados por dimensión de revisión", en: "Specialized agents per review dimension" },
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     slug: "picaday",
     name: "Picaday",
     index: "04",
-    category: { es: "Producto propio — diario fotográfico", en: "Own product — photo journal" },
+    category: { es: "Producto propio: diario fotográfico", en: "Own product: photo journal" },
     role: { es: "Founder & desarrollador", en: "Founder & developer" },
     summary: {
       es: "App de diario fotográfico con foco en performance y experiencia. MVP listo para producción.",
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     slug: "numerai",
     name: "Numerai",
     index: "05",
-    category: { es: "Producto propio — finanzas personales", en: "Own product — personal finance" },
+    category: { es: "Producto propio: finanzas personales", en: "Own product: personal finance" },
     role: { es: "Founder & desarrollador", en: "Founder & developer" },
     summary: {
       es: "Tracker de finanzas personales multi-moneda con captura de gastos por IA vía WhatsApp e integración de pagos.",
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     slug: "what-i-wish",
     name: "What I Wish",
     index: "06",
-    category: { es: "Producto propio — wishlist social", en: "Own product — social wishlist" },
+    category: { es: "Producto propio: wishlist social", en: "Own product: social wishlist" },
     role: { es: "Founder & desarrollador", en: "Founder & developer" },
     summary: {
       es: "App para compartir listas de deseos con viralización vía WhatsApp y onboarding en menos de 60 segundos.",

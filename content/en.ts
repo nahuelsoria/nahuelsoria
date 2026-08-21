@@ -17,7 +17,7 @@ export const en: Dictionary = {
     headlineAccent: "business",
     lead: "I build SaaS, dashboards, automations and payment systems for founders and teams. From idea to production.",
     statement:
-      "Nahuel Soria is a Buenos Aires–based software developer who builds SaaS, fintech payment systems and custom automations for founders and companies, end to end.",
+      "Nahuel Soria is a software developer based in Buenos Aires who builds SaaS, fintech payment systems and custom automations for founders and companies, end to end.",
     bullets: [
       "Sites and landings that convert",
       "Scalable web apps and SaaS with data and payments",
@@ -34,7 +34,7 @@ export const en: Dictionary = {
     reposLabel: "View on GitHub",
   },
   projects: {
-    eyebrow: "// 01 — Projects",
+    eyebrow: "// 01 · Projects",
     title: "Products I built end to end",
     subtitle:
       "Fintech platforms in production and my own products. Each with full technical ownership: architecture, backend, frontend and integrations.",
@@ -49,7 +49,7 @@ export const en: Dictionary = {
     },
   },
   services: {
-    eyebrow: "// 02 — Services",
+    eyebrow: "// 02 · Services",
     title: "How I can help",
     subtitle: "From a landing page to fintech infrastructure. We scope it around your goal.",
     featuredBadge: "Most chosen",
@@ -57,17 +57,17 @@ export const en: Dictionary = {
     cta: "Let's start",
   },
   process: {
-    eyebrow: "// 03 — Process",
+    eyebrow: "// 03 · Process",
     title: "How I work",
     subtitle: "A clear process, with incremental delivery and constant communication.",
   },
   about: {
-    eyebrow: "// 04 — About",
+    eyebrow: "// 04 · About",
     title: "An engineer who thinks like a founder",
     statement:
-      "I'm Nahuel Soria, a software developer and technical founder in Buenos Aires. I specialize in fintech — payments, KYC/KYB, settlement — and in custom SaaS products.",
+      "I'm Nahuel Soria, a software developer and technical founder in Buenos Aires. I specialize in fintech (payments, KYC/KYB, settlement) and in custom SaaS products.",
     paragraphs: [
-      "I work best where the problem is ambiguous, has to run in production, and can't be wrong. I'm the single technical owner behind several payment platforms: I own the architecture, the decisions and the delivery — not just the code.",
+      "I work best where the problem is ambiguous, has to run in production, and can't be wrong. I'm the single technical owner behind several payment platforms: I own the architecture, the decisions and the delivery, not just the code.",
       "I also build my own products (Picaday, Numerai, What I Wish) and AI-powered code-auditing tools. I learn fast and solve whatever comes up.",
     ],
     stackTitle: "Core stack",
@@ -82,15 +82,15 @@ export const en: Dictionary = {
     location: "Buenos Aires, Argentina · Remote worldwide",
   },
   faq: {
-    eyebrow: "// 05 — FAQ",
+    eyebrow: "// 05 · FAQ",
     title: "Frequently asked questions",
     subtitle: "What people usually ask before we start.",
   },
   contact: {
-    eyebrow: "// 06 — Contact",
+    eyebrow: "// 06 · Contact",
     title: "Let's work together",
     subtitle:
-      "Have a project in mind? Book a free 30-minute consultation and we'll assess your idea — no strings attached.",
+      "Have a project in mind? Book a free 30-minute consultation and we'll assess your idea, no strings attached.",
     emailLabel: "Email",
     whatsappLabel: "WhatsApp",
     scheduleLabel: "Book a call",

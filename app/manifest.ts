@@ -3,9 +3,9 @@ import { site } from "@/content/site"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${site.name} — Software developer`,
+    name: `${site.name} · Software developer`,
     short_name: site.name,
-    description: "Custom software, SaaS and fintech payment systems — built end to end.",
+    description: "Custom software, SaaS and fintech payment systems, built end to end.",
     start_url: "/es",
     display: "standalone",
     background_color: "#12160f",

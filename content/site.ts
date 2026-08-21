@@ -5,7 +5,7 @@ export const defaultLocale: Locale = "es"
 
 /**
  * Single source of truth for identity, contact and canonical URLs.
- * Change the domain, phone or email here — nowhere else.
+ * Change the domain, phone or email here, nowhere else.
  */
 export const site = {
   // Canonical URL. Override via NEXT_PUBLIC_SITE_URL (Vercel env) when the .com is ready;
@@ -36,7 +36,7 @@ export const whatsappHref = (message: string) =>
  */
 export const metrics: Metric[] = [
   {
-    // Aggregate portfolio figure — not attributed to any single client (privacy-safe).
+    // Aggregate portfolio figure, not attributed to any single client (privacy-safe).
     value: "+$20M",
     label: { es: "USD procesados en plataformas que construí", en: "USD processed across platforms I built" },
     status: "confirmed",

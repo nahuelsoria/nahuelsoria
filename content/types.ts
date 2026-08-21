@@ -57,7 +57,7 @@ export type BioLink = {
   featured?: boolean
 }
 
-/** Copy dictionary — one shape, two languages resolved at build/render time. */
+/** Copy dictionary: one shape, two languages resolved at build/render time. */
 export type Dictionary = {
   nav: {
     projects: string

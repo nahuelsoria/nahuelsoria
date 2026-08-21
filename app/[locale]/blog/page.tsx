@@ -18,7 +18,7 @@ export async function generateMetadata({
   const loc: Locale = isLocale(locale) ? locale : "es"
   const dict = getDictionary(loc)
 
-  const title = `${dict.blog.title} — ${site.name}`
+  const title = `${dict.blog.title} · ${site.name}`
   const description = dict.blog.subtitle
   // openGraph/twitter are shallow-merged: declaring them here drops the
   // file-based image from app/[locale]/opengraph-image, so re-attach it.

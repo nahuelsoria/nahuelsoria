@@ -3,7 +3,7 @@ import { projects } from "@/content/projects"
 import { services } from "@/content/offerings"
 import { getPosts } from "@/lib/blog"
 
-// Serves /llms.txt — a plain-markdown brief designed for ingestion by LLMs (GEO).
+// Serves /llms.txt, a plain-markdown brief designed for ingestion by LLMs (GEO).
 export const dynamic = "force-static"
 
 export function GET() {
@@ -11,7 +11,7 @@ export function GET() {
   lines.push(`# ${site.name}`)
   lines.push("")
   lines.push(
-    "> Nahuel Soria is a Buenos Aires–based software developer and technical founder who builds SaaS products, fintech payment systems (KYC/KYB, settlement, multi-currency) and custom automations for founders and companies — end to end, from architecture to production.",
+    "> Nahuel Soria is a software developer and technical founder based in Buenos Aires who builds SaaS products, fintech payment systems (KYC/KYB, settlement, multi-currency) and custom automations for founders and companies, end to end, from architecture to production.",
   )
   lines.push("")
   lines.push(`- Website: ${site.url}`)
@@ -29,7 +29,7 @@ export function GET() {
   for (const p of projects) {
     const urls = [p.links?.live, p.links?.repo].filter(Boolean)
     const url = urls.length > 0 ? ` (${urls.join(", ")})` : ""
-    lines.push(`- ${p.name} — ${p.category.en}. ${p.summary.en} Stack: ${p.stack.join(", ")}.${url}`)
+    lines.push(`- ${p.name}: ${p.category.en}. ${p.summary.en} Stack: ${p.stack.join(", ")}.${url}`)
   }
   lines.push("")
   const posts = getPosts("en")
