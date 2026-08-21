@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
   const lead = body as Lead
 
   try {
-    // Option 1 — SendGrid (set SENDGRID_API_KEY). Plain REST v3, no SDK dependency.
+    // Option 1, SendGrid (set SENDGRID_API_KEY). Plain REST v3, no SDK dependency.
     // CONTACT_FROM must be a verified sender/domain in SendGrid; defaults to CONTACT_TO.
     if (process.env.SENDGRID_API_KEY) {
       const from = process.env.CONTACT_FROM || CONTACT_TO
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ ok: true })
     }
 
-    // Option 2 — generic webhook (Formspree / Zapier / n8n). Set CONTACT_WEBHOOK_URL.
+    // Option 2, generic webhook (Formspree / Zapier / n8n). Set CONTACT_WEBHOOK_URL.
     if (process.env.CONTACT_WEBHOOK_URL) {
       const res = await fetch(process.env.CONTACT_WEBHOOK_URL, {
         method: "POST",
@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
 
     // No provider configured yet: log the lead (lands in Vercel logs) and signal
     // the client to fall back to mailto so the lead is never silently lost.
-    console.warn("[contact] no SENDGRID_API_KEY / CONTACT_WEBHOOK_URL set — lead not delivered:", {
+    console.warn("[contact] no SENDGRID_API_KEY / CONTACT_WEBHOOK_URL set, lead not delivered:", {
       name: lead.name,
       email: lead.email,
     })

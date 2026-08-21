@@ -27,7 +27,7 @@ export async function generateMetadata({
   const post = getPost(slug, loc)
   if (!post) return {}
 
-  const title = `${post.title} — ${site.name}`
+  const title = `${post.title} · ${site.name}`
   const url = `${site.url}/${loc}/blog/${slug}`
   // openGraph/twitter are shallow-merged: declaring them here drops the
   // file-based image from app/[locale]/opengraph-image, so re-attach it.

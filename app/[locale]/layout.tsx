@@ -51,7 +51,7 @@ export async function generateMetadata({
   const loc: Locale = isLocale(locale) ? locale : "es"
   const dict = getDictionary(loc)
 
-  const title = `${site.name} — ${dict.hero.role}`
+  const title = `${site.name} · ${dict.hero.role}`
   const description = dict.hero.statement
 
   return {

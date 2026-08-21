@@ -34,7 +34,7 @@ export const es: Dictionary = {
     reposLabel: "Ver en GitHub",
   },
   projects: {
-    eyebrow: "// 01 — Proyectos",
+    eyebrow: "// 01 · Proyectos",
     title: "Productos que construí de punta a punta",
     subtitle:
       "Plataformas fintech en producción y productos propios. Cada uno con ownership técnico completo: arquitectura, backend, frontend e integraciones.",
@@ -49,7 +49,7 @@ export const es: Dictionary = {
     },
   },
   services: {
-    eyebrow: "// 02 — Servicios",
+    eyebrow: "// 02 · Servicios",
     title: "Cómo puedo ayudarte",
     subtitle: "Desde una landing hasta infraestructura fintech. Elegimos el alcance según tu objetivo.",
     featuredBadge: "Más elegido",
@@ -57,15 +57,15 @@ export const es: Dictionary = {
     cta: "Empecemos",
   },
   process: {
-    eyebrow: "// 03 — Proceso",
+    eyebrow: "// 03 · Proceso",
     title: "Cómo trabajo",
     subtitle: "Un proceso claro, con entregas parciales y comunicación constante.",
   },
   about: {
-    eyebrow: "// 04 — Sobre mí",
+    eyebrow: "// 04 · Sobre mí",
     title: "Ingeniero que piensa como founder",
     statement:
-      "Soy Nahuel Soria, desarrollador de software y technical founder en Buenos Aires. Me especializo en fintech —pagos, KYC/KYB, settlement— y en productos SaaS a medida.",
+      "Soy Nahuel Soria, desarrollador de software y technical founder en Buenos Aires. Me especializo en fintech (pagos, KYC/KYB, settlement) y en productos SaaS a medida.",
     paragraphs: [
       "Trabajo mejor donde el problema es ambiguo, tiene que funcionar en producción y no admite errores. Soy el único responsable técnico detrás de varias plataformas de pago: soy dueño de la arquitectura, las decisiones y la entrega, no sólo del código.",
       "Además construyo productos propios (Picaday, Numerai, What I Wish) y herramientas de auditoría de código con IA. Aprendo rápido y resuelvo lo que se presente.",
@@ -82,12 +82,12 @@ export const es: Dictionary = {
     location: "Buenos Aires, Argentina · Remoto para todo el mundo",
   },
   faq: {
-    eyebrow: "// 05 — FAQ",
+    eyebrow: "// 05 · FAQ",
     title: "Preguntas frecuentes",
     subtitle: "Lo que suelen preguntarme antes de empezar.",
   },
   contact: {
-    eyebrow: "// 06 — Contacto",
+    eyebrow: "// 06 · Contacto",
     title: "Trabajemos juntos",
     subtitle:
       "¿Tenés un proyecto en mente? Agendá una consulta gratuita de 30 minutos y evaluamos tu idea sin compromiso.",

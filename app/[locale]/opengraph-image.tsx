@@ -4,7 +4,7 @@ import { site } from "@/content/site"
 
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
-export const alt = "Nahuel Soria — Software developer"
+export const alt = "Nahuel Soria · Software developer"
 
 // Branded social preview (dark, warm near-black + signal green), one per locale.
 export default async function OgImage({ params }: { params: Promise<{ locale: string }> }) {
@@ -57,7 +57,7 @@ export default async function OgImage({ params }: { params: Promise<{ locale: st
         {/* headline */}
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ color: muted, fontSize: 24, fontFamily: "monospace", marginBottom: 20 }}>
-            {loc === "es" ? "// Nahuel Soria — Desarrollador de software" : "// Nahuel Soria — Software developer"}
+            {loc === "es" ? "// Nahuel Soria · Desarrollador de software" : "// Nahuel Soria · Software developer"}
           </div>
           <div style={{ display: "flex", color: fg, fontSize: 68, lineHeight: 1.05, letterSpacing: -1, maxWidth: 900 }}>
             {loc === "es"

@@ -79,7 +79,7 @@ export const processSteps: ProcessStep[] = [
     },
   },
   {
-    duration: { es: "24–48 h", en: "24–48 h" },
+    duration: { es: "24-48 h", en: "24-48 h" },
     title: { es: "Propuesta", en: "Proposal" },
     description: {
       es: "Propuesta detallada con alcance, tiempos y precio.",
@@ -87,7 +87,7 @@ export const processSteps: ProcessStep[] = [
     },
   },
   {
-    duration: { es: "2–6 semanas", en: "2–6 weeks" },
+    duration: { es: "2-6 semanas", en: "2-6 weeks" },
     title: { es: "Build iterativo", en: "Iterative build" },
     description: {
       es: "Sprints con entregas parciales y demos en staging.",
@@ -108,8 +108,8 @@ export const faqItems: FaqItem[] = [
   {
     q: { es: "¿Cuánto tarda un proyecto?", en: "How long does a project take?" },
     a: {
-      es: "Depende del alcance: una landing 1–2 semanas, una web app 3–6 semanas, y sistemas o ERPs 6–12 semanas. En la propuesta te doy un timeline concreto.",
-      en: "It depends on scope: a landing takes 1–2 weeks, a web app 3–6 weeks, and systems or ERPs 6–12 weeks. The proposal includes a concrete timeline.",
+      es: "Depende del alcance: una landing 1-2 semanas, una web app 3-6 semanas, y sistemas o ERPs 6-12 semanas. En la propuesta te doy un timeline concreto.",
+      en: "It depends on scope: a landing takes 1-2 weeks, a web app 3-6 weeks, and systems or ERPs 6-12 weeks. The proposal includes a concrete timeline.",
     },
   },
   {
@@ -143,8 +143,8 @@ export const faqItems: FaqItem[] = [
   {
     q: { es: "¿Puedo ver el progreso durante el desarrollo?", en: "Can I follow progress during development?" },
     a: {
-      es: "Sí. Trabajo con entregas cada 1–2 semanas en un entorno de staging y updates por WhatsApp o email.",
-      en: "Yes. I ship every 1–2 weeks to a staging environment, with updates over WhatsApp or email.",
+      es: "Sí. Trabajo con entregas cada 1-2 semanas en un entorno de staging y updates por WhatsApp o email.",
+      en: "Yes. I ship every 1-2 weeks to a staging environment, with updates over WhatsApp or email.",
     },
   },
   {
