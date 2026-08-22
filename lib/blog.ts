@@ -81,10 +81,16 @@ export function getPost(slug: string, locale: Locale): Post | null {
 }
 
 export function formatPostDate(date: string, locale: Locale): string {
+  // readPost defaults a missing `date:` to "", and Intl throws RangeError on an
+  // invalid Date. Without this guard one post with broken frontmatter takes the
+  // whole blog down at build time, not just its own page.
+  const parsed = new Date(`${date}T00:00:00Z`)
+  if (Number.isNaN(parsed.getTime())) return date
+
   return new Intl.DateTimeFormat(locale === "es" ? "es-AR" : "en-US", {
     day: "numeric",
     month: "long",
     year: "numeric",
     timeZone: "UTC",
-  }).format(new Date(`${date}T00:00:00Z`))
+  }).format(parsed)
 }
