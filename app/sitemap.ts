@@ -35,9 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts: MetadataRoute.Sitemap = getSlugs().flatMap((slug) =>
     locales.map((locale) => {
       const post = getPosts(locale).find((p) => p.slug === slug)
+      // A broken `date:` in frontmatter parses to an Invalid Date, and Next calls
+      // .toISOString() on it while serializing the sitemap, which throws and takes
+      // the whole build down. Same guard as formatPostDate: drop the field instead.
+      const parsed = post?.date ? new Date(`${post.date}T00:00:00Z`) : undefined
       return {
         url: `${site.url}/${locale}/blog/${slug}`,
-        lastModified: post?.date ? new Date(`${post.date}T00:00:00Z`) : undefined,
+        lastModified: parsed && !Number.isNaN(parsed.getTime()) ? parsed : undefined,
         changeFrequency: "yearly" as const,
         priority: 0.7,
         alternates: alternatesFor(`/blog/${slug}`),
