@@ -32,7 +32,7 @@ El primer diseño le pedía al modelo que estimara si nombraría a la marca. Sal
 
 El resultado fue incómodo: la estimación acierta con las marcas desconocidas (20 de 22 efectivamente ausentes) y falla justo con las que tienen presencia real. Una marca a la que la estimación le daba 8 sobre 100 salía quinta en la respuesta en vivo. Es el peor tipo de error posible: le decís "sos invisible" al que sí aparece.
 
-Lo que hice: cada audit hace además la consulta en vivo por proveedor y la respuesta cruda queda como evidencia visible. La posición que se guarda sale solo de esa consulta real; hay un test que prohíbe persistir posiciones estimadas.
+Lo que hice: cada audit hace además la consulta en vivo por proveedor y la respuesta cruda queda como evidencia visible. La posición que se guarda sale solo de esa consulta real; hay un test que prohíbe persistir posiciones estimadas. Es la misma regla que sostiene [el diario que se publica solo](/es/blog/automated-newsroom): el control de calidad va en código, no en el prompt.
 
 ## 4. La rúbrica de scoring se rompe con una frase
 
