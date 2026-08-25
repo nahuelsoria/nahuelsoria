@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getDictionary, isLocale } from "@/lib/i18n"
-import { buildFaqJsonLd } from "@/lib/jsonld"
+import { buildFaqJsonLd, jsonLdHtml } from "@/lib/jsonld"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/sections/hero"
 import { Proof } from "@/components/sections/proof"
@@ -30,7 +30,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdHtml(faqLd) }}
       />
       <Header dict={dict} locale={locale} />
       <main>

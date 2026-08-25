@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { notFound } from "next/navigation"
 import { Instrument_Serif, Hanken_Grotesk, JetBrains_Mono } from "next/font/google"
 import { AnalyticsProvider } from "@/lib/analytics"
-import { buildProfileJsonLd } from "@/lib/jsonld"
+import { buildProfileJsonLd, jsonLdHtml } from "@/lib/jsonld"
 import { getDictionary, isLocale, locales } from "@/lib/i18n"
 import { site } from "@/content/site"
 import type { Locale } from "@/content/types"
@@ -134,7 +134,7 @@ export default async function LocaleLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(profileLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdHtml(profileLd) }}
         />
       </head>
       <body>

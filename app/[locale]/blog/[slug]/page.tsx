@@ -7,7 +7,7 @@ import { Footer } from "@/components/sections/footer"
 import { Markdown } from "@/lib/markdown"
 import { getDictionary, isLocale } from "@/lib/i18n"
 import { getPost, getSlugs, formatPostDate } from "@/lib/blog"
-import { buildBlogPostingJsonLd } from "@/lib/jsonld"
+import { buildBlogPostingJsonLd, jsonLdHtml } from "@/lib/jsonld"
 import { site } from "@/content/site"
 import type { Locale } from "@/content/types"
 
@@ -86,7 +86,7 @@ export default async function BlogPost({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(postLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdHtml(postLd) }}
       />
       <Header dict={dict} locale={locale} />
       <main>

@@ -138,3 +138,14 @@ export function buildFaqJsonLd(locale: Locale) {
     })),
   }
 }
+
+/**
+ * JSON-LD is injected with dangerouslySetInnerHTML, and JSON.stringify leaves
+ * `</script>` intact: a `<` inside any title or description closes the script
+ * tag early and the rest of the payload is parsed as markup. Escaping every
+ * `<` to its \u003c form is inert for JSON parsers, so what a crawler reads
+ * is byte-identical data.
+ */
+export function jsonLdHtml(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c")
+}
