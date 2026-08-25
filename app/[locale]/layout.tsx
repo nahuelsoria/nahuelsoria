@@ -136,6 +136,7 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdHtml(profileLd) }}
         />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="3KIktiyLaDD8j2sK5QAtGA" async />
       </head>
       <body>
         {children}
