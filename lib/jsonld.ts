@@ -46,18 +46,30 @@ export function buildProfileJsonLd(locale: Locale) {
         knowsAbout,
         sameAs: [site.social.github, site.social.linkedin, site.social.x],
       },
+      // ProfessionalService es un LocalBusiness (Organization + Place), no un
+      // Service: `provider` y `serviceType` no existen para ese tipo y el
+      // validador de schema.org los marcaba en las 16 paginas (Ahrefs,
+      // 25/08/2026). Lo que ofrece va en knowsAbout y en la descripcion; la
+      // relacion con la persona es founder. image y address son los campos que
+      // Google recomienda para LocalBusiness y que faltaban.
       {
         "@type": "ProfessionalService",
         "@id": `${site.url}/#service`,
         name: `${site.name} · ${dict.hero.role}`,
         description: dict.hero.statement,
         url: home,
-        provider: { "@id": personId },
+        image: `${site.url}/${locale}/opengraph-image`,
+        founder: { "@id": personId },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: site.location.city,
+          addressRegion: site.location.region,
+          addressCountry: site.location.country,
+        },
         areaServed: [
           { "@type": "Country", name: "Argentina" },
           { "@type": "Place", name: "Worldwide (remote)" },
         ],
-        serviceType: ["Software development", "Fintech", "SaaS", "Automation"],
         knowsAbout,
         sameAs: [site.social.github, site.social.linkedin, site.social.x],
       },
@@ -75,11 +87,13 @@ export function buildProfileJsonLd(locale: Locale) {
         itemListElement: projects.map((p, i) => ({
           "@type": "ListItem",
           position: i + 1,
+          // CreativeWork y no SoftwareApplication: Google exige offers o
+          // aggregateRating para ese tipo y son productos de clientes, no
+          // software en venta. additionalType conserva el significado.
           item: {
-            "@type": "SoftwareApplication",
+            "@type": "CreativeWork",
+            additionalType: "https://schema.org/SoftwareApplication",
             name: p.name,
-            applicationCategory: "BusinessApplication",
-            operatingSystem: "Web",
             description: p.summary[locale],
             ...(p.links?.repo ? { url: p.links.repo } : {}),
             author: { "@id": personId },
