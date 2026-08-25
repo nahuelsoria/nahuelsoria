@@ -1,6 +1,7 @@
 ---
 title: I built a tech news site that publishes itself (writing was not the hard part)
-description: Onda Corta publishes daily with nobody pressing buttons. The case study: why quality control lives in code instead of the prompt, and what the human actually does.
+seoTitle: A tech news site that publishes itself
+description: Onda Corta publishes daily with nobody pressing buttons. Why quality control lives in code instead of the prompt, and what the human actually does.
 date: 2026-08-15
 tags: AI Agents, Media, Automation
 ---

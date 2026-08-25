@@ -1,6 +1,6 @@
 ---
 title: El prompt sugiere, el código decide
-description: Me preguntaron en X cómo limito a los agentes que corren solos. El detalle de las cinco capas que uso, con tareas chicas, gates en código, validadores de salida y publicación a mano.
+description: Me preguntaron en X cómo limito a los agentes que corren solos. Cinco capas: tareas chicas, gates en código, validadores de salida y publicación a mano.
 date: 2026-08-11
 tags: Agentes de IA, Seguridad, Automatización
 ---

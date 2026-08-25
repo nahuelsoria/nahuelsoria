@@ -1,6 +1,6 @@
 ---
 title: The only agent I let write code
-description: My nightly bug hunter runs at 2am over six repos, fixes what it can prove, and opens a PR. Here is the design, the real numbers, and the four failures that taught me every guardrail.
+description: My nightly bug hunter runs at 2am over six repos, fixes what it can prove and opens a PR. The design, the numbers and the failures behind every guardrail.
 date: 2026-08-01
 tags: AI agents, DevOps, Automation
 ---

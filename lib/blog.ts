@@ -6,6 +6,8 @@ import { locales } from "@/content/site"
 export type PostMeta = {
   slug: string
   title: string
+  /** Short title for <title>/OG only; the H1 keeps `title`. */
+  seoTitle?: string
   description: string
   date: string // ISO yyyy-mm-dd
   tags: string[]
@@ -41,6 +43,7 @@ function readPost(slug: string, locale: Locale): Post | null {
   return {
     slug,
     title: meta.title ?? slug,
+    seoTitle: meta.seoTitle,
     description: meta.description ?? "",
     date: meta.date ?? "",
     tags: meta.tags ? meta.tags.split(",").map((t) => t.trim()) : [],

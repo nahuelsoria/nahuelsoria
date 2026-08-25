@@ -76,6 +76,8 @@ export type Dictionary = {
     lead: string
     // one plain declarative sentence for crawlers/LLMs (GEO)
     statement: string
+    // meta description of the home (120-155 chars)
+    description: string
     bullets: string[]
     ctaPrimary: string
     ctaSecondary: string
@@ -136,6 +138,8 @@ export type Dictionary = {
     eyebrow: string
     title: string
     subtitle: string
+    // meta description of /links (120-155 chars)
+    description: string
     groups: Record<BioLinkKind, string>
   }
   contact: {

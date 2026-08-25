@@ -1,5 +1,6 @@
 ---
 title: Una flota de agentes opera mi infraestructura mientras duermo
+seoTitle: Agentes de IA que operan mi infraestructura
 description: Cómo diseñé una flota de ~20 agentes de IA que monitorea, diagnostica y repara mi infraestructura en producción, y por qué ninguno puede tocar plata.
 date: 2026-07-23
 tags: Agentes de IA, DevOps, Automatización

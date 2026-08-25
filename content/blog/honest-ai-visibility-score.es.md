@@ -1,6 +1,7 @@
 ---
 title: Un score honesto de visibilidad en IA es más difícil de lo que parece
-description: Construí una herramienta que mide si ChatGPT, Gemini y Claude recomiendan una marca. Cuatro problemas de medición que encontré con datos, y qué hice con cada uno.
+seoTitle: Un score honesto de visibilidad en IA
+description: Construí una herramienta que mide si ChatGPT, Gemini y Claude recomiendan una marca. Cuatro problemas de medición que encontré, y qué hice con cada uno.
 date: 2026-08-15
 tags: IA, SaaS, Medición
 ---

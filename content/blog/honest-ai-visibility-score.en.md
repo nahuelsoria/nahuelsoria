@@ -1,5 +1,6 @@
 ---
 title: An honest AI visibility score is harder than it looks
+seoTitle: Why an honest AI visibility score is hard
 description: I built a tool that measures whether ChatGPT, Gemini and Claude recommend a brand. Four measurement problems I hit with data, and what I did about each one.
 date: 2026-08-15
 tags: AI, SaaS, Measurement

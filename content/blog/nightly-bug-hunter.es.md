@@ -1,6 +1,7 @@
 ---
 title: El único agente al que le dejo escribir código
-description: Mi bug hunter nocturno corre a las 2am sobre seis repos, arregla lo que puede demostrar y abre un PR. Este es el diseño, los números reales y las cuatro fallas que escribieron cada guardrail.
+seoTitle: El único agente al que dejo escribir código
+description: Mi bug hunter corre a las 2am sobre seis repos, arregla lo que puede demostrar y abre un PR. El diseño, los números y las fallas detrás de cada guardrail.
 date: 2026-08-01
 tags: Agentes de IA, DevOps, Automatización
 ---
