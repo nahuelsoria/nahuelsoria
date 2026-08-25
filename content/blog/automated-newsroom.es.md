@@ -1,6 +1,7 @@
 ---
 title: Construí un diario de tecnología que se publica solo (la parte difícil no fue escribir)
-description: Onda Corta publica notas todos los días sin nadie apretando botones. El case study: por qué el control de calidad va en código y no en el prompt, y qué hace el humano.
+seoTitle: Un diario de tecnología que se publica solo
+description: Onda Corta publica notas todos los días sin nadie apretando botones. Por qué el control de calidad va en código y no en el prompt, y qué hace el humano.
 date: 2026-08-15
 tags: Agentes de IA, Medios, Automatización
 ---

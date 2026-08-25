@@ -18,6 +18,8 @@ export const en: Dictionary = {
     lead: "I build SaaS, dashboards, automations and payment systems for founders and teams. From idea to production.",
     statement:
       "Nahuel Soria is a software developer based in Buenos Aires who builds SaaS, fintech payment systems and custom automations for founders and companies, end to end.",
+    description:
+      "I build SaaS, fintech payment systems and custom automations for founders and companies, end to end, from Buenos Aires. From idea to production.",
     bullets: [
       "Sites and landings that convert",
       "Scalable web apps and SaaS with data and payments",
@@ -114,6 +116,8 @@ export const en: Dictionary = {
     eyebrow: "// Links",
     title: "All my projects",
     subtitle: "Everything I build and where to find me, in one place.",
+    description:
+      "Everything I build and where to find me, in one place: the blog, the products I run in production and my GitHub, LinkedIn and X profiles.",
     groups: {
       writing: "Writing",
       project: "Projects",

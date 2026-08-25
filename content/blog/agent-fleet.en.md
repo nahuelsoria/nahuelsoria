@@ -1,5 +1,6 @@
 ---
 title: A fleet of AI agents runs my infrastructure while I sleep
+seoTitle: A fleet of AI agents runs my infrastructure
 description: How I designed a fleet of ~20 AI agents that monitors, diagnoses and repairs my production infrastructure, and why none of them can touch money.
 date: 2026-07-23
 tags: AI agents, DevOps, Automation

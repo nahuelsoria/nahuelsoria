@@ -20,7 +20,7 @@ export async function generateMetadata({
   const dict = getDictionary(loc)
 
   const title = `${dict.links.title} · ${site.name}`
-  const description = dict.links.subtitle
+  const description = dict.links.description
   // openGraph/twitter are shallow-merged: declaring them here drops the
   // file-based image from app/[locale]/opengraph-image, so re-attach it.
   const ogImage = `${site.url}/${loc}/opengraph-image`

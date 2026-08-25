@@ -1,6 +1,6 @@
 ---
 title: The prompt suggests, the code decides
-description: Someone on X asked how I limit the agents that run unattended. The detail of the five layers I use, with small tasks, code gates, output validators and manual publishing.
+description: Someone on X asked how I limit the agents that run unattended. The five layers I use: small tasks, code gates, output validators and manual publishing.
 date: 2026-08-11
 tags: AI Agents, Security, Automation
 ---

@@ -52,7 +52,7 @@ export async function generateMetadata({
   const dict = getDictionary(loc)
 
   const title = `${site.name} · ${dict.hero.role}`
-  const description = dict.hero.statement
+  const description = dict.hero.description
 
   return {
     metadataBase: new URL(site.url),
