@@ -32,7 +32,7 @@ The first design asked the model to estimate whether it would name the brand. Ch
 
 The result was uncomfortable: the estimate is right about unknown brands (20 of 22 genuinely absent) and wrong precisely about the brands with real presence. One brand the estimate scored 8 out of 100 came out fifth in the live answer. That is the worst possible failure mode: telling the brand that does show up "you are invisible".
 
-What I did: every audit now also runs the live query per provider, and the raw answer is kept as visible evidence. The position that gets persisted comes only from that real answer; a test forbids storing estimated positions.
+What I did: every audit now also runs the live query per provider, and the raw answer is kept as visible evidence. The position that gets persisted comes only from that real answer; a test forbids storing estimated positions. It is the same rule that holds up [the news site that publishes itself](/en/blog/automated-newsroom): quality control lives in code, not in the prompt.
 
 ## 4. The scoring rubric breaks from one sentence
 

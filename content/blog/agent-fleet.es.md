@@ -28,7 +28,7 @@ Tres niveles, según cuánta autonomía se ganaron:
 
 **Workers con IA (leen y diagnostican, no escriben).** Cuando un monitor detecta un error en producción, encola un job. Un worker lo toma, junta contexto (logs recientes, checkout local del repo) y corre un agente headless restringido a herramientas de solo lectura que manda el diagnóstico a Telegram: qué se rompió, dónde, y qué haría para arreglarlo. Yo decido si se aplica.
 
-**El bug hunter nocturno (escribe, con permisos ganados).** A las 02:00 recorre mis repos, busca bugs, los arregla en una branch y abre un PR que me espera a la mañana. Es el único agente con permiso de escritura, y es el que más guardrails tiene.
+**El bug hunter nocturno (escribe, con permisos ganados).** A las 02:00 recorre mis repos, busca bugs, los arregla en una branch y abre un PR que me espera a la mañana. Es el único agente con permiso de escritura, y es el que más guardrails tiene. Lo conté entero en [el único agente al que le dejo escribir código](/es/blog/nightly-bug-hunter).
 
 Alrededor de eso, la capa de rutina: digest diario de unos 46 feeds RSS, follow-ups de leads comerciales (genera borradores, jamás envía un mail solo), digest semanal de alertas de seguridad de GitHub, y una revisión semanal que me lista los pendientes manuales que están frenando revenue.
 
@@ -41,6 +41,8 @@ Esto funciona en producción, con clientes fintech reales, por todo lo que los a
 - **Caps de costo y de recursos.** Tope diario de corridas de IA (hoy: 8 para el triage), gate de RAM que difiere el trabajo si el servidor está bajo presión (aprendido de un crash real), timeout duro por corrida, lock con flock para que nunca corran dos instancias.
 - **Salud del proveedor antes de usarlo.** Smoke test al modelo antes de confiarle un job; si falla, se cae al siguiente proveedor de la cadena.
 - **Cómputo oportunista.** El trabajo nocturno pesado intenta correr primero en mi PC de casa vía Tailscale; si la PC no responde, cae a la VPS. El cron sigue siendo la fuente de verdad.
+
+Las cinco capas con las que limito a un agente que corre solo, y por qué el prompt no alcanza para ninguna, están en [el prompt sugiere, el código decide](/es/blog/agent-guardrails).
 
 ## Resultados
 
@@ -58,4 +60,4 @@ Sin números inventados; lo que cambió en la práctica:
 3. Mi trabajo ahora es decidir qué merece atención y con qué límites, más que tipear código.
 4. Los guardrails baratos evitan incidentes caros: flock, un tope diario y un regex de repos prohibidos son 20 líneas de bash que sostienen todo lo demás.
 
-Voy a ir desarmando la flota agente por agente en próximos posts: el bug hunter nocturno, el triage de errores de solo lectura, el watchdog de fintech. Si estás construyendo algo parecido, [escribime](mailto:jorgenahuelsoria@gmail.com).
+Voy a ir desarmando la flota agente por agente. El primero ya salió, el del bug hunter nocturno; siguen el triage de errores de solo lectura y el watchdog de fintech. Si estás construyendo algo parecido, [escribime](mailto:jorgenahuelsoria@gmail.com).

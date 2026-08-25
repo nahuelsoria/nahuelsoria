@@ -28,7 +28,7 @@ Three levels, based on how much autonomy each agent has earned:
 
 **AI workers (read and diagnose, never write).** When a monitor catches a production error, it queues a job. A worker picks it up, gathers context (recent logs, a local checkout of the repo) and runs a headless agent restricted to read-only tools that sends the diagnosis to Telegram: what broke, where, and what it would do to fix it. I decide whether it ships.
 
-**The nightly bug hunter (writes, with earned permissions).** At 2am it sweeps my repos, hunts for bugs, fixes them on a branch and opens a PR that waits for me in the morning. It is the only agent with write access, and the one with the most guardrails.
+**The nightly bug hunter (writes, with earned permissions).** At 2am it sweeps my repos, hunts for bugs, fixes them on a branch and opens a PR that waits for me in the morning. It is the only agent with write access, and the one with the most guardrails. I took it apart in full in [the only agent I let write code](/en/blog/nightly-bug-hunter).
 
 Around that, the routine layer: a daily digest of about 46 RSS feeds, follow-ups on sales leads (it drafts, it never sends an email on its own), a weekly digest of GitHub security alerts, and a weekly review that lists the manual pending items that are blocking revenue.
 
@@ -41,6 +41,8 @@ This works in production, with real fintech clients, because of everything the a
 - **Cost and resource caps.** A daily cap on AI runs (today: 8 for triage), a RAM gate that defers work when the server is under pressure (learned from a real crash), a hard timeout per run, and a flock lock so two instances never run at once.
 - **Provider health before trusting it.** A smoke test on the model before giving it a job; if it fails, the chain falls back to the next provider.
 - **Opportunistic compute.** Heavy nightly work tries my home PC first over Tailscale; if the PC is unreachable, it falls back to the VPS. Cron remains the source of truth.
+
+The five layers I use to limit an agent that runs unattended, and why the prompt covers none of them, are in [the prompt suggests, the code decides](/en/blog/agent-guardrails).
 
 ## Results
 
@@ -58,4 +60,4 @@ No invented numbers; what actually changed:
 3. My job now is deciding what deserves attention and within which limits, more than typing code.
 4. Cheap guardrails prevent expensive incidents: flock, a daily cap and a forbidden-repos regex are 20 lines of bash that hold up everything else.
 
-I will be breaking the fleet down agent by agent in future posts: the nightly bug hunter, the read-only error triage, the fintech watchdog. If you are building something similar, [write me](mailto:jorgenahuelsoria@gmail.com).
+I will be breaking the fleet down agent by agent. The first one is out, the nightly bug hunter; the read-only error triage and the fintech watchdog are next. If you are building something similar, [write me](mailto:jorgenahuelsoria@gmail.com).
