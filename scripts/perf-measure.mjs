@@ -108,9 +108,11 @@ async function launchChrome(port) {
 
 function classify(url, mime) {
   const u = url.toLowerCase()
+  // CSS first: Next.js serves stylesheets from /_next/static/chunks/*.css, so the
+  // js branch below swallowed every stylesheet (cssKB always 0, jsKB inflated).
+  if (mime?.includes("css") || u.endsWith(".css")) return "css"
   if (mime?.includes("javascript") || u.endsWith(".js") || u.includes("/_next/static/chunks/"))
     return "js"
-  if (mime?.includes("css") || u.endsWith(".css")) return "css"
   if (mime?.includes("font") || u.includes(".woff") || u.includes("font")) return "font"
   if (mime?.startsWith("image/") || /\.(png|jpe?g|webp|gif|svg|avif)(\?|$)/i.test(u)) return "image"
   if (mime?.includes("html") || u === baseUrl || u.startsWith(baseUrl + "/")) {
