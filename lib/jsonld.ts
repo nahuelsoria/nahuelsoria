@@ -1,7 +1,7 @@
 import type { Locale } from "@/content/types"
 import { site } from "@/content/site"
 import { projects } from "@/content/projects"
-import { faqItems } from "@/content/offerings"
+import { faqItems, channels, maintenance, pricingFaq } from "@/content/offerings"
 import { getDictionary } from "@/lib/i18n"
 
 const knowsAbout = [
@@ -141,15 +141,78 @@ export function buildBlogPostingJsonLd(
 }
 
 /** FAQPage: high value for AI Overviews and rich results. */
-export function buildFaqJsonLd(locale: Locale) {
+export function buildFaqJsonLd(locale: Locale, items = faqItems) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
+    mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.q[locale],
       acceptedAnswer: { "@type": "Answer", text: item.a[locale] },
     })),
+  }
+}
+
+/**
+ * /servicios: one Service per channel with its price floor as an Offer
+ * (minPrice, since the shown price is a starting point), the maintenance
+ * plan, the pricing FAQ and a breadcrumb. Prices follow the locale: ARS on
+ * /es, USD on /en, same as the visible page.
+ */
+export function buildServicesJsonLd(locale: Locale) {
+  const dict = getDictionary(locale)
+  const personId = `${site.url}/#person`
+  const pageUrl = `${site.url}/${locale}/servicios`
+  const areaServed = [
+    { "@type": "Country", name: "Argentina" },
+    { "@type": "Place", name: "Worldwide (remote)" },
+  ]
+  const offerFor = (price: { amount: number; currency: string }) => ({
+    "@type": "Offer",
+    priceCurrency: price.currency,
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      minPrice: price.amount,
+      priceCurrency: price.currency,
+    },
+    availability: "https://schema.org/InStock",
+    url: pageUrl,
+  })
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      ...channels.map((c) => ({
+        "@type": "Service",
+        "@id": `${pageUrl}#${c.id}`,
+        name: c.title[locale],
+        description: c.description[locale],
+        serviceType: c.id === "web" ? "Web design and development" : "Custom software development",
+        provider: { "@id": personId },
+        areaServed,
+        url: pageUrl,
+        offers: offerFor(c.price[locale]),
+      })),
+      {
+        "@type": "Service",
+        "@id": `${pageUrl}#maintenance`,
+        name: dict.pricing.maintenanceTitle,
+        description: dict.pricing.maintenanceText,
+        serviceType: "Website maintenance",
+        provider: { "@id": personId },
+        areaServed,
+        url: pageUrl,
+        offers: offerFor(maintenance.price[locale]),
+      },
+      buildFaqJsonLd(locale, pricingFaq),
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: site.name, item: `${site.url}/${locale}` },
+          { "@type": "ListItem", position: 2, name: dict.nav.services, item: pageUrl },
+        ],
+      },
+    ],
   }
 }
 

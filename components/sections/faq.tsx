@@ -1,10 +1,18 @@
 import { Plus } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 import { faqItems } from "@/content/offerings"
-import type { Dictionary, Locale } from "@/content/types"
+import type { Dictionary, FaqItem, Locale } from "@/content/types"
 
-export function Faq({ dict, locale }: { dict: Dictionary; locale: Locale }) {
-  const f = dict.faq
+type FaqProps = {
+  dict: Dictionary
+  locale: Locale
+  /** Defaults to the home FAQ; /servicios passes its pricing questions. */
+  items?: FaqItem[]
+  copy?: Dictionary["faq"]
+}
+
+export function Faq({ dict, locale, items = faqItems, copy }: FaqProps) {
+  const f = copy ?? dict.faq
 
   return (
     <section id="faq" className="section scroll-mt-24" aria-labelledby="faq-title">
@@ -28,7 +36,7 @@ export function Faq({ dict, locale }: { dict: Dictionary; locale: Locale }) {
           {/* ---- Right: accordion (native details for zero-JS SEO/GEO) ---- */}
           <Reveal delay={2}>
             <div className="border-t border-line">
-              {faqItems.map((item) => (
+              {items.map((item) => (
                 <details
                   key={item.q[locale]}
                   className="group border-b border-line"

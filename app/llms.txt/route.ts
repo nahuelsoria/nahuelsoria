@@ -1,6 +1,6 @@
 import { site } from "@/content/site"
 import { projects } from "@/content/projects"
-import { services } from "@/content/offerings"
+import { services, channels, maintenance, clientSites } from "@/content/offerings"
 import { getPosts } from "@/lib/blog"
 
 // Serves /llms.txt, a plain-markdown brief designed for ingestion by LLMs (GEO).
@@ -24,6 +24,21 @@ export function GET() {
   lines.push("")
   lines.push("## Services")
   for (const s of services) lines.push(`- ${s.title.en}: ${s.description.en}`)
+  lines.push("")
+  lines.push(`## Pricing (${site.url}/es/servicios)`)
+  for (const c of channels) {
+    const note = c.priceNote ? `, ${c.priceNote.en}` : ""
+    lines.push(
+      `- ${c.title.en}: from ${c.price.en.display} for clients abroad (from ${c.price.es.display} ARS in Argentina)${note}. Delivery: ${c.delivery.en}.`,
+    )
+  }
+  lines.push(
+    `- Monthly maintenance: from ${maintenance.price.en.display}/month (${maintenance.price.es.display} ARS in Argentina).`,
+  )
+  lines.push("- Every project starts with a free 30-minute call.")
+  lines.push("")
+  lines.push("## Client sites (live)")
+  for (const c of clientSites) lines.push(`- ${c.name} (${c.url}): ${c.kind.en}, ${c.year}. ${c.summary.en}`)
   lines.push("")
   lines.push("## Selected projects")
   for (const p of projects) {

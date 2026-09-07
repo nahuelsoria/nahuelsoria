@@ -2,8 +2,17 @@ import { Reveal } from "@/components/reveal"
 import { processSteps } from "@/content/offerings"
 import type { Dictionary, Locale } from "@/content/types"
 
-export function Process({ dict, locale }: { dict: Dictionary; locale: Locale }) {
-  const p = dict.process
+export function Process({
+  dict,
+  locale,
+  eyebrow,
+}: {
+  dict: Dictionary
+  locale: Locale
+  /** Section number differs per page; /servicios overrides it. */
+  eyebrow?: string
+}) {
+  const p = { ...dict.process, eyebrow: eyebrow ?? dict.process.eyebrow }
 
   return (
     <section className="section" aria-labelledby="process-title">

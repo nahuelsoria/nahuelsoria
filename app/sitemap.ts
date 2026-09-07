@@ -32,6 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: alternatesFor("/links"),
   }))
 
+  const servicios: MetadataRoute.Sitemap = locales.map((locale) => ({
+    url: `${site.url}/${locale}/servicios`,
+    changeFrequency: "monthly",
+    priority: 0.9,
+    alternates: alternatesFor("/servicios"),
+  }))
+
   const posts: MetadataRoute.Sitemap = getSlugs().flatMap((slug) =>
     locales.map((locale) => {
       const post = getPosts(locale).find((p) => p.slug === slug)
@@ -49,5 +56,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   )
 
-  return [...home, ...blogIndex, ...links, ...posts]
+  return [...home, ...servicios, ...blogIndex, ...links, ...posts]
 }
