@@ -15,7 +15,7 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   // Locale-absolute hrefs so section links also work from /blog pages.
   const navLinks = [
     { href: `/${locale}#projects`, label: dict.nav.projects },
-    { href: `/${locale}#services`, label: dict.nav.services },
+    { href: `/${locale}/servicios`, label: dict.nav.services },
     { href: `/${locale}#about`, label: dict.nav.about },
     { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/links`, label: dict.nav.links },

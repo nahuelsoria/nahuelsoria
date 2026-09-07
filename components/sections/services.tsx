@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ArrowRight, Check, Compass, Globe, Landmark, LayoutDashboard, Workflow } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 import { Reveal } from "@/components/reveal"
@@ -90,13 +91,13 @@ export function Services({ dict, locale }: { dict: Dictionary; locale: Locale })
         <Reveal delay={2}>
           <div className="mt-14 flex flex-col items-center gap-5 text-center">
             <p className="text-sm text-fg-muted">{s.ctaText}</p>
-            <a
-              href="#contact"
+            <Link
+              href={`/${locale}/servicios`}
               className="group inline-flex items-center justify-center gap-2 rounded-md bg-brand px-6 py-3 text-sm font-medium text-brand-foreground transition-transform hover:-translate-y-0.5"
             >
               {s.cta}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

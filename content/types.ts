@@ -45,6 +45,41 @@ export type FaqItem = {
   a: Localized
 }
 
+/** Price shown per locale (ARS for es, USD for en) plus the numeric value for JSON-LD. */
+export type LocalizedPrice = {
+  es: { display: string; amount: number; currency: "ARS" }
+  en: { display: string; amount: number; currency: "USD" }
+}
+
+/** One of the two ways to hire: a web site or custom software. */
+export type Channel = {
+  id: "web" | "software"
+  index: string // "01", "02"
+  title: Localized
+  description: Localized
+  includes: Localized[]
+  delivery: Localized
+  price: LocalizedPrice
+  /** Shown next to the price when the floor is a starting point for a milestone quote. */
+  priceNote?: Localized
+  cta: Localized
+  whatsappMessage: Localized
+}
+
+export type MaintenancePlan = {
+  price: LocalizedPrice
+  includes: Localized[]
+}
+
+/** A site delivered to a client, live and public. */
+export type ClientSite = {
+  name: string
+  url: string
+  kind: Localized
+  summary: Localized
+  year: number
+}
+
 export type BioLinkKind = "writing" | "project" | "contact"
 
 export type BioLink = {
@@ -126,6 +161,32 @@ export type Dictionary = {
     eyebrow: string
     title: string
     subtitle: string
+  }
+  pricing: {
+    eyebrow: string
+    title: string
+    lead: string
+    // one plain declarative sentence with the price floors, for crawlers/LLMs (GEO)
+    statement: string
+    // meta description of /servicios (120-155 chars)
+    description: string
+    channelsEyebrow: string
+    channelsTitle: string
+    fromLabel: string
+    deliveryLabel: string
+    includesLabel: string
+    proofEyebrow: string
+    proofTitle: string
+    proofSubtitle: string
+    proofProductsLink: string
+    maintenanceEyebrow: string
+    maintenanceTitle: string
+    maintenanceText: string
+    perMonth: string
+    processEyebrow: string
+    faqEyebrow: string
+    faqTitle: string
+    faqSubtitle: string
   }
   blog: {
     eyebrow: string

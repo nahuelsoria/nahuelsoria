@@ -11,6 +11,17 @@ export const bioLinkGroups: BioLinkKind[] = ["writing", "project", "contact"]
  */
 export const bioLinks: BioLink[] = [
   {
+    label: { es: "Servicios y precios", en: "Services and pricing" },
+    description: {
+      es: "Landing pages desde $250.000 y software a medida por hitos. Charla gratuita de 30 minutos.",
+      en: "Landing pages from USD 1,500 and custom software by milestones. Free 30-minute call.",
+    },
+    href: "/servicios",
+    kind: "contact",
+    internal: true,
+    featured: true,
+  },
+  {
     label: { es: "Blog", en: "Blog" },
     description: {
       es: "Notas de ingeniería: agentes de IA, fintech y automatización en producción.",
@@ -19,7 +30,6 @@ export const bioLinks: BioLink[] = [
     href: "/blog",
     kind: "writing",
     internal: true,
-    featured: true,
   },
   {
     label: { es: "Onda Corta", en: "Onda Corta" },
