@@ -42,7 +42,7 @@ export const metrics: Metric[] = [
     status: "confirmed",
   },
   {
-    value: "6",
+    value: "7",
     label: { es: "Productos en producción / activos", en: "Products in production / active" },
     status: "confirmed",
   },
