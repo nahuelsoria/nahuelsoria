@@ -140,6 +140,45 @@ export function buildBlogPostingJsonLd(
   }
 }
 
+/** CreativeWork for a case study page, plus its breadcrumb. */
+export function buildCaseStudyJsonLd(
+  locale: Locale,
+  study: { slug: string; kind: "project" | "client"; name: string; title: string; description: string; live?: string },
+) {
+  const dict = getDictionary(locale)
+  const personId = `${site.url}/#person`
+  const pageUrl = `${site.url}/${locale}/proyectos/${study.slug}`
+  const parent =
+    study.kind === "client"
+      ? { name: dict.nav.services, item: `${site.url}/${locale}/servicios` }
+      : { name: dict.nav.projects, item: `${site.url}/${locale}#projects` }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": `${pageUrl}#case`,
+        name: study.title,
+        headline: study.title,
+        description: study.description,
+        inLanguage: locale === "es" ? "es-AR" : "en",
+        url: pageUrl,
+        author: { "@id": personId },
+        about: { "@type": "CreativeWork", name: study.name, ...(study.live ? { url: study.live } : {}) },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: site.name, item: `${site.url}/${locale}` },
+          { "@type": "ListItem", position: 2, ...parent },
+          { "@type": "ListItem", position: 3, name: study.title, item: pageUrl },
+        ],
+      },
+    ],
+  }
+}
+
 /** FAQPage: high value for AI Overviews and rich results. */
 export function buildFaqJsonLd(locale: Locale, items = faqItems) {
   return {

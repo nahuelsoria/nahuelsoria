@@ -2,6 +2,7 @@ import { site } from "@/content/site"
 import { projects } from "@/content/projects"
 import { services, channels, maintenance, clientSites } from "@/content/offerings"
 import { getPosts } from "@/lib/blog"
+import { caseHref, hasCase } from "@/lib/cases"
 
 // Serves /llms.txt, a plain-markdown brief designed for ingestion by LLMs (GEO).
 export const dynamic = "force-static"
@@ -38,13 +39,17 @@ export function GET() {
   lines.push("- Every project starts with a free 30-minute call.")
   lines.push("")
   lines.push("## Client sites (live)")
-  for (const c of clientSites) lines.push(`- ${c.name} (${c.url}): ${c.kind.en}, ${c.year}. ${c.summary.en}`)
+  for (const c of clientSites) {
+    const study = hasCase(c.slug) ? ` Case study: ${site.url}${caseHref("en", c.slug)}` : ""
+    lines.push(`- ${c.name} (${c.url}): ${c.kind.en}, ${c.year}. ${c.summary.en}${study}`)
+  }
   lines.push("")
   lines.push("## Selected projects")
   for (const p of projects) {
     const urls = [p.links?.live, p.links?.repo].filter(Boolean)
     const url = urls.length > 0 ? ` (${urls.join(", ")})` : ""
-    lines.push(`- ${p.name}: ${p.category.en}. ${p.summary.en} Stack: ${p.stack.join(", ")}.${url}`)
+    const study = hasCase(p.slug) ? ` Case study: ${site.url}${caseHref("en", p.slug)}` : ""
+    lines.push(`- ${p.name}: ${p.category.en}. ${p.summary.en} Stack: ${p.stack.join(", ")}.${url}${study}`)
   }
   lines.push("")
   const posts = getPosts("en")

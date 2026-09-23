@@ -10,6 +10,7 @@ import { Faq } from "@/components/sections/faq"
 import { Reveal } from "@/components/reveal"
 import { TrackedLink } from "@/components/tracked-link"
 import { getDictionary, isLocale } from "@/lib/i18n"
+import { caseHref, hasCase } from "@/lib/cases"
 import { buildServicesJsonLd, jsonLdHtml } from "@/lib/jsonld"
 import { channels, maintenance, clientSites, pricingFaq } from "@/content/offerings"
 import { site, whatsappHref } from "@/content/site"
@@ -198,22 +199,32 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
               {clientSites.map((c, i) => {
                 const delay = (i + 2) as 2 | 3
                 const host = c.url.replace(/^https?:\/\//, "")
+                // With a case study the card opens it (the case links to the
+                // live site); without one it goes straight to the site.
+                const withCase = hasCase(c.slug)
                 return (
                   <Reveal key={c.url} delay={delay} as="article">
                     <TrackedLink
-                      href={c.url}
-                      label={`servicios_site_${host}`}
-                      external
+                      href={withCase ? caseHref(locale, c.slug) : c.url}
+                      label={withCase ? `servicios_case_${c.slug}` : `servicios_site_${host}`}
+                      external={!withCase}
                       className="card-surface group block h-full p-6"
                     >
                       <span className="flex items-center justify-between gap-3">
                         <span className="font-mono text-xs uppercase tracking-wide text-fg-muted">
                           {c.kind[locale]} · {c.year}
                         </span>
-                        <ArrowUpRight
-                          className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand"
-                          aria-hidden
-                        />
+                        {withCase ? (
+                          <ArrowRight
+                            className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-brand"
+                            aria-hidden
+                          />
+                        ) : (
+                          <ArrowUpRight
+                            className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand"
+                            aria-hidden
+                          />
+                        )}
                       </span>
                       <span className="mt-4 block font-serif text-2xl text-foreground transition-colors group-hover:text-brand">
                         {c.name}

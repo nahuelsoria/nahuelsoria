@@ -15,7 +15,7 @@ export type ProjectStatus = "production" | "active" | "mvp"
 export type Project = {
   slug: string
   name: string
-  index: string // "01".."06"
+  index: string // "01", "02", ... in list order
   category: Localized
   role: Localized
   summary: Localized
@@ -73,11 +73,13 @@ export type MaintenancePlan = {
 
 /** A site delivered to a client, live and public. */
 export type ClientSite = {
+  slug: string
   name: string
   url: string
   kind: Localized
   summary: Localized
   year: number
+  stack: string[]
 }
 
 export type BioLinkKind = "writing" | "project" | "contact"
@@ -131,7 +133,18 @@ export type Dictionary = {
     stackLabel: string
     viewRepo: string
     viewLive: string
+    readCase: string
     statusLabel: Record<ProjectStatus, string>
+  }
+  caseStudy: {
+    eyebrow: string
+    clientLabel: string
+    roleLabel: string
+    yearLabel: string
+    stackLabel: string
+    visit: string
+    backToProjects: string
+    backToClients: string
   }
   services: {
     eyebrow: string

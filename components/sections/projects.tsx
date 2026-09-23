@@ -1,6 +1,8 @@
-import { ArrowUpRight, Github } from "lucide-react"
+import Link from "next/link"
+import { ArrowRight, ArrowUpRight, Github } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 import { projects } from "@/content/projects"
+import { caseHref, hasCase } from "@/lib/cases"
 import type { Dictionary, Locale, Project, ProjectStatus } from "@/content/types"
 
 const statusDot: Record<ProjectStatus, string> = {
@@ -23,6 +25,7 @@ function ProjectCard({
   const p = dict.projects
   const repo = project.links?.repo
   const live = project.links?.live
+  const withCase = hasCase(project.slug)
 
   return (
     <div
@@ -88,8 +91,17 @@ function ProjectCard({
       </div>
 
       {/* links */}
-      {(repo || live) && (
+      {(repo || live || withCase) && (
         <div className="mt-auto flex flex-wrap items-center gap-3 pt-6">
+          {withCase && (
+            <Link
+              href={caseHref(locale, project.slug)}
+              className="group inline-flex items-center gap-2 rounded-md border border-brand/60 px-4 py-2 text-sm text-foreground transition-colors hover:border-brand"
+            >
+              {p.readCase}
+              <ArrowRight className="h-4 w-4 text-brand transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          )}
           {repo && (
             <a
               href={repo}
