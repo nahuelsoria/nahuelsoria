@@ -1,5 +1,6 @@
 import { ArrowRight, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react"
 import { Reveal } from "@/components/reveal"
+import { CodeRain } from "@/components/code-rain"
 import { site, metrics } from "@/content/site"
 import type { Dictionary, Locale } from "@/content/types"
 
@@ -16,6 +17,7 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
         aria-hidden
         className="pointer-events-none absolute inset-0 grid-lines opacity-[0.5] [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"
       />
+      <CodeRain className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.22] [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
       <div className="container-page relative">
         <div className="grid items-start gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
           {/* ---- Left: statement ---- */}
