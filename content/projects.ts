@@ -84,27 +84,9 @@ export const projects: Project[] = [
     links: { live: "https://ondacorta.news" },
   },
   {
-    slug: "llm-audit",
-    name: "LLM Audit",
-    index: "05",
-    category: { es: "Auditoría de código con IA", en: "AI-powered code auditing" },
-    role: { es: "Creador", en: "Creator" },
-    summary: {
-      es: "Herramienta que orquesta agentes LLM, cada uno sobre una dimensión (seguridad, calidad, UX, arquitectura), y consolida un reporte priorizado.",
-      en: "A tool that orchestrates LLM agents, each covering one dimension (security, code quality, UX, architecture), into a single prioritized report.",
-    },
-    highlights: [
-      { es: "Agentes especializados por dimensión de revisión", en: "Specialized agents per review dimension" },
-      { es: "Consolidación en un reporte único priorizado", en: "Consolidation into a single prioritized report" },
-    ],
-    stack: ["Python", "TypeScript", "LLM APIs"],
-    status: "active",
-    links: { repo: `${site.social.github}/llm-audit` },
-  },
-  {
     slug: "picaday",
     name: "Picaday",
-    index: "06",
+    index: "05",
     category: { es: "Producto propio: diario fotográfico", en: "Own product: photo journal" },
     role: { es: "Founder & desarrollador", en: "Founder & developer" },
     summary: {
@@ -121,7 +103,7 @@ export const projects: Project[] = [
   {
     slug: "timerz",
     name: "timerz",
-    index: "07",
+    index: "06",
     category: { es: "Producto propio: timer para enfocarse", en: "Own product: focus timer" },
     role: { es: "Founder & desarrollador", en: "Founder & developer" },
     summary: {
@@ -140,7 +122,7 @@ export const projects: Project[] = [
   {
     slug: "numerai",
     name: "Numerai",
-    index: "08",
+    index: "07",
     category: { es: "Producto propio: finanzas personales", en: "Own product: personal finance" },
     role: { es: "Founder & desarrollador", en: "Founder & developer" },
     summary: {
@@ -157,7 +139,7 @@ export const projects: Project[] = [
   {
     slug: "what-i-wish",
     name: "What I Wish",
-    index: "09",
+    index: "08",
     category: { es: "Producto propio: wishlist social", en: "Own product: social wishlist" },
     role: { es: "Founder & desarrollador", en: "Founder & developer" },
     summary: {
