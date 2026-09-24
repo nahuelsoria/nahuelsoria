@@ -247,6 +247,7 @@ export const maintenance: MaintenancePlan = {
  */
 export const clientSites: ClientSite[] = [
   {
+    slug: "peyote-concept",
     name: "Peyote Concept",
     url: "https://peyoteconcept.com",
     kind: { es: "Agencia creativa", en: "Creative agency" },
@@ -255,16 +256,19 @@ export const clientSites: ClientSite[] = [
       en: "One-page site with the brand identity applied, tracked WhatsApp CTAs, technical SEO and structured data.",
     },
     year: 2026,
+    stack: ["HTML", "CSS", "JavaScript", "Canvas", "Vercel"],
   },
   {
+    slug: "manicuria-caba",
     name: "Manicuría CABA",
     url: "https://manicuriacaba.com.ar",
-    kind: { es: "Salón de manicuría", en: "Nail salon" },
+    kind: { es: "Manicuría a domicilio", en: "Home-visit nail service" },
     summary: {
       es: "Sitio estático para un negocio local, con turnos por WhatsApp y publicación automática en Instagram.",
       en: "Static site for a local business, with WhatsApp bookings and automated Instagram publishing.",
     },
     year: 2026,
+    stack: ["HTML", "CSS", "Vercel Functions", "Vercel Blob", "PostHog", "Instagram API"],
   },
 ]
 

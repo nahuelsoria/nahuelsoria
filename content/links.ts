@@ -41,12 +41,12 @@ export const bioLinks: BioLink[] = [
     kind: "project",
   },
   {
-    label: { es: "LLM Audit", en: "LLM Audit" },
+    label: { es: "Asked Thrice", en: "Asked Thrice" },
     description: {
-      es: "Auditoría de código con agentes de IA: seguridad, calidad y arquitectura en un solo reporte.",
-      en: "AI code auditing: security, quality and architecture in a single report.",
+      es: "Mide si ChatGPT, Gemini y Claude recomiendan tu marca, con las respuestas como evidencia.",
+      en: "Measures whether ChatGPT, Gemini and Claude recommend your brand, with the answers as evidence.",
     },
-    href: "https://llmaudit.app",
+    href: "https://askedthrice.com",
     kind: "project",
   },
   {

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
 import { site, locales } from "@/content/site"
 import { getPosts, getSlugs } from "@/lib/blog"
+import { getCaseSlugs } from "@/lib/cases"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const alternatesFor = (path: string) => ({
@@ -39,6 +40,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: alternatesFor("/servicios"),
   }))
 
+  const cases: MetadataRoute.Sitemap = getCaseSlugs().flatMap((slug) =>
+    locales.map((locale) => ({
+      url: `${site.url}/${locale}/proyectos/${slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+      alternates: alternatesFor(`/proyectos/${slug}`),
+    })),
+  )
+
   const posts: MetadataRoute.Sitemap = getSlugs().flatMap((slug) =>
     locales.map((locale) => {
       const post = getPosts(locale).find((p) => p.slug === slug)
@@ -56,5 +66,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   )
 
-  return [...home, ...servicios, ...blogIndex, ...links, ...posts]
+  return [...home, ...servicios, ...cases, ...blogIndex, ...links, ...posts]
 }

@@ -20,7 +20,7 @@ const BLOG_DIR = path.join(process.cwd(), "content", "blog")
 const WORDS_PER_MINUTE = 200
 
 /** Parses the `---` frontmatter block. Values are plain strings; tags are comma-separated. */
-function parseFrontmatter(raw: string): { meta: Record<string, string>; body: string } {
+export function parseFrontmatter(raw: string): { meta: Record<string, string>; body: string } {
   const match = raw.match(/^---\n([\s\S]*?)\n---\n?/)
   if (!match) return { meta: {}, body: raw }
 
