@@ -14,8 +14,8 @@ Websites, custom software, payment and fintech integrations, AI agents and month
 
 **Payment platforms**
 
-- **[Bridgewater Payments](https://www.bridgewaterpayments.com)**: B2B payments platform. KYC/KYB onboarding, virtual accounts, fiat off-ramps, a settlement rules engine and an operations backoffice. I am the sole technical owner. [Case study](https://github.com/nahuelsoria/bridgewater-payments).
-- **[Condor OTC](https://www.condorotc.com.ar)**: cross-border payments and exchange. I lead the technology: provider integrations behind a common interface, multi-currency operations and the desk's internal tooling. [Case study](https://github.com/nahuelsoria/condor-otc).
+- **[Bridgewater Payments](https://www.bridgewaterpayments.com)**: B2B payments platform. KYC/KYB onboarding, virtual accounts, fiat off-ramps, a settlement rules engine and an operations backoffice. I am the sole technical owner. [Case study](https://nahuelsoria.com/en/proyectos/bridgewater-payments).
+- **[Condor OTC](https://www.condorotc.com.ar)**: cross-border payments and exchange. I lead the technology: provider integrations behind a common interface, multi-currency operations and the desk's internal tooling. [Case study](https://nahuelsoria.com/en/proyectos/condor-otc).
 
 More than USD 20 million has been processed on the payment platforms I built.
 
@@ -23,7 +23,7 @@ More than USD 20 million has been processed on the payment platforms I built.
 
 - **[Asked Thrice](https://askedthrice.com)**: measures whether ChatGPT, Gemini and Claude recommend a brand, with several runs per model and the raw answers as evidence. [How it was built](https://nahuelsoria.com/en/proyectos/asked-thrice).
 - **[Onda Corta](https://ondacorta.news)**: a Spanish-language tech news site written and published by an agent pipeline, with plagiarism, fact and duplicate checks that run in code. [How it was built](https://nahuelsoria.com/en/proyectos/onda-corta).
-- **[What I Wish](https://whatiwish.app)**: wishlists you can share in seconds.
+- **[What I Wish](https://whatiwish.app)**: gift lists in one link, where guests reserve without an account. [How it was built](https://nahuelsoria.com/en/proyectos/what-i-wish).
 - **[timerz](https://timerz-app.vercel.app)**: a focus timer over animated scenes that works offline and without an account. [How it was built](https://nahuelsoria.com/en/proyectos/timerz).
 
 **Client sites**
@@ -48,6 +48,7 @@ I write about systems I run in production:
 
 - [A fleet of AI agents runs my infrastructure while I sleep](https://nahuelsoria.com/en/blog/agent-fleet)
 - [The only agent I let write code](https://nahuelsoria.com/en/blog/nightly-bug-hunter)
+- [The agent that reads production errors and cannot touch a file](https://nahuelsoria.com/en/blog/error-triage)
 - [The prompt suggests, the code decides](https://nahuelsoria.com/en/blog/agent-guardrails)
 - [An honest AI visibility score is harder than it looks](https://nahuelsoria.com/en/blog/honest-ai-visibility-score)
 - [I built a tech news site that publishes itself](https://nahuelsoria.com/en/blog/automated-newsroom)
